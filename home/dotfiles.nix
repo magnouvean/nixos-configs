@@ -1,10 +1,10 @@
 { pkgs, ... }: {
   home.file = {
-    ".config/git/config".source = ../files/git;
+    ".config/git/config".source = ../files/git/config;
     ".config/zathura/zathurarc".source = ../files/zathura/zathurarc;
     ".config/godot/editor_settings-4.tres".source = ../files/godot/editor_settings-4.tres;
-    
-    "Sync/.stignore".source = ../files/www/syncthing/stignore;
+
+    "Sync/.stignore".source = ../files/syncthing/stignore;
 
     "Code/R/shell.nix".source = ../files/environments/R/shell.nix;
     "Code/c/shell.nix".source = ../files/environments/c/shell.nix;

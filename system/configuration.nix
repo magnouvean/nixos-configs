@@ -1,8 +1,9 @@
 { config, lib, pkgs, ... }:
 let
   home-manager = builtins.fetchTarball "https://github.com/nix-community/home-manager/archive/master.tar.gz";
-in {
-  imports = [./gnome.nix (import "${home-manager}/nixos")];
+in
+{
+  imports = [ ./gnome.nix (import "${home-manager}/nixos") ];
 
   # Bootloader
   boot.loader.grub = { enable = true; };
@@ -10,7 +11,7 @@ in {
   # Neworking
   networking = {
     networkmanager.enable = true;
-    extraHosts = builtins.readFile ../files/misc/hosts;
+    extraHosts = builtins.readFile ../files/hosts;
   };
 
   # Time/Locale
@@ -23,12 +24,6 @@ in {
 
   # Sound
   sound.enable = true;
-  services.pipewire = {
-    enable = true;
-    alsa.enable = true;
-    alsa.support32Bit = true;
-    pulse.enable = true;
-  };
 
   # Users
   users.users.magnus = {
@@ -37,7 +32,7 @@ in {
     shell = pkgs.zsh;
   };
   # And home-manager
-  home-manager.user.magnus = (import ../home/home.nix);
+  home-manager.users.magnus = (import ../home/home.nix);
 
   # Shell
   programs.zsh.enable = true;
@@ -66,9 +61,13 @@ in {
   # Packages
   environment.systemPackages = with pkgs; [
     # GUI programs
+    # g4music
+    ferdium
+    firefox
     gimp
     godot_4
     kitty # Backup terminal
+    rnote
     zathura
 
     # CLI tools
@@ -82,7 +81,7 @@ in {
     lm_sensors
     mpc_cli
     vim
-    pass
+    pass-wayland
     ripgrep
     unzip
     wget

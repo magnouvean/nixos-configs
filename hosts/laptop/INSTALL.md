@@ -11,8 +11,8 @@ I recommend using ~gdisk~ for paritioning
 ## Installation (System)
 After formatting as described above run the following commands (as root and with internet):
 ```{bash}
-sudo cryptsetup luksFormat /dev/sda3
-sudo cryptsetup luksOpen /dev/sda3 enc-pv
+sudo cryptsetup luksFormat /dev/sda2
+sudo cryptsetup luksOpen /dev/sda2 enc-pv
 ```
 
 ```{bash}
@@ -23,15 +23,15 @@ sudo lvcreate -l '100%FREE' -n root vg
 ```
 
 ```{bash}
-sudo mkfs.ext2 /dev/sda2 -U 933c1d16-e734-4d7c-879a-834497581785
-sudo mkfs.ext4 -L root /dev/vg/root -U 009b54b4-d4a1-427f-8471-1ea2fcd52a1b
-sudo mkswap -L swap /dev/vg/swap -U 3adc58f0-5602-406d-82a1-7605c88e7ee4
+sudo mkfs.fat /dev/sda1 -i aeb1e5fe
+sudo mkfs.ext4 -L root /dev/vg/root -U 40a4c612-7b66-4abf-b23d-6eea5ff4d85d
+sudo mkswap -L swap /dev/vg/swap -U fd9a1b38-9b0f-4eeb-a880-5b5980f8d1ed
 ```
 
 ```{bash}
 sudo mount /dev/vg/root /mnt
 sudo mkdir /mnt/boot
-sudo mount /dev/sda2 /mnt/boot
+sudo mount /dev/sda1 /mnt/boot
 sudo swapon /dev/vg/swap
 ```
 
@@ -44,7 +44,7 @@ sudo nix-channel --update
 nix-shell -p git
 sudo mkdir -p /mnt/etc/nixos
 sudo git clone https://codeberg.org/magnouvean/nixos-configs /mnt/etc/nixos/configs
-sudo ln -s /mnt/etc/nixos/configs/hosts/desktop/configuration.nix /mnt/etc/nixos/configuration.nix
+sudo ln -s /mnt/etc/nixos/configs/hosts/laptop/configuration.nix /mnt/etc/nixos/configuration.nix
 sudo nixos-install
 sudo rm -rf /mnt/etc/nixos
 reboot

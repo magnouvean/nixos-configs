@@ -1,6 +1,6 @@
 { config, pkgs, ... }: {
   imports =
-    [ ./dotfiles.nix ./mimeapps.nix ./neovim.nix ];
+    [ ./dotfiles.nix ./gsettings.nix ./mimeapps.nix ./neovim.nix ./vscodium.nix ];
 
   # Fonts
   fonts.fontconfig.enable = true;
@@ -17,7 +17,7 @@
     syntaxHighlighting.enable = true;
     enableAutosuggestions = true;
     initExtra = ''
-      ${builtins.readFile ../files/misc/zsh/zshrc}
+      ${builtins.readFile ../files/zsh/zshrc}
     '';
   };
 
