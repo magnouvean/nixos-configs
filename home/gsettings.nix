@@ -2,7 +2,7 @@
 {
   dconf.settings = {
     "org/gnome/shell" = {
-      favorite-apps = [ "firefox.desktop" "org.gnome.Terminal.desktop" "org.gnome.Nautilus.desktop" "org.gnome.Software.desktop" ];
+      favorite-apps = [ "firefox.desktop" "com.raggesilver.BlackBox.desktop" "org.gnome.Nautilus.desktop" ];
       enabled-extensions = [ "pop-shell@system76.com" "appindicatorsupport@rgcjonas.gmail.com" ];
       disable-user-extensions = false;
     };
@@ -50,7 +50,7 @@
     };
     "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0" = {
       binding = "<Super><Alt>Return";
-      command = "gtk-launch org.gnome.Console.desktop";
+      command = "gtk-launch com.raggesilver.BlackBox.desktop";
       name = "Launch terminal";
     };
     "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1" = {
@@ -139,6 +139,9 @@
       switch-monitor = [ ];
       toggle-tiled-left = [ ];
       toggle-tiled-right = [ ];
+    };
+    "com/raggesilver/BlackBox" = {
+      font = "FiraCode Nerd Font 11";
     };
   };
 }

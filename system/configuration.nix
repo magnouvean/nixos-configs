@@ -62,11 +62,11 @@ in
   environment.systemPackages = with pkgs; [
     # GUI programs
     # g4music
+    blackbox-terminal
     ferdium
     firefox
     gimp
     godot_4
-    kitty # Backup terminal
     rnote
     zathura
 
@@ -80,11 +80,13 @@ in
     htop
     lm_sensors
     mpc_cli
-    vim
+    networkmanagerapplet
     pass-wayland
     ripgrep
     unzip
+    vim
     wget
+    wl-clipboard
 
     # Other
     xdg-user-dirs
