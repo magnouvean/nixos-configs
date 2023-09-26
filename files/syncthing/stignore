@@ -1,0 +1,11 @@
+.aux
+.direnv
+.fdb_latexmk
+.fls
+.ipynb_checkpoints
+.mypy_cache
+.ob-jupyter
+.synctex.gz
+__pycache__
+htmlcov
+ltximg
