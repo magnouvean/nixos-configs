@@ -5,6 +5,8 @@
     package = pkgs.vscodium;
     mutableExtensionsDir = true;
     extensions = (with pkgs.vscode-extensions; [
+      bbenoist.nix
+      brettm12345.nixfmt-vscode
       james-yu.latex-workshop
       mkhl.direnv
       ms-python.python

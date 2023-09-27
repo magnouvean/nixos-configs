@@ -39,6 +39,9 @@ in
 
   # Bluetooth
   hardware.bluetooth.enable = true;
+  
+  # Better tablet support
+  hardware.opentabletdriver.enable = true;
 
   # Fonts
   fonts = {

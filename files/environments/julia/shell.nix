@@ -1,9 +1,17 @@
 { pkgs ? import <nixpkgs> { } }:
 pkgs.mkShell {
   nativeBuildInputs = with pkgs; [
+    # Julia
     julia-bin
-    pandoc
+
+    # Jupyter
     python3Packages.jupyter
-    python3Packages.jupytext
+
+    # Latex
+    pandoc
+    (pkgs.texlive.combine {
+      inherit (pkgs.texlive)
+        scheme-medium dvisvgm dvipng wrapfig amsmath ulem hyperref capt-of;
+    })
   ];
 }

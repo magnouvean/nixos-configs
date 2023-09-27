@@ -1,11 +1,23 @@
 { pkgs ? import <nixpkgs> { } }:
 pkgs.mkShell {
-  nativeBuildInputs = (with pkgs; [ black isort mypy python3 pandoc ])
-    ++ (with pkgs.python3Packages; [
+  nativeBuildInputs = (with pkgs; [
+    # Python
+    black
+    isort
+    mypy
+    python3
+
+    # Latex
+    pandoc
+    (pkgs.texlive.combine {
+      inherit (pkgs.texlive)
+        scheme-medium dvisvgm dvipng wrapfig amsmath ulem hyperref capt-of;
+    })
+  ]) ++ (with pkgs.python3Packages; [
+    # Python libraries
     debugpy
     ipython
     jupyter
-    jupytext
     keras
     matplotlib
     numpy
