@@ -1,9 +1,13 @@
-{ pkgs, lib, ... }:
-{
+{ pkgs, lib, ... }: {
   dconf.settings = {
     "org/gnome/shell" = {
-      favorite-apps = [ "firefox.desktop" "com.raggesilver.BlackBox.desktop" "org.gnome.Nautilus.desktop" ];
-      enabled-extensions = [ "pop-shell@system76.com" "appindicatorsupport@rgcjonas.gmail.com" ];
+      favorite-apps = [
+        "firefox.desktop"
+        "com.raggesilver.BlackBox.desktop"
+        "org.gnome.Nautilus.desktop"
+      ];
+      enabled-extensions =
+        [ "pop-shell@system76.com" "appindicatorsupport@rgcjonas.gmail.com" ];
       disable-user-extensions = false;
     };
     "org/gnome/shell/extensions/pop-shell" = {
@@ -35,7 +39,14 @@
       sources = [ (lib.hm.gvariant.mkTuple [ "xkb" "no" ]) ];
     };
     "org/gnome/settings-daemon/plugins/media-keys" = {
-      custom-keybindings = [ "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom4/" ];
+      custom-keybindings = [
+        "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/"
+        "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/"
+        "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/"
+        "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/"
+        "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom4/"
+        "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom5/"
+      ];
     };
     "org/gnome/settings-daemon/plugins/media-keys" = {
       email = [ ];
@@ -48,31 +59,42 @@
       screensaver = [ "<Super><Shift>s" ];
       www = [ "<Super><Alt>w" ];
     };
-    "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0" = {
-      binding = "<Super><Alt>Return";
-      command = "gtk-launch com.raggesilver.BlackBox.desktop";
-      name = "Launch terminal";
-    };
-    "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1" = {
-      binding = "<Super><Alt>e";
-      command = "gtk-launch codium.desktop";
-      name = "Launch editor";
-    };
-    "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2" = {
-      binding = "<Super><Alt>m";
-      command = "gtk-launch ferdium.desktop";
-      name = "Launch mail client";
-    };
-    "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3" = {
-      binding = "<Super><Alt>g";
-      command = "gtk-launch steam.desktop";
-      name = "Launch game launcher";
-    };
-    "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom4" = {
-      binding = "<Super><Alt>n";
-      command = "gtk-launch com.github.flxzt.rnote.desktop";
-      name = "Launch note app";
-    };
+    "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0" =
+      {
+        binding = "<Super><Alt>Return";
+        command = "gtk-launch com.raggesilver.BlackBox.desktop";
+        name = "Launch terminal";
+      };
+    "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1" =
+      {
+        binding = "<Super><Alt>e";
+        command = "gtk-launch codium.desktop";
+        name = "Launch editor";
+      };
+    "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2" =
+      {
+        binding = "<Super><Alt>c";
+        command = "gtk-launch ferdium.desktop";
+        name = "Launch mail client";
+      };
+    "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3" =
+      {
+        binding = "<Super><Alt>g";
+        command = "gtk-launch steam.desktop";
+        name = "Launch game launcher";
+      };
+    "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom4" =
+      {
+        binding = "<Super><Alt>n";
+        command = "gtk-launch com.github.flxzt.rnote.desktop";
+        name = "Launch note app";
+      };
+    "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom5" =
+      {
+        binding = "<Super><Alt>m";
+        command = "gtk-launch g4music.desktop";
+        name = "Launch music player";
+      };
     "org/gnome/shell/keybindings" = {
       focus-active-notification = [ ];
       toggle-application-view = [ ];
@@ -121,16 +143,16 @@
     };
     "org/gnome/desktop/background" = {
       picture-options = "zoom";
-      picture-uri = "file://${pkgs.gnome.gnome-backgrounds}/share/backgrounds/gnome/pills-l.webp";
-      picture-uri-dark = "file://${pkgs.gnome.gnome-backgrounds}/share/backgrounds/gnome/pills-d.webp";
+      picture-uri =
+        "file://${pkgs.gnome.gnome-backgrounds}/share/backgrounds/gnome/pills-l.webp";
+      picture-uri-dark =
+        "file://${pkgs.gnome.gnome-backgrounds}/share/backgrounds/gnome/pills-d.webp";
     };
     "org/gnome/desktop/interface" = {
       color-scheme = "prefer-dark";
       gtk-theme = "Adwaita-dark";
     };
-    "org/gnome/desktop/wm/preferences" = {
-      button-layout = ":minimize,close";
-    };
+    "org/gnome/desktop/wm/preferences" = { button-layout = ":minimize,close"; };
     "org/gnome/mutter" = {
       overlay-key = "";
       workspaces-only-on-primary = false;
@@ -140,8 +162,6 @@
       toggle-tiled-left = [ ];
       toggle-tiled-right = [ ];
     };
-    "com/raggesilver/BlackBox" = {
-      font = "FiraCode Nerd Font 11";
-    };
+    "com/raggesilver/BlackBox" = { font = "FiraCode Nerd Font 11"; };
   };
 }
