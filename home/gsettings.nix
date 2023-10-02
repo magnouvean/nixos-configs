@@ -92,7 +92,7 @@
     "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom5" =
       {
         binding = "<Super><Alt>m";
-        command = "gtk-launch g4music.desktop";
+        command = "gtk-launch com.github.neithern.g4music.desktop";
         name = "Launch music player";
       };
     "org/gnome/shell/keybindings" = {
