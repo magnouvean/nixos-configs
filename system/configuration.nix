@@ -1,8 +1,8 @@
 { config, lib, pkgs, ... }:
 let
-  home-manager = builtins.fetchTarball "https://github.com/nix-community/home-manager/archive/master.tar.gz";
-in
-{
+  home-manager = builtins.fetchTarball
+    "https://github.com/nix-community/home-manager/archive/master.tar.gz";
+in {
   imports = [ ./gnome.nix (import "${home-manager}/nixos") ];
 
   # Bootloader
@@ -39,21 +39,18 @@ in
 
   # Bluetooth
   hardware.bluetooth.enable = true;
-  
+
   # Better tablet support
   hardware.opentabletdriver.enable = true;
 
   # Fonts
   fonts = {
-    packages = with pkgs; [
-      (nerdfonts.override { fonts = [ "FiraCode" "DroidSansMono" ]; })
-    ];
+    packages = with pkgs;
+      [ (nerdfonts.override { fonts = [ "FiraCode" "DroidSansMono" ]; }) ];
   };
 
   # GPG
-  programs.gnupg.agent = {
-    enable = true;
-  };
+  programs.gnupg.agent = { enable = true; };
 
   # Polkit
   security.polkit = { enable = true; };
@@ -64,10 +61,10 @@ in
   # Packages
   environment.systemPackages = with pkgs; [
     # GUI programs
-    # g4music
     blackbox-terminal
     ferdium
     firefox
+    g4music
     gimp
     godot_4
     rnote
@@ -100,11 +97,7 @@ in
   ];
 
   # Podman
-  virtualisation = {
-    podman = {
-      enable = true;
-    };
-  };
+  virtualisation = { podman = { enable = true; }; };
 
   # Misc
   nixpkgs.config.allowUnfree = true;
