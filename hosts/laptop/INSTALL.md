@@ -46,7 +46,7 @@ sudo git clone https://codeberg.org/magnouvean/nixos-configs /mnt/etc/nixos/conf
 sudo ln -s /mnt/etc/nixos/configs/hosts/laptop/configuration.nix /mnt/etc/nixos/configuration.nix
 sudo nixos-install
 sudo rm -rf /mnt/etc/nixos
-reboot
+sudo reboot
 ```
 
 After installation it should be enough to run `./deploy.sh` (in this directory)

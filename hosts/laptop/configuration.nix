@@ -1,5 +1,5 @@
 { config, ... }: {
-  imports = [ ../base-configuration.nix ./hardware-configuration.nix ];
+  imports = [ ../../system/configuration.nix ./hardware-configuration.nix ];
 
   networking.hostName = "nixos-laptop";
 
