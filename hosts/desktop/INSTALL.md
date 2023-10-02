@@ -2,13 +2,13 @@
 
 ## Partitioning
 
-I recommend using ~gdisk~ for paritioning
+I recommend using `gdisk` for paritioning
 
-- 1M BIOS boot parition (~ef02~) at /dev/sda1
-- 512M boot parition (~8300~) at /dev/sda2
-- Rest of the space (~8300~) at /dev/sda3
+- 1M BIOS boot parition (`ef02`) at /dev/sda1
+- 512M boot parition (`8300`) at /dev/sda2
+- Rest of the space (`8300`) at /dev/sda3
 
-## Installation (System)
+## Installation
 After formatting as described above run the following commands (as root and with internet):
 ```{bash}
 sudo cryptsetup luksFormat /dev/sda3
