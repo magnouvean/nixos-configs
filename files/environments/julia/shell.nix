@@ -9,9 +9,6 @@ pkgs.mkShell {
 
     # Latex
     pandoc
-    (pkgs.texlive.combine {
-      inherit (pkgs.texlive)
-        scheme-medium dvisvgm dvipng wrapfig amsmath ulem hyperref capt-of;
-    })
+    texlive.combined.scheme-full
   ];
 }
