@@ -92,6 +92,7 @@
 0.0.0.0 gab.com
 0.0.0.0 global.espn.com
 0.0.0.0 goal.com
+0.0.0.0 haaretz.com
 0.0.0.0 hacker-news.news
 0.0.0.0 hitc.com
 0.0.0.0 hn.algolia.com
@@ -203,7 +204,6 @@
 0.0.0.0 lulz.com
 0.0.0.0 m.jpost.com
 0.0.0.0 m.reddit.com
-0.0.0.0 m.youtube.com
 0.0.0.0 manchestereveningnews.co.uk
 0.0.0.0 marca.com
 0.0.0.0 mediamatters.org
@@ -455,6 +455,7 @@
 0.0.0.0 www.futhead.com
 0.0.0.0 www.gab.com
 0.0.0.0 www.goal.com
+0.0.0.0 www.haaretz.com
 0.0.0.0 www.hacker-news.news
 0.0.0.0 www.hitc.com
 0.0.0.0 www.huffpost.com
@@ -659,12 +660,8 @@
 0.0.0.0 www.wwd.com
 0.0.0.0 www.xscores.com
 0.0.0.0 www.yahoo.com
-0.0.0.0 www.youtube-nocookie.com
-0.0.0.0 www.youtube.com
 0.0.0.0 www.zdnet.com
 0.0.0.0 xscores.com
 0.0.0.0 yahoo.com
-0.0.0.0 youtube-nocookie.com
-0.0.0.0 youtube.com
 0.0.0.0 za.ign.com
 0.0.0.0 zdnet.com
