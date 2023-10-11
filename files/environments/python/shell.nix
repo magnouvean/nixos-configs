@@ -14,6 +14,8 @@ pkgs.mkShell {
     # Python libraries
     debugpy
     ipython
+    jax
+    jaxlib-bin
     jupyter
     keras
     matplotlib
