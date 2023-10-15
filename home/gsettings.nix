@@ -13,8 +13,9 @@
     "org/gnome/shell/extensions/pop-shell" = {
       activate-launcher = [ ];
       active-hint = true;
-      gap-inner = 4;
-      gap-outer = 4;
+      active-hint-border-radius = lib.hm.gvariant.mkUint32 12;
+      gap-inner = lib.hm.gvariant.mkUint32 4;
+      gap-outer = lib.hm.gvariant.mkUint32 4;
       hint-color-rgba = "rgba(120, 117, 122, 1)";
       pop-monitor-down = [ ];
       pop-monitor-left = [ ];
@@ -33,7 +34,6 @@
       toggle-stacking = [ ];
       toggle-stacking-global = [ ];
       toggle-tiling = [ ];
-      active-hint-border-radius = 10;
     };
     "org/gnome/desktop/input-sources" = {
       sources = [ (lib.hm.gvariant.mkTuple [ "xkb" "no" ]) ];
@@ -162,6 +162,9 @@
       toggle-tiled-left = [ ];
       toggle-tiled-right = [ ];
     };
-    "com/raggesilver/BlackBox" = { font = "FiraCode Nerd Font 11"; };
+    "com/raggesilver/BlackBox" = {
+      font = "FiraCode Nerd Font 11";
+      scrollback-lines = lib.hm.gvariant.mkUint32 10000;
+    };
   };
 }
