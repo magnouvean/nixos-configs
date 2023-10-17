@@ -14,7 +14,9 @@ pkgs.mkShell {
     # R libraries
     IRkernel
     MASS
+    VGAM
     languageserver
+    nnet
     styler
     testthat
     tidyverse
