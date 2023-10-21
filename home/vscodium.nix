@@ -1,5 +1,4 @@
-{ pkgs, ... }:
-{
+{ pkgs, ... }: {
   programs.vscode = {
     enable = true;
     package = pkgs.vscodium;
@@ -9,6 +8,7 @@
       brettm12345.nixfmt-vscode
       james-yu.latex-workshop
       mkhl.direnv
+      ms-pyright.pyright
       ms-python.python
       ms-toolsai.jupyter
       njpwerner.autodocstring
@@ -37,6 +37,8 @@
     ]);
   };
 
-  home.file.".config/VSCodium/User/settings.json".source = ../files/vscodium/settings.json;
-  home.file.".config/VSCodium/User/keybindings.json".source = ../files/vscodium/keybindings.json;
+  home.file.".config/VSCodium/User/settings.json".source =
+    ../files/vscodium/settings.json;
+  home.file.".config/VSCodium/User/keybindings.json".source =
+    ../files/vscodium/keybindings.json;
 }

@@ -5,6 +5,7 @@ pkgs.mkShell {
     black
     isort
     mypy
+    pyright
     python3
 
     # Latex
