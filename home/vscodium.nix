@@ -9,6 +9,7 @@
       james-yu.latex-workshop
       mkhl.direnv
       ms-pyright.pyright
+      ms-python.isort
       ms-python.python
       ms-toolsai.jupyter
       njpwerner.autodocstring
