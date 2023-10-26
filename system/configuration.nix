@@ -79,6 +79,7 @@ in {
     curl
     distrobox
     eza
+    gh
     git
     htop
     lm_sensors
