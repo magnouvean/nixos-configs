@@ -1,4 +1,4 @@
-{ pkgs, lib, ... }: {
+{ config, pkgs, lib, ... }: {
   dconf.settings = {
     "org/gnome/shell" = {
       favorite-apps = [
@@ -6,9 +6,20 @@
         "com.raggesilver.BlackBox.desktop"
         "org.gnome.Nautilus.desktop"
       ];
-      enabled-extensions =
-        [ "pop-shell@system76.com" "appindicatorsupport@rgcjonas.gmail.com" ];
+      enabled-extensions = [
+        "appindicatorsupport@rgcjonas.gmail.com"
+        "azwallpaper@azwallpaper.gitlab.com"
+        "pop-shell@system76.com"
+      ];
       disable-user-extensions = false;
+    };
+    "org/gnome/shell/extensions/azwallpaper" = {
+      bing-download-directory =
+        "${config.home.homeDirectory}/Pictures/Bing Wallpapers";
+      slideshow-directory =
+        "${config.home.homeDirectory}/Pictures/Bing Wallpapers";
+      slideshow-image-duration = 600;
+      bing-wallpaper-download = true;
     };
     "org/gnome/shell/extensions/pop-shell" = {
       activate-launcher = [ ];
@@ -140,13 +151,6 @@
       switch-to-workspace-7 = [ "<Super>7" ];
       switch-to-workspace-8 = [ "<Super>8" ];
       toggle-maximized = [ "<Super>f" ];
-    };
-    "org/gnome/desktop/background" = {
-      picture-options = "zoom";
-      picture-uri =
-        "file://${pkgs.gnome.gnome-backgrounds}/share/backgrounds/gnome/pills-l.webp";
-      picture-uri-dark =
-        "file://${pkgs.gnome.gnome-backgrounds}/share/backgrounds/gnome/pills-d.webp";
     };
     "org/gnome/desktop/interface" = {
       color-scheme = "prefer-dark";

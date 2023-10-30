@@ -5,7 +5,11 @@
     ".config/godot/editor_settings-4.tres".source =
       ../files/godot/editor_settings-4.tres;
 
+    "Ebooks/.stignore".source = ../files/syncthing/stignore;
+    "Music/.stignore".source = ../files/syncthing/stignore;
+    "Pictures/.stignore".source = ../files/syncthing/stignore;
     "Sync/.stignore".source = ../files/syncthing/stignore;
+    "Videos/.stignore".source = ../files/syncthing/stignore;
 
     "Code/R/shell.nix".source = ../files/environments/R/shell.nix;
     "Code/c/shell.nix".source = ../files/environments/c/shell.nix;
