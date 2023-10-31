@@ -70,6 +70,7 @@ in {
     g4music
     gimp
     godot_4
+    libreoffice
     rnote
     zathura
 

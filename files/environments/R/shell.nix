@@ -16,6 +16,7 @@ pkgs.mkShell {
     MASS
     VGAM
     languageserver
+    nlme
     nnet
     styler
     testthat

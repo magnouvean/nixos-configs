@@ -16,7 +16,7 @@ pkgs.mkShell {
     debugpy
     ipython
     jax
-    jaxlib-bin
+    jaxlib
     jupyter
     keras
     matplotlib
@@ -33,6 +33,6 @@ pkgs.mkShell {
     scikit-learn
     scipy
     sympy
-    # tensorflow
+    tensorflow
   ]);
 }
