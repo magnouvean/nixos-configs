@@ -7,7 +7,8 @@
       comment-nvim
       diffview-nvim
       direnv-vim
-      dracula-nvim
+      iron-nvim
+      kanagawa-nvim
       lualine-nvim
       luasnip
       nvim-autopairs

@@ -25,17 +25,25 @@ vim.opt.foldenable = false
 -- Comment
 require('Comment').setup {}
 
+-- Theme
+require('kanagawa').setup({
+	undercurl = true,
+	commentStyle = { italic = true },
+	keywordStyle = { italic = true },
+	statementStyle = { bold = true },
+	transparent = true,
+	dimInactive = false,
+	terminalColors = true,
+	theme = "wave",
+})
+vim.cmd('colorscheme kanagawa')
+
 -- Lualine
 require('lualine').setup {
 	options = {
 		icons_enabled = true,
-		theme = 'dracula-nvim',
 	}
 }
-
--- Theme
-require('dracula').setup { transparent_bg = (not vim.g.neovide) }
-vim.cmd [[colorscheme dracula-soft]]
 
 -- Setup language servers.
 local lspconfig = require('lspconfig')
@@ -69,16 +77,50 @@ end
 
 vim.cmd [[autocmd BufWritePre * lua vim.lsp.buf.format()]]
 
--- R
-vim.api.nvim_create_autocmd('filetype R', {
-	callback = function(ev)
-		local opts = { buffer = ev.buf }
-		vim.keymap.set('n', '<C-Enter>', "<Plug>RDSendLine", opts)
-		vim.keymap.set('n', '<C-c><C-c>', "<Plug>RDSendLine", opts)
-		vim.keymap.set('v', '<C-Enter>', "<Plug>REDSendSelection", opts)
-		vim.keymap.set('v', '<C-c><C-c>', "<Plug>REDSendSelection", opts)
-	end
-})
+-- Iron.nvim repls
+local iron = require("iron.core")
+iron.setup {
+	config = {
+		scratch_repl = true,
+		repl_definition = {
+			sh = {
+				command = { "zsh" }
+			},
+			python = {
+				command = { "python" }
+			},
+			R = {
+				command = { "R" }
+			}
+		},
+		repl_open_cmd = require('iron.view').split('30%'),
+	},
+	keymaps = {
+		send_motion = "<leader>sc",
+		visual_send = "<leader>sc",
+		send_file = "<leader>sf",
+		send_line = "<leader>sl",
+		send_until_cursor = "<leader>su",
+		send_mark = "<leader>sm",
+		mark_motion = "<leader>mc",
+		mark_visual = "<leader>mc",
+		remove_mark = "<leader>md",
+		cr = "<leader>s<cr>",
+		interrupt = "<leader>s<space>",
+		exit = "<leader>sq",
+		clear = "<leader>cl",
+	},
+	highlight = {
+		italic = true
+	},
+	ignore_blank_lines = true,
+}
+vim.keymap.set('n', '<leader>rs', '<cmd>IronRepl<cr>')
+vim.keymap.set('n', '<leader>rr', '<cmd>IronRestart<cr>')
+vim.keymap.set('n', '<leader>rf', '<cmd>IronFocus<cr>')
+vim.keymap.set('n', '<leader>rh', '<cmd>IronHide<cr>')
+vim.keymap.set('n', '<C-c><C-c>', iron.send_line)
+vim.keymap.set('v', '<C-c><C-c>', iron.send_mark)
 
 -- Snippets
 local luasnip = require('luasnip')
