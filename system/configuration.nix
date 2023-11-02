@@ -2,7 +2,8 @@
 let
   home-manager = builtins.fetchTarball
     "https://github.com/nix-community/home-manager/archive/master.tar.gz";
-in {
+in
+{
   imports = [ ./gnome.nix (import "${home-manager}/nixos") ];
 
   # Bootloader
@@ -64,12 +65,12 @@ in {
   # Packages
   environment.systemPackages = with pkgs; [
     # GUI programs
-    blackbox-terminal
     ferdium
     firefox
     g4music
     gimp
     godot_4
+    kitty
     libreoffice
     rnote
     zathura

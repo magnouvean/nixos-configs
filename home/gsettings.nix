@@ -3,7 +3,7 @@
     "org/gnome/shell" = {
       favorite-apps = [
         "firefox.desktop"
-        "com.raggesilver.BlackBox.desktop"
+        "kitty.desktop"
         "org.gnome.Nautilus.desktop"
       ];
       enabled-extensions = [
@@ -73,7 +73,7 @@
     "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0" =
       {
         binding = "<Super><Alt>Return";
-        command = "gtk-launch com.raggesilver.BlackBox.desktop";
+        command = "kitty";
         name = "Launch terminal";
       };
     "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1" =
@@ -165,10 +165,6 @@
       switch-monitor = [ ];
       toggle-tiled-left = [ ];
       toggle-tiled-right = [ ];
-    };
-    "com/raggesilver/BlackBox" = {
-      font = "FiraCode Nerd Font 11";
-      scrollback-lines = lib.hm.gvariant.mkUint32 10000;
     };
   };
 }
