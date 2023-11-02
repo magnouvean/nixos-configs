@@ -32,6 +32,7 @@ pkgs.mkShell {
     pytorch
     scikit-learn
     scipy
+    seaborn
     sympy
     tensorflow
   ]);
