@@ -9,6 +9,5 @@
   environment.systemPackages = with pkgs.gnomeExtensions; [
     appindicator
     pop-shell
-    wallpaper-slideshow
   ];
 }
