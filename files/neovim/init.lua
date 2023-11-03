@@ -86,14 +86,8 @@ iron.setup {
 			sh = {
 				command = { "zsh" }
 			},
-			python = {
-				command = { "python" }
-			},
-			R = {
-				command = { "R" }
-			}
 		},
-		repl_open_cmd = require('iron.view').split('30%'),
+		repl_open_cmd = require('iron.view').split.rightbelow('30%'),
 	},
 	keymaps = {
 		send_motion = "<leader>sc",
