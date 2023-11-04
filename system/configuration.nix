@@ -81,7 +81,6 @@ in {
     distrobox
     eza
     gh
-    git
     htop
     lm_sensors
     mpc_cli

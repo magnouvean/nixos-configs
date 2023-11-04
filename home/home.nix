@@ -1,6 +1,7 @@
 { config, pkgs, ... }: {
   imports = [
     ./dotfiles.nix
+    ./git.nix
     ./gsettings.nix
     ./mimeapps.nix
     ./neovim.nix
