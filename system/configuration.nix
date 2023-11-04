@@ -2,8 +2,7 @@
 let
   home-manager = builtins.fetchTarball
     "https://github.com/nix-community/home-manager/archive/master.tar.gz";
-in
-{
+in {
   imports = [ ./gnome.nix (import "${home-manager}/nixos") ];
 
   # Bootloader
@@ -16,13 +15,6 @@ in
   networking = {
     networkmanager.enable = true;
     extraHosts = builtins.readFile ../files/hosts;
-  };
-
-  # Git
-  programs.git = {
-    enable = true;
-    package = pkgs.gitFull;
-    config.credential.helper = "libsecret";
   };
 
   # Time/Locale
@@ -89,6 +81,7 @@ in
     distrobox
     eza
     gh
+    git
     htop
     lm_sensors
     mpc_cli

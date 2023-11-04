@@ -1,6 +1,10 @@
 { pkgs, ... }: {
   home.file = {
-    ".config/git/config".source = ../files/git/config;
+    ".config/git/config".text = ''
+      ${builtins.readFile ../files/git/config}
+      [credential]
+      helper=${pkgs.git-credential-manager}/lib/git-credential-manager/git-credential-manager
+      	'';
     ".config/kitty/kitty.conf".source = ../files/kitty/kitty.conf;
     ".config/zathura/zathurarc".source = ../files/zathura/zathurarc;
     ".config/godot/editor_settings-4.tres".source =

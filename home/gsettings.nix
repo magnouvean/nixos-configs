@@ -1,11 +1,8 @@
 { config, pkgs, lib, ... }: {
   dconf.settings = {
     "org/gnome/shell" = {
-      favorite-apps = [
-        "firefox.desktop"
-        "kitty.desktop"
-        "org.gnome.Nautilus.desktop"
-      ];
+      favorite-apps =
+        [ "firefox.desktop" "kitty.desktop" "org.gnome.Nautilus.desktop" ];
       enabled-extensions = [
         "appindicatorsupport@rgcjonas.gmail.com"
         "azwallpaper@azwallpaper.gitlab.com"
@@ -157,8 +154,10 @@
       gtk-theme = "Adwaita-dark";
     };
     "org/gnome/desktop/background" = {
-      picture-uri = "file://${pkgs.gnome.gnome-backgrounds}/share/backgrounds/gnome/drool-l.svg";
-      picture-uri-dark = "file://${pkgs.gnome.gnome-backgrounds}/share/backgrounds/gnome/drool-d.svg";
+      picture-uri =
+        "file://${pkgs.gnome.gnome-backgrounds}/share/backgrounds/gnome/drool-l.svg";
+      picture-uri-dark =
+        "file://${pkgs.gnome.gnome-backgrounds}/share/backgrounds/gnome/drool-d.svg";
     };
     "org/gnome/desktop/wm/preferences" = { button-layout = ":minimize,close"; };
     "org/gnome/mutter" = {

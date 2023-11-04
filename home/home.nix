@@ -1,6 +1,11 @@
 { config, pkgs, ... }: {
-  imports =
-    [ ./dotfiles.nix ./gsettings.nix ./mimeapps.nix ./neovim.nix ./vscodium.nix ];
+  imports = [
+    ./dotfiles.nix
+    ./gsettings.nix
+    ./mimeapps.nix
+    ./neovim.nix
+    ./vscodium.nix
+  ];
 
   # Fonts
   fonts.fontconfig.enable = true;

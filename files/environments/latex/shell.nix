@@ -4,5 +4,4 @@ let
     inherit (pkgs.texlive)
       scheme-medium dvisvgm dvipng wrapfig amsmath ulem hyperref capt-of;
   });
-in
-with pkgs; mkShell { nativeBuildInputs = [ pandoc tex texlab ]; }
+in with pkgs; mkShell { nativeBuildInputs = [ pandoc tex texlab ]; }

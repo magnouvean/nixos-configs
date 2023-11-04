@@ -1,4 +1,2 @@
 { pkgs ? import <nixpkgs> { } }:
-pkgs.mkShell {
-  nativeBuildInputs = with pkgs; [ guile racket ];
-}
+pkgs.mkShell { nativeBuildInputs = with pkgs; [ guile racket ]; }

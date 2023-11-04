@@ -9,8 +9,7 @@ let
     "x-scheme-handler/http" = [ "firefox.desktop" ];
     "x-scheme-handler/https" = [ "firefox.desktop" ];
   };
-in
-{
+in {
   xdg.mimeApps = {
     enable = true;
     associations.added = mimeDefaults;
