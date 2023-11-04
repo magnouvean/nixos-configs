@@ -83,6 +83,9 @@ iron.setup {
 	config = {
 		scratch_repl = true,
 		repl_definition = {
+			rmd = {
+				command = { "R" }
+			},
 			sh = {
 				command = { "zsh" }
 			},
@@ -174,7 +177,6 @@ local function my_on_attach(bufnr)
 		opts('CD to ~/'))
 	vim.keymap.set('n', 'gu', function() api.tree.change_root('../') end,
 		opts('CD to ../'))
-	vim.keymap.set('n', 'gw', require('telescope').extensions.project.project, opts('Change workspace'))
 	vim.keymap.set('n', '<M-e>', api.tree.close, opts('Close'))
 end
 require('nvim-tree').setup {
@@ -209,6 +211,8 @@ require('toggleterm').setup {}
 
 -- Bindings for launching various things
 vim.keymap.set('n', '<M-e>', ':NvimTreeFocus<CR>')
-vim.keymap.set('n', '<M-g>', ':Git<CR>')
 vim.keymap.set('n', '<M-f>', ':Telescope live_grep<CR>')
+vim.keymap.set('n', '<M-g>', ':Git<CR>')
+vim.keymap.set('n', '<M-o>', ':Telescope find_files<CR>')
+vim.keymap.set('n', '<M-p>', require('telescope').extensions.project.project)
 vim.keymap.set('n', '<M-t>', ':ToggleTerm<CR>')

@@ -18,6 +18,13 @@ in
     extraHosts = builtins.readFile ../files/hosts;
   };
 
+  # Git
+  programs.git = {
+    enable = true;
+    package = pkgs.gitFull;
+    config.credential.helper = "libsecret";
+  };
+
   # Time/Locale
   time.timeZone = "Europe/Oslo";
   i18n.defaultLocale = "en_US.UTF-8";
@@ -82,7 +89,6 @@ in
     distrobox
     eza
     gh
-    git
     htop
     lm_sensors
     mpc_cli
