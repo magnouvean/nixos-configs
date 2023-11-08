@@ -51,6 +51,7 @@ local lspconfig = require('lspconfig')
 vim.api.nvim_create_autocmd('LspAttach', {
 	group = vim.api.nvim_create_augroup('UserLspConfig', {}),
 	callback = function(ev)
+		vim.bo[ev.buf].formatexpr = nil 
 		vim.bo[ev.buf].omnifunc = 'v:lua.vim.lsp.omnifunc'
 
 		local opts = { buffer = ev.buf }
@@ -117,7 +118,7 @@ vim.keymap.set('n', '<leader>rr', '<cmd>IronRestart<cr>')
 vim.keymap.set('n', '<leader>rf', '<cmd>IronFocus<cr>')
 vim.keymap.set('n', '<leader>rh', '<cmd>IronHide<cr>')
 vim.keymap.set('n', '<C-c><C-c>', iron.send_line)
-vim.keymap.set('v', '<C-c><C-c>', iron.send_mark)
+vim.keymap.set('v', '<C-c><C-c>', iron.visual_send)
 
 -- Snippets
 local luasnip = require('luasnip')

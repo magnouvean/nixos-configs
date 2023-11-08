@@ -13,7 +13,7 @@ alias gpl="git pull"
 alias grm="git rm"
 alias gst="git status"
 alias ls="exa -a"
-alias update="just -f /usr/share/ublue-os/just/custom.just update"
+[ "$TERM" = "xterm-kitty" ] && alias ssh="kitty +kitten ssh"
 
 # Prompt
 autoload -Uz vcs_info
