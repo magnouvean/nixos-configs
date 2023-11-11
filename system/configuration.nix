@@ -1,9 +1,6 @@
 { config, lib, pkgs, ... }:
-let
-  home-manager = builtins.fetchTarball
-    "https://github.com/nix-community/home-manager/archive/master.tar.gz";
-in {
-  imports = [ ./gnome.nix (import "${home-manager}/nixos") ];
+{
+  imports = [ ./kde.nix ];
 
   # Bootloader
   boot.loader.grub = { enable = true; };
@@ -34,8 +31,6 @@ in {
     extraGroups = [ "wheel" "storage" "networkmanager" ];
     shell = pkgs.zsh;
   };
-  # And home-manager
-  home-manager.users.magnus = (import ../home/home.nix);
 
   # Shell
   programs.zsh.enable = true;
@@ -104,6 +99,8 @@ in {
   virtualisation = { podman = { enable = true; }; };
 
   # Misc
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
   nixpkgs.config.allowUnfree = true;
   system.stateVersion = "23.05";
 }
+

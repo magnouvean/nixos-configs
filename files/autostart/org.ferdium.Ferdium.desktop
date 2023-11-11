@@ -1,6 +1,0 @@
-[Desktop Entry]
-Name=Ferdium
-Exec=flatpak run org.ferdium.Ferdium
-Terminal=false
-Type=Application
-Icon=org.ferdium.Ferdium
