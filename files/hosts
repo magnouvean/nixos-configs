@@ -40,6 +40,7 @@
 0.0.0.0 cbssports.com
 0.0.0.0 channel4.com
 0.0.0.0 chroniclelive.co.uk
+0.0.0.0 cnbc.com
 0.0.0.0 cnet.com
 0.0.0.0 cozy.tv
 0.0.0.0 dagbladet.no
@@ -58,6 +59,7 @@
 0.0.0.0 dlive.tv
 0.0.0.0 dn.no
 0.0.0.0 docs.invidious.io
+0.0.0.0 dw.com
 0.0.0.0 edition.cnn.com
 0.0.0.0 espn.co.uk
 0.0.0.0 espn.com
@@ -206,6 +208,7 @@
 0.0.0.0 lulz.com
 0.0.0.0 m.jpost.com
 0.0.0.0 m.reddit.com
+0.0.0.0 m.youtube.com
 0.0.0.0 manchestereveningnews.co.uk
 0.0.0.0 marca.com
 0.0.0.0 mediamatters.org
@@ -318,6 +321,7 @@
 0.0.0.0 sofascore.com
 0.0.0.0 sopuli.xyz
 0.0.0.0 soyjak.party
+0.0.0.0 spiegel.de
 0.0.0.0 sportbible.com
 0.0.0.0 sportinglife.com
 0.0.0.0 sportjoe.ie
@@ -349,6 +353,7 @@
 0.0.0.0 thesun.ie
 0.0.0.0 thetopflight.com
 0.0.0.0 theverge.com
+0.0.0.0 threadreaderapp.com
 0.0.0.0 tiktok.com
 0.0.0.0 tmz.com
 0.0.0.0 transfermarkt.us
@@ -412,6 +417,7 @@
 0.0.0.0 www.cbssports.com
 0.0.0.0 www.channel4.com
 0.0.0.0 www.chroniclelive.co.uk
+0.0.0.0 www.cnbc.com
 0.0.0.0 www.cnet.com
 0.0.0.0 www.cozy.tv
 0.0.0.0 www.dagbladet.no
@@ -429,6 +435,7 @@
 0.0.0.0 www.dirt.com
 0.0.0.0 www.dlive.tv
 0.0.0.0 www.dn.no
+0.0.0.0 www.dw.com
 0.0.0.0 www.espn.co.uk
 0.0.0.0 www.espn.com
 0.0.0.0 www.euronews.com
@@ -611,6 +618,7 @@
 0.0.0.0 www.sofascore.com
 0.0.0.0 www.sopuli.xyz
 0.0.0.0 www.soyjak.party
+0.0.0.0 www.spiegel.de
 0.0.0.0 www.sportbible.com
 0.0.0.0 www.sportinglife.com
 0.0.0.0 www.sportjoe.ie
@@ -638,6 +646,7 @@
 0.0.0.0 www.thesun.ie
 0.0.0.0 www.thetopflight.com
 0.0.0.0 www.theverge.com
+0.0.0.0 www.threadreaderapp.com
 0.0.0.0 www.tiktok.com
 0.0.0.0 www.tmz.com
 0.0.0.0 www.transfermarkt.us
@@ -666,8 +675,12 @@
 0.0.0.0 www.wwd.com
 0.0.0.0 www.xscores.com
 0.0.0.0 www.yahoo.com
+0.0.0.0 www.youtube-nocookie.com
+0.0.0.0 www.youtube.com
 0.0.0.0 www.zdnet.com
 0.0.0.0 xscores.com
 0.0.0.0 yahoo.com
+0.0.0.0 youtube-nocookie.com
+0.0.0.0 youtube.com
 0.0.0.0 za.ign.com
 0.0.0.0 zdnet.com

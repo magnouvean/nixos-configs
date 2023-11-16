@@ -24,6 +24,11 @@
 
   # Sound
   sound.enable = true;
+  services.pipewire = {
+    enable = true;
+    alsa.enable = true;
+    pulse.enable = true;
+  };
 
   # Users
   users.users.magnus = {
@@ -37,9 +42,6 @@
 
   # Bluetooth
   hardware.bluetooth.enable = true;
-
-  # Better tablet support
-  hardware.opentabletdriver.enable = true;
 
   # Fonts
   fonts = {
@@ -61,13 +63,11 @@
     # GUI programs
     ferdium
     firefox
-    g4music
-    gimp
     godot_4
     kitty
-    libreoffice
+    krita
+    libreoffice-qt
     rnote
-    zathura
 
     # CLI tools
     android-tools
@@ -90,9 +90,6 @@
     # Other
     xdg-user-dirs
     xdg-utils
-
-    # Games
-    osu-lazer-bin
   ];
 
   # Podman
