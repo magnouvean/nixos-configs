@@ -2,8 +2,14 @@
 {
   programs.plasma = {
     enable = true;
+    workspace = {
+      clickItemTo = "select";
+      theme = "breeze-dark";
+      colorscheme = "BreezeDark";
+    };
     shortcuts = {
       "ferdium.desktop"."_launch" = "Meta+Alt+C";
+      "@joplinapp-desktop.desktop"."_launch" = "Meta+Alt+N";
       "ksmserver"."Log Out" = "Meta+Shift+E";
       "kwin"."Switch Window Down" = "Meta+J";
       "kwin"."Switch Window Left" = "Meta+H";
@@ -67,6 +73,7 @@
       "kglobalshortcutsrc"."ActivityManager"."_k_friendly_name" = "Activity Manager";
       "kglobalshortcutsrc"."KDE Keyboard Layout Switcher"."_k_friendly_name" = "Keyboard Layout Switcher";
       "kglobalshortcutsrc"."ferdium.desktop"."_k_friendly_name" = "Ferdium";
+      "kglobalshortcutsrc"."@joplinapp-desktop.desktop"."_k_friendly_name" = "Joplin";
       "kglobalshortcutsrc"."kaccess"."_k_friendly_name" = "Accessibility";
       "kglobalshortcutsrc"."kcm_touchpad"."_k_friendly_name" = "Touchpad";
       "kglobalshortcutsrc"."kded5"."_k_friendly_name" = "KDE Daemon";

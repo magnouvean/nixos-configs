@@ -64,10 +64,10 @@
     ferdium
     firefox
     godot_4
+    joplin-desktop
     kitty
     krita
     libreoffice-qt
-    rnote
 
     # CLI tools
     android-tools

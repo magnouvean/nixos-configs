@@ -11,6 +11,7 @@
       kanagawa-nvim
       lualine-nvim
       luasnip
+      markdown-preview-nvim
       nvim-autopairs
       nvim-cmp
       nvim-lspconfig

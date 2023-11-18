@@ -1,0 +1,9 @@
+[Desktop Entry]
+Comment=Desktop app bringing all your messaging services into one installable
+Exec=bash -c "[ -f ~/.config/autostart/.ferdium-wrapped.desktop ] && ferdium"
+Icon=ferdium
+MimeType=x-scheme-handler/ferdium;
+Name=Ferdium
+StartupWMClass=Ferdium
+Terminal=false
+Type=Application

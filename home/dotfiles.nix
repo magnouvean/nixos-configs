@@ -1,5 +1,6 @@
 { pkgs, ... }: {
   home.file = {
+    ".config/autostart/ferdium.desktop".source = ../files/autostart/ferdium.desktop;
     ".config/kitty/kitty.conf".source = ../files/kitty/kitty.conf;
     ".config/zathura/zathurarc".source = ../files/zathura/zathurarc;
     ".config/godot/editor_settings-4.tres".source =
