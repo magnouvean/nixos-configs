@@ -1,5 +1,6 @@
 { pkgs, ... }: {
   home.file = {
+    ".config/joplin-desktop/settings.json".source = ../files/joplin/settings.json;
     ".config/autostart/ferdium.desktop".source = ../files/autostart/ferdium.desktop;
     ".config/kitty/kitty.conf".source = ../files/kitty/kitty.conf;
     ".config/zathura/zathurarc".source = ../files/zathura/zathurarc;
@@ -7,6 +8,7 @@
       ../files/godot/editor_settings-4.tres;
 
     "Ebooks/.stignore".source = ../files/syncthing/stignore;
+    "Joplin/.stignore".source = ../files/syncthing/stignore;
     "Music/.stignore".source = ../files/syncthing/stignore;
     "Pictures/.stignore".source = ../files/syncthing/stignore;
     "Sync/.stignore".source = ../files/syncthing/stignore;
