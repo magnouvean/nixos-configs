@@ -15,6 +15,5 @@
   programs.kdeconnect.enable = true;
   environment.systemPackages = with pkgs; [
     plasma-pass
-    latte-dock
   ];
 }

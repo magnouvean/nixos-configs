@@ -28,4 +28,5 @@
     ];
     extraLuaConfig = (builtins.readFile ../files/neovim/init.lua);
   };
+  home.packages = with pkgs; [ neovide ];
 }

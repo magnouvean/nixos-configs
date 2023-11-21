@@ -31,7 +31,7 @@ require('kanagawa').setup({
 	commentStyle = { italic = true },
 	keywordStyle = { italic = true },
 	statementStyle = { bold = true },
-	transparent = true,
+	transparent = not vim.g.neovide,
 	dimInactive = false,
 	terminalColors = true,
 	theme = "wave",
@@ -196,9 +196,6 @@ require('nvim-autopairs').setup {}
 
 -- GUI settings
 vim.o.guifont = 'FiraCode Nerd Font:h11'
-
--- Neovide settings
-if vim.g.neovide then vim.g.neovide_transparency = 0.80 end
 
 -- Terminal support
 function _G.set_terminal_keymaps()
