@@ -57,10 +57,6 @@
       "kwin"."Switch One Desktop Up" = "Meta+Ctrl+Up";
       "kwin"."Switch One Desktop to the Left" = "Meta+Ctrl+Left";
       "kwin"."Switch One Desktop to the Right" = "Meta+Ctrl+Right";
-      "kwin"."Switch Window Down" = "Meta+J";
-      "kwin"."Switch Window Left" = "Meta+H";
-      "kwin"."Switch Window Right" = "Meta+L";
-      "kwin"."Switch Window Up" = "Meta+K";
       "kwin"."Switch to Desktop 1" = "Meta+1";
       "kwin"."Switch to Desktop 10" = [ ];
       "kwin"."Switch to Desktop 11" = [ ];
@@ -135,10 +131,6 @@
       "kwin"."Window One Screen to the Left" = [ ];
       "kwin"."Window One Screen to the Right" = [ ];
       "kwin"."Window Operations Menu" = "Alt+F3";
-      "kwin"."Window Pack Down" = "Meta+Shift+J";
-      "kwin"."Window Pack Left" = "Meta+Shift+H";
-      "kwin"."Window Pack Right" = "Meta+Shift+L";
-      "kwin"."Window Pack Up" = "Meta+Shift+K";
       "kwin"."Window Quick Tile Bottom Left" = [ ];
       "kwin"."Window Quick Tile Bottom Right" = [ ];
       "kwin"."Window Quick Tile Bottom" = "Meta+Down";
@@ -173,9 +165,7 @@
       "kwin"."Window to Desktop 8" = "Meta+(";
       "kwin"."Window to Desktop 9" = [ ];
       "kwin"."Window to Next Desktop" = [ ];
-      "kwin"."Window to Next Screen" = "Alt+Shift+L";
       "kwin"."Window to Previous Desktop" = [ ];
-      "kwin"."Window to Previous Screen" = "Alt+Shift+H";
       "kwin"."Window to Screen 0" = [ ];
       "kwin"."Window to Screen 1" = [ ];
       "kwin"."Window to Screen 2" = [ ];

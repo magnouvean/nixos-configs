@@ -30,6 +30,9 @@
     pulse.enable = true;
   };
 
+  # Wacom tablet support
+  hardware.opentabletdriver.enable = true;
+
   # Users
   users.users.magnus = {
     isNormalUser = true;

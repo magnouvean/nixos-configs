@@ -2,6 +2,7 @@
 {
   services.xserver = {
     enable = true;
+    displayManager.defaultSession = "plasmawayland";
     displayManager.sddm = {
       theme = "breeze";
       enable = true;

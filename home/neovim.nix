@@ -21,7 +21,6 @@
       playground
       telescope-nvim
       telescope-project-nvim
-      toggleterm-nvim
       vim-fugitive
       vimtex
       which-key-nvim

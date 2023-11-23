@@ -68,6 +68,15 @@ vim.api.nvim_create_autocmd('LspAttach', {
 	end
 })
 
+vim.api.nvim_create_autocmd('FileType', {
+    pattern = 'markdown',
+    callback = function ()
+        vim.keymap.set('n', '<leader>mpp', ':MarkdownPreview<CR>', { silent = true, buffer = true })
+        vim.keymap.set('n', '<leader>mps', ':MarkdownPreviewStop<CR>', { silent = true, buffer = true })
+        vim.keymap.set('n', '<leader>mpt', ':MarkdownPreviewToggle<CR>', { silent = true, buffer = true })
+    end
+})
+
 local servers = {
 	'gdscript', 'rust_analyzer', 'pylsp', 'rnix', 'texlab', 'r_language_server', 'lua_ls'
 }
@@ -197,20 +206,10 @@ require('nvim-autopairs').setup {}
 -- GUI settings
 vim.o.guifont = 'FiraCode Nerd Font:h11'
 
--- Terminal support
-function _G.set_terminal_keymaps()
-	local opts = { buffer = 0 }
-	vim.keymap.set('t', '<C-w>', [[<C-\><C-n><C-w>]], opts)
-	vim.keymap.set('t', '<M-t>', [[<Cmd>ToggleTerm<CR>]], opts)
-end
-
-vim.cmd('autocmd! TermOpen term://* lua set_terminal_keymaps()')
-require('toggleterm').setup {}
-
 -- Bindings for launching various things
 vim.keymap.set('n', '<M-e>', ':NvimTreeFocus<CR>')
 vim.keymap.set('n', '<M-f>', ':Telescope live_grep<CR>')
 vim.keymap.set('n', '<M-g>', ':Git<CR>')
 vim.keymap.set('n', '<M-o>', ':Telescope find_files<CR>')
 vim.keymap.set('n', '<M-p>', require('telescope').extensions.project.project)
-vim.keymap.set('n', '<M-t>', ':ToggleTerm<CR>')
+vim.keymap.set('n', '<M-t>', ':IronFocus zsh<CR>')
