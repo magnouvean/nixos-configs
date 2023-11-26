@@ -31,13 +31,14 @@
 		],
 		"visible": true
 	},
-	"editor.codeView": false,
+	"editor.codeView": true,
 	"theme": 2,
-	"plugin-io.github.personalizedrefrigerator.js-draw.disable-editor-fills-window": false,
-	"plugin-io.github.personalizedrefrigerator.js-draw.autosave-interval-minutes": 0,
-	"plugin-io.github.personalizedrefrigerator.js-draw.keyboard-shortcuts": {},
 	"sync.target": 2,
 	"sync.2.path": "/home/magnus/Joplin",
 	"editor.spellcheckBeta": true,
-	"themeAutoDetect": true
+	"themeAutoDetect": true,
+	"plugin-io.github.personalizedrefrigerator.js-draw.disable-editor-fills-window": false,
+	"plugin-io.github.personalizedrefrigerator.js-draw.autosave-interval-minutes": 0,
+	"plugin-io.github.personalizedrefrigerator.js-draw.keyboard-shortcuts": {},
+	"editor.keyboardMode": "vim"
 }

@@ -35,5 +35,6 @@ pkgs.mkShell {
     seaborn
     sympy
     tensorflow
+    xgboost
   ]);
 }
