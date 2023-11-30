@@ -10,6 +10,7 @@ pkgs.mkShell {
 
     # Latex
     pandoc
+    texlab
     texlive.combined.scheme-full
   ]) ++ (with pkgs.python3Packages; [
     # Python libraries

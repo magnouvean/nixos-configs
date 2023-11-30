@@ -9,6 +9,7 @@ pkgs.mkShell {
 
     # Latex
     pandoc
+    texlab
     texlive.combined.scheme-full
   ];
 }

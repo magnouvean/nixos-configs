@@ -12,6 +12,7 @@
       lualine-nvim
       luasnip
       markdown-preview-nvim
+      # neoformat
       nvim-autopairs
       nvim-cmp
       nvim-lspconfig
