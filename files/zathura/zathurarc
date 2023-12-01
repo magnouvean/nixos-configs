@@ -1,8 +1,0 @@
-# Font
-set font "monospace normal 11"
-
-# Theme based on https://github.com/dracula/zathura/blob/master/zathurarc
-set window-title-basename "true"
-set selection-clipboard "clipboard"
-set adjust-open width
-# set recolor true

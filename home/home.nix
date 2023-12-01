@@ -5,7 +5,6 @@
     ./mimeapps.nix
     ./neovim.nix
     ./plasma.nix
-    ./vscodium.nix
   ];
 
   # Fonts
