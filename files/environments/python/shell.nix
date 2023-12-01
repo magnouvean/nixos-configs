@@ -15,6 +15,7 @@ pkgs.mkShell {
   ]) ++ (with pkgs.python3Packages; [
     # Python libraries
     debugpy
+    graphviz
     ipython
     jax
     jaxlib

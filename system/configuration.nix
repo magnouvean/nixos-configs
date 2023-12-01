@@ -14,6 +14,14 @@
     extraHosts = builtins.readFile ../files/hosts;
   };
 
+  # Printer support
+  services.printing.enable = true;
+  services.avahi = {
+    enable = true;
+    nssmdns = true;
+    openFirewall = true;
+  };
+
   # Time/Locale
   time.timeZone = "Europe/Oslo";
   i18n.defaultLocale = "en_US.UTF-8";
