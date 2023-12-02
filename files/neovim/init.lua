@@ -22,25 +22,71 @@ vim.opt.foldmethod = 'expr'
 vim.opt.foldexpr = 'nvim_treesitter#foldexpr()'
 vim.opt.foldenable = false
 
--- Comment
-require('Comment').setup {}
+-- Mini
+require('mini.basics').setup()
+require('mini.comment').setup()
+require('mini.completion').setup()
+require('mini.cursorword').setup()
+require('mini.fuzzy').setup()
+require('mini.pairs').setup()
+require('mini.tabline').setup()
+require('mini.trailspace').setup()
 
 -- Theme
-require('kanagawa').setup({
-	undercurl = true,
-	commentStyle = { italic = true },
-	keywordStyle = { italic = true },
-	statementStyle = { bold = true },
-	transparent = not vim.g.neovide,
-	dimInactive = false,
-	terminalColors = true,
-	theme = "wave",
+require("catppuccin").setup({
+    flavour = "latte",
+    background = {
+        light = "latte",
+        dark = "mocha",
+    },
+    transparent_background = false,
+    show_end_of_buffer = false,
+    term_colors = false,
+    dim_inactive = {
+        enabled = false,
+        shade = "dark",
+        percentage = 0.15,
+    },
+    no_italic = false,
+    no_bold = false,
+    no_underline = false,
+    styles = {
+        comments = { "italic" },
+        conditionals = { "italic" },
+        loops = {},
+        functions = {},
+        keywords = {},
+        strings = {},
+        variables = {},
+        numbers = {},
+        booleans = {},
+        properties = {},
+        types = {},
+        operators = {},
+    },
+    color_overrides = {},
+    custom_highlights = {},
+    integrations = {
+	ts_rainbow2 = true,
+	which_key = true,
+        cmp = true,
+        gitsigns = true,
+        notify = false,
+        nvimtree = true,
+        treesitter = true,
+        mini = {
+            enabled = true,
+            indentscope_color = "",
+        },
+	markdown = true,
+    },
 })
-vim.cmd('colorscheme kanagawa')
+vim.cmd.colorscheme "catppuccin"
 
 -- Lualine
 require('lualine').setup {
 	options = {
+		theme = "catppuccin",
 		icons_enabled = true,
 	}
 }
@@ -199,9 +245,6 @@ require('nvim-tree').setup {
 
 -- Telescope
 require('telescope').setup { extensions = { project = { sync_with_nvim_tree = true } } }
-
--- Autopairing
-require('nvim-autopairs').setup {}
 
 -- GUI settings
 vim.o.guifont = 'FiraCode Nerd Font:h11'

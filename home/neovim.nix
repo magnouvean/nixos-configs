@@ -2,22 +2,21 @@
   programs.neovim = {
     enable = true;
     plugins = with pkgs.vimPlugins; [
+      catppuccin-nvim
       cmp-nvim-lsp
       cmp_luasnip
-      comment-nvim
       diffview-nvim
       direnv-vim
       iron-nvim
-      kanagawa-nvim
       lualine-nvim
       luasnip
       markdown-preview-nvim
-      # neoformat
-      nvim-autopairs
+      mini-nvim
       nvim-cmp
       nvim-lspconfig
       nvim-tree-lua
       nvim-treesitter.withAllGrammars
+      nvim-ts-rainbow2
       nvim-web-devicons
       playground
       telescope-nvim

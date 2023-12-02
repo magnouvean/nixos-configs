@@ -4,8 +4,8 @@
     enable = true;
     workspace = {
       clickItemTo = "select";
-      theme = "breeze-dark";
-      colorscheme = "BreezeDark";
+      theme = "breeze";
+      colorscheme = "Breeze";
     };
     shortcuts = {
       "@joplinapp-desktop.desktop"."_launch" = "Meta+N";
