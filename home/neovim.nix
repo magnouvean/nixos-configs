@@ -2,9 +2,12 @@
   programs.neovim = {
     enable = true;
     plugins = with pkgs.vimPlugins; [
+      bufferline-nvim
       catppuccin-nvim
       cmp-nvim-lsp
+      cmp-nvim-lsp-signature-help
       cmp_luasnip
+      comment-nvim
       diffview-nvim
       direnv-vim
       iron-nvim
@@ -12,6 +15,7 @@
       luasnip
       markdown-preview-nvim
       mini-nvim
+      nvim-autopairs
       nvim-cmp
       nvim-lspconfig
       nvim-tree-lua

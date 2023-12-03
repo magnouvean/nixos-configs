@@ -22,15 +22,14 @@ vim.opt.foldmethod = 'expr'
 vim.opt.foldexpr = 'nvim_treesitter#foldexpr()'
 vim.opt.foldenable = false
 
--- Mini
-require('mini.basics').setup()
-require('mini.comment').setup()
-require('mini.completion').setup()
-require('mini.cursorword').setup()
-require('mini.fuzzy').setup()
-require('mini.pairs').setup()
-require('mini.tabline').setup()
-require('mini.trailspace').setup()
+-- Comments
+require('Comment').setup {}
+
+-- Bufferline
+require('bufferline').setup {}
+
+-- Autopairing
+require('nvim-autopairs').setup {}
 
 -- Theme
 require("catppuccin").setup({
@@ -74,10 +73,6 @@ require("catppuccin").setup({
         notify = false,
         nvimtree = true,
         treesitter = true,
-        mini = {
-            enabled = true,
-            indentscope_color = "",
-        },
 	markdown = true,
     },
 })
@@ -114,6 +109,18 @@ vim.api.nvim_create_autocmd('LspAttach', {
 	end
 })
 
+local servers = {
+	'gdscript', 'rust_analyzer', 'pylsp', 'rnix', 'texlab', 'r_language_server', 'lua_ls'
+}
+local capabilities = require('cmp_nvim_lsp').default_capabilities()
+capabilities.textDocument.completion.completionItem.snipperSupport = true
+for _, lsp in ipairs(servers) do
+	lspconfig[lsp].setup { capabilities = capabilities }
+end
+
+vim.cmd [[autocmd BufWritePre * lua vim.lsp.buf.format()]]
+
+-- Markdown preview bindings
 vim.api.nvim_create_autocmd('FileType', {
     pattern = 'markdown',
     callback = function ()
@@ -122,16 +129,6 @@ vim.api.nvim_create_autocmd('FileType', {
         vim.keymap.set('n', '<leader>mpt', ':MarkdownPreviewToggle<CR>', { silent = true, buffer = true })
     end
 })
-
-local servers = {
-	'gdscript', 'rust_analyzer', 'pylsp', 'rnix', 'texlab', 'r_language_server', 'lua_ls'
-}
-local capabilitites = require('cmp_nvim_lsp').default_capabilities()
-for _, lsp in ipairs(servers) do
-	lspconfig[lsp].setup { capabilties = capabilitites }
-end
-
-vim.cmd [[autocmd BufWritePre * lua vim.lsp.buf.format()]]
 
 -- Iron.nvim repls
 local iron = require("iron.core")
@@ -193,7 +190,7 @@ cmp.setup {
 	completion = {
 		completeopt = "menu,menuone,noinsert"
 	},
-	sources = { { name = 'nvim_lsp' }, { name = 'luasnip' } }
+	sources = { { name = 'nvim_lsp' }, { name = 'nvim_lsp_signature_help' }, { name = 'luasnip' } }
 }
 
 -- File picker/tree

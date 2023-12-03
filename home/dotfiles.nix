@@ -1,6 +1,6 @@
 { pkgs, ... }: {
+  imports = [ ./joplin.nix ];
   home.file = {
-    ".config/joplin-desktop/settings.json".source = ../files/joplin/settings.json;
     ".config/autostart/ferdium.desktop".source = ../files/autostart/ferdium.desktop;
     ".config/kitty/kitty.conf".source = ../files/kitty/kitty.conf;
     ".config/godot/editor_settings-4.tres".source =
