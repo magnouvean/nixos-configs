@@ -17,6 +17,7 @@ pkgs.mkShell {
     MASS
     VGAM
     languageserver
+    lme4
     nlme
     nnet
     styler

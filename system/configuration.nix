@@ -27,9 +27,6 @@
   i18n.defaultLocale = "en_US.UTF-8";
   console = { keyMap = "no"; };
 
-  # Games
-  programs.steam.enable = true;
-
   # Sound
   sound.enable = true;
   services.pipewire = {
@@ -84,15 +81,14 @@
     android-tools
     bat
     curl
-    distrobox
     eza
     gh
     htop
     lm_sensors
-    mpc_cli
     networkmanagerapplet
     pass-wayland
     ripgrep
+    sshfs
     unzip
     vim
     wget
@@ -102,9 +98,6 @@
     xdg-user-dirs
     xdg-utils
   ];
-
-  # Podman
-  virtualisation = { podman = { enable = true; }; };
 
   # Misc
   nix.settings.experimental-features = [ "nix-command" "flakes" ];

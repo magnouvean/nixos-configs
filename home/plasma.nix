@@ -239,16 +239,7 @@
       "plasmashell"."switch to next activity" = [ ];
       "plasmashell"."switch to previous activity" = [ ];
       "plasmashell"."toggle do not disturb" = [ ];
-      "steam.desktop"."BigPicture" = [ ];
-      "steam.desktop"."Community" = [ ];
-      "steam.desktop"."Friends" = [ ];
-      "steam.desktop"."Library" = [ ];
-      "steam.desktop"."News" = [ ];
-      "steam.desktop"."Screenshots" = [ ];
-      "steam.desktop"."Servers" = [ ];
-      "steam.desktop"."Settings" = [ ];
-      "steam.desktop"."Store" = [ ];
-      "steam.desktop"."_launch" = "Meta+G";
+      "net.lutris.Lutris.desktop"."_launch" = "Meta+G";
       "systemsettings.desktop"."_launch" = "Tools";
       "systemsettings.desktop"."kcm-kscreen" = [ ];
       "systemsettings.desktop"."kcm-lookandfeel" = [ ];
@@ -274,7 +265,7 @@
       "kglobalshortcutsrc"."org.kde.elisa.desktop"."_k_friendly_name" = "Elisa";
       "kglobalshortcutsrc"."org.kde.konsole.desktop"."_k_friendly_name" = "Konsole";
       "kglobalshortcutsrc"."org.kde.krunner.desktop"."_k_friendly_name" = "KRunner";
-      "kglobalshortcutsrc"."steam.desktop"."_k_friendly_name" = "Steam";
+      "kglobalshortcutsrc"."net.lutris.Lutris.desktop"."_k_friendly_name" = "Lutris";
       "krunnerrc"."General"."FreeFloating" = true;
       "kwinrc"."Desktops"."Number" = 8;
       "kwinrc"."Desktops"."Rows" = 1;

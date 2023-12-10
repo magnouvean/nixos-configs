@@ -4,9 +4,6 @@ pkgs.mkShell {
     # Julia
     julia-bin
 
-    # Jupyter
-    python3Packages.jupyter
-
     # Latex
     pandoc
     texlab

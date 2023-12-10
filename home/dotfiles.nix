@@ -15,6 +15,7 @@
 
     "Code/R/shell.nix".source = ../files/environments/R/shell.nix;
     "Code/c/shell.nix".source = ../files/environments/c/shell.nix;
+    "Code/haskell/shell.nix".source = ../files/environments/haskell/shell.nix;
     "Code/julia/shell.nix".source = ../files/environments/julia/shell.nix;
     "Code/latex/shell.nix".source = ../files/environments/latex/shell.nix;
     "Code/nix/shell.nix".source = ../files/environments/nix/shell.nix;
@@ -24,6 +25,7 @@
 
     "Code/R/.envrc".source = ../files/environments/envrc;
     "Code/c/.envrc".source = ../files/environments/envrc;
+    "Code/haskell/.envrc".source = ../files/environments/envrc;
     "Code/julia/.envrc".source = ../files/environments/envrc;
     "Code/latex/.envrc".source = ../files/environments/envrc;
     "Code/nix/.envrc".source = ../files/environments/envrc;
