@@ -1,8 +1,8 @@
 { ... }:
 let
   mimeDefaults = {
-    "x-scheme-handler/http" = [ "firefox.desktop" ];
-    "x-scheme-handler/https" = [ "firefox.desktop" ];
+    "x-scheme-handler/http" = [ "brave-desktop.desktop" ];
+    "x-scheme-handler/https" = [ "brave-desktop.desktop" ];
     "text/markdown" = [ "neovide.desktop" ];
   };
 in

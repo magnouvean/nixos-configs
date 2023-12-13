@@ -69,8 +69,8 @@
   # Packages
   environment.systemPackages = with pkgs; [
     # GUI programs
+    brave
     ferdium
-    firefox
     godot_4
     joplin-desktop
     kitty

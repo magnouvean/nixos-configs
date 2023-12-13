@@ -10,10 +10,10 @@
     shortcuts = {
       "@joplinapp-desktop.desktop"."_launch" = "Meta+N";
       "ferdium.desktop"."_launch" = "Meta+C";
-      "firefox.desktop"."_launch" = "Meta+W";
-      "firefox.desktop"."new-private-window" = [ ];
-      "firefox.desktop"."new-window" = [ ];
-      "firefox.desktop"."profile-manager-window" = [ ];
+      "brave-browser.desktop"."_launch" = "Meta+W";
+      "brave-browser.desktop"."new-private-window" = [ ];
+      "brave-browser.desktop"."new-window" = [ ];
+      "brave-browser.desktop"."profile-manager-window" = [ ];
       "joplin.desktop"."_launch" = [ ];
       "kaccess"."Toggle Screen Reader On and Off" = "Meta+Alt+S";
       "kcm_touchpad"."Disable Touchpad" = "Touchpad Off";
