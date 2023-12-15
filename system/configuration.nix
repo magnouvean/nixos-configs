@@ -11,7 +11,6 @@
   # Neworking
   networking = {
     networkmanager.enable = true;
-    extraHosts = builtins.readFile ../files/hosts;
   };
 
   # Printer support

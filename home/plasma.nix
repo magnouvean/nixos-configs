@@ -8,13 +8,6 @@
       colorscheme = "Breeze";
     };
     shortcuts = {
-      "@joplinapp-desktop.desktop"."_launch" = "Meta+N";
-      "ferdium.desktop"."_launch" = "Meta+C";
-      "brave-browser.desktop"."_launch" = "Meta+W";
-      "brave-browser.desktop"."new-private-window" = [ ];
-      "brave-browser.desktop"."new-window" = [ ];
-      "brave-browser.desktop"."profile-manager-window" = [ ];
-      "joplin.desktop"."_launch" = [ ];
       "kaccess"."Toggle Screen Reader On and Off" = "Meta+Alt+S";
       "kcm_touchpad"."Disable Touchpad" = "Touchpad Off";
       "kcm_touchpad"."Enable Touchpad" = "Touchpad On";
@@ -185,15 +178,13 @@
       "mediacontrol"."playpausemedia" = "Media Play";
       "mediacontrol"."previousmedia" = "Media Previous";
       "mediacontrol"."stopmedia" = "Media Stop";
-      "neovide.desktop"."_launch" = "Meta+E";
+      "codium.desktop"."_launch" = "Meta+E";
       "nvim.desktop"."_launch" = [ ];
       "org.kde.dolphin.desktop"."_launch" = "Meta+F";
       "org.kde.elisa.desktop"."_launch" = "Meta+M";
       "org.kde.konsole.desktop"."NewTab" = [ ];
       "org.kde.konsole.desktop"."NewWindow" = [ ];
       "org.kde.konsole.desktop"."_launch" = "Meta+Return";
-      "org.kde.krunner.desktop"."RunClipboard" = "Alt+Shift+F2";
-      "org.kde.krunner.desktop"."_launch" = [ "Meta+R" "Search" ];
       "org.kde.plasma.emojier.desktop"."_launch" = [ "Meta+." "Meta+Ctrl+Alt+Shift+Space" ];
       "org.kde.spectacle.desktop"."ActiveWindowScreenShot" = "Meta+Print";
       "org.kde.spectacle.desktop"."CurrentMonitorScreenShot" = [ ];
@@ -252,15 +243,12 @@
     configFile = {
       "kglobalshortcutsrc"."ActivityManager"."_k_friendly_name" = "Activity Manager";
       "kglobalshortcutsrc"."KDE Keyboard Layout Switcher"."_k_friendly_name" = "Keyboard Layout Switcher";
-      "kglobalshortcutsrc"."ferdium.desktop"."_k_friendly_name" = "Ferdium";
-      "kglobalshortcutsrc"."@joplinapp-desktop.desktop"."_k_friendly_name" = "Joplin";
       "kglobalshortcutsrc"."kaccess"."_k_friendly_name" = "Accessibility";
       "kglobalshortcutsrc"."kcm_touchpad"."_k_friendly_name" = "Touchpad";
       "kglobalshortcutsrc"."kded5"."_k_friendly_name" = "KDE Daemon";
       "kglobalshortcutsrc"."khotkeys"."_k_friendly_name" = "Custom Shortcuts Service";
       "kglobalshortcutsrc"."ksmserver"."_k_friendly_name" = "Session Management";
       "kglobalshortcutsrc"."kwin"."_k_friendly_name" = "KWin";
-      "kglobalshortcutsrc"."neovide.desktop"."_k_friendly_name" = "neovide editor";
       "kglobalshortcutsrc"."org.kde.dolphin.desktop"."_k_friendly_name" = "Dolphin";
       "kglobalshortcutsrc"."org.kde.elisa.desktop"."_k_friendly_name" = "Elisa";
       "kglobalshortcutsrc"."org.kde.konsole.desktop"."_k_friendly_name" = "Konsole";
