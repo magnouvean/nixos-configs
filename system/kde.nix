@@ -18,6 +18,11 @@
   programs.kdeconnect.enable = true;
   programs.dconf.enable = true;
   environment.systemPackages = with pkgs; [
+    # Theme
+    catppuccin-gtk
+    catppuccin-kde
+
+    # Other
     plasma-pass
   ];
 }

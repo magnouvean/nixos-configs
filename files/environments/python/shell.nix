@@ -5,13 +5,18 @@ pkgs.mkShell {
     black
     isort
     mypy
-    pyright
     python3
+
+    # Jupyter
+    python3Packages.jupyter
 
     # Latex
     pandoc
     texlab
     texlive.combined.scheme-full
+
+    # Other
+    kaggle
   ]) ++ (with pkgs.python3Packages; [
     # Python libraries
     debugpy
@@ -24,6 +29,7 @@ pkgs.mkShell {
     matplotlib
     numpy
     pandas
+    pyarrow
     pycodestyle
     pydocstyle
     pyflakes
@@ -32,6 +38,7 @@ pkgs.mkShell {
     python-lsp-black
     python-lsp-server
     pytorch
+    ray
     scikit-learn
     scipy
     seaborn

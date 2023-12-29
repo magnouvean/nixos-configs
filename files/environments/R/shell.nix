@@ -6,6 +6,7 @@ pkgs.mkShell {
 
     # Jupyter
     python3Packages.jupyter
+    rPackages.IRkernel
 
     # Latex
     pandoc
