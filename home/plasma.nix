@@ -1,6 +1,6 @@
 { pkgs, ... }:
 let
-  konsole_themes = pkgs.fetchFromGitHub
+  konsole-themes = pkgs.fetchFromGitHub
     {
       owner = "catppuccin";
       repo = "konsole";
@@ -14,7 +14,11 @@ in
     overrideConfig = true;
     workspace = {
       clickItemTo = "select";
-      colorscheme = "CatppuccinFrappeBlue";
+      lookAndFeel = "org.kde.breezedark.desktop";
+      colorScheme = "CatppuccinFrappeBlue";
+      cursorTheme = "Bibata-Modern-Ice";
+      iconTheme = "Papirus-Dark";
+      wallpaper = "${pkgs.libsForQt5.plasma-workspace-wallpapers}/share/wallpapers/Patak";
     };
     shortcuts = {
       "kwin"."Switch to Desktop 1" = "Meta+1";
@@ -52,7 +56,7 @@ in
   };
 
   home.file = {
-    ".local/share/konsole/Catppuccin-Latte.colorscheme".source = "${konsole_themes}/Catppuccin-Latte.colorscheme";
-    ".local/share/konsole/Catppuccin-Frappe.colorscheme".source = "${konsole_themes}/Catppuccin-Frappe.colorscheme";
+    ".local/share/konsole/Catppuccin-Latte.colorscheme".source = "${konsole-themes}/Catppuccin-Latte.colorscheme";
+    ".local/share/konsole/Catppuccin-Frappe.colorscheme".source = "${konsole-themes}/Catppuccin-Frappe.colorscheme";
   };
 }
