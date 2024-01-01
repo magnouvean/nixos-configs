@@ -52,6 +52,8 @@ in
       "kwinrc"."Tiling"."padding" = 6;
       "konsolerc"."Default"."MenuBar" = "Disabled";
       "konsolerc"."Desktop Entry"."DefaultProfile" = "Profile 1.profile";
+      "gtk-3.0/settings.ini"."Settings"."gtk-theme-name" = "Catppuccin-Frappe-Standard-Blue-Dark";
+      "gtk-4.0/settings.ini"."Settings"."gtk-theme-name" = "Catppuccin-Frappe-Standard-Blue-Dark";
     };
   };
 

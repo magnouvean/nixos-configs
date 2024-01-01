@@ -42,6 +42,7 @@ pkgs.mkShell {
     scikit-learn
     scipy
     seaborn
+    spacy
     sympy
     tensorflow
     xgboost
