@@ -25,6 +25,9 @@
   virtualisation.libvirtd.enable = true;
   programs.virt-manager.enable = true;
 
+  # Games
+  programs.steam.enable = true;
+
   # Time/Locale
   time.timeZone = "Europe/Oslo";
   i18n.defaultLocale = "en_US.UTF-8";
@@ -88,6 +91,7 @@
     gh
     htop
     lm_sensors
+    neofetch
     networkmanagerapplet
     pass-wayland
     ripgrep
@@ -100,6 +104,9 @@
     # Other
     xdg-user-dirs
     xdg-utils
+
+    # Games
+    osu-lazer-bin
   ];
 
   # Misc
