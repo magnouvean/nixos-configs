@@ -35,18 +35,10 @@ sudo swapon /dev/vg/swap
 ```
 
 ```{bash}
-sudo nix-channel --add https://nixos.org/channels/nixpkgs-unstable nixos
-sudo nix-channel --update
-```
-
-```{bash}
 nix-shell -p git
-sudo mkdir -p /mnt/etc/nixos
-sudo git clone https://codeberg.org/magnouvean/nixos-configs /mnt/etc/nixos/configs
-sudo ln -s /mnt/etc/nixos/configs/hosts/laptop/configuration.nix /mnt/etc/nixos/configuration.nix
+git clone https://codeberg.org/magnouvean/nixos-configs
 sudo nix-prefetch-url --name displaylink-580.zip https://www.synaptics.com/sites/default/files/exe_files/2023-08/DisplayLink%20USB%20Graphics%20Software%20for%20Ubuntu5.8-EXE.zip
-sudo nixos-install
-sudo rm -rf /mnt/etc/nixos
+sudo nixos-install --flake ./nixos-configs#nixos-laptop
 sudo reboot
 ```
 
