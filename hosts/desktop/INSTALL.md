@@ -9,6 +9,7 @@ I recommend using `gdisk` for paritioning
 - Rest of the space (`8300`) at /dev/sda3
 
 ## Installation
+### Preparation
 After formatting as described above run the following commands (as root and with internet):
 ```{bash}
 sudo cryptsetup luksFormat /dev/sda3
@@ -35,10 +36,21 @@ sudo mount /dev/sda2 /mnt/boot
 sudo swapon /dev/vg/swap
 ```
 
+### The rest
+
 ```{bash}
 nix-shell -p git
 git clone https://codeberg.org/magnouvean/nixos-configs
-sudo nix-prefetch-url --name displaylink-580.zip https://www.synaptics.com/sites/default/files/exe_files/2023-08/DisplayLink%20USB%20Graphics%20Software%20for%20Ubuntu5.8-EXE.zip
+```
+
+Remove the displaylink configuration located in `system/kde.nix`, for example
+using:
+```{bash}
+vim nixos-configs/system/kde.nix
+```
+This should be one line, and the whole line can be deleted.
+Finally run:
+```{bash}
 sudo nixos-install --flake ./nixos-configs#nixos-desktop
 sudo reboot
 ```

@@ -8,6 +8,9 @@ I recommend using `gdisk` for paritioning
 - Rest of the space (`8300`) at /dev/sda2
 
 ## Installation
+
+### Preparation
+
 After formatting as described above run the following commands (as root and with internet):
 ```{bash}
 sudo cryptsetup luksFormat /dev/sda2
@@ -34,15 +37,5 @@ sudo mount /dev/sda1 /mnt/boot
 sudo swapon /dev/vg/swap
 ```
 
-```{bash}
-nix-shell -p git
-git clone https://codeberg.org/magnouvean/nixos-configs
-sudo nix-prefetch-url --name displaylink-580.zip https://www.synaptics.com/sites/default/files/exe_files/2023-08/DisplayLink%20USB%20Graphics%20Software%20for%20Ubuntu5.8-EXE.zip
-sudo nixos-install --flake ./nixos-configs#nixos-laptop
-sudo reboot
-```
-
-After installation it should be enough to run `./deploy.sh` (in this directory)
-
-## Sources
-[This was heavily inspired by this github gist (thanks to marijnvermaat on github)]( https://gist.github.com/martijnvermaat/76f2e24d0239470dd71050358b4d5134)
+### The rest
+Follow the same steps as for [desktop](../desktop/INSTALL.md#the-rest).
