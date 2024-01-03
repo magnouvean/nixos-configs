@@ -54,6 +54,7 @@ in
       "kwinrc"."Tiling"."padding" = 6;
       "konsolerc"."Default"."MenuBar" = "Disabled";
       "konsolerc"."Desktop Entry"."DefaultProfile" = "Profile 1.profile";
+      "konsolerc"."MainWindow"."State" = "AAAA/wAAAAD9AAAAAQAAAAAAAAAAAAAAAPwCAAAAAvsAAAAcAFMAUwBIAE0AYQBuAGEAZwBlAHIARABvAGMAawAAAAAA/////wAAARUBAAAD+wAAACIAUQB1AGkAYwBrAEMAbwBtAG0AYQBuAGQAcwBEAG8AYwBrAAAAAAD/////AAABfAEAAAMAAAVWAAACqAAAAAQAAAAEAAAACAAAAAj8AAAAAQAAAAIAAAACAAAAFgBtAGEAaQBuAFQAbwBvAGwAQgBhAHIAAAAAAP////8AAAAAAAAAAAAAABwAcwBlAHMAcwBpAG8AbgBUAG8AbwBsAGIAYQByAAAAAAD/////AAAAAAAAAAA=";
       "gtk-3.0/settings.ini"."Settings"."gtk-theme-name" = "Catppuccin-Frappe-Standard-Blue-Dark";
       "gtk-4.0/settings.ini"."Settings"."gtk-theme-name" = "Catppuccin-Frappe-Standard-Blue-Dark";
     };
