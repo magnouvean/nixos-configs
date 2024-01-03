@@ -30,7 +30,12 @@
 
   # Time/Locale
   time.timeZone = "Europe/Oslo";
-  i18n.defaultLocale = "en_US.UTF-8";
+  i18n = {
+    defaultLocale = "en_US.UTF-8";
+    extraLocaleSettings = {
+      LC_TIME = "nb_NO.UTF-8";
+    };
+  };
   console = { keyMap = "no"; };
 
   # Sound
@@ -79,7 +84,6 @@
     ferdium
     godot_4
     joplin-desktop
-    kitty
     krita
     libreoffice-qt
 

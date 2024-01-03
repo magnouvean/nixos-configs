@@ -13,7 +13,6 @@ alias gpl="git pull"
 alias grm="git rm"
 alias gst="git status"
 alias ls="exa -a"
-[ "$TERM" = "xterm-kitty" ] && alias ssh="kitty +kitten ssh"
 
 # Prompt
 autoload -Uz vcs_info
