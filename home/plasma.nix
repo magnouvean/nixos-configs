@@ -42,6 +42,8 @@ in
       "konsole/Profile 1.profile" = {
         "Appearance"."ColorScheme" = "Catppuccin-Frappe";
         "Appearance"."Font" = "FiraCode Nerd Font,11,-1,5,50,0,0,0,0,0";
+        "General"."Name" = "Profile 1";
+        "General"."Parent" = "FALLBACK/";
         "Scrolling"."HistorySize" = 10000;
       };
     };
