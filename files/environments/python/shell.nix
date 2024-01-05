@@ -29,6 +29,7 @@ pkgs.mkShell {
     matplotlib
     numpy
     pandas
+    pip
     pyarrow
     pycodestyle
     pydocstyle
@@ -43,6 +44,7 @@ pkgs.mkShell {
     scipy
     seaborn
     spacy
+    spacy_models.en_core_web_sm
     sympy
     tensorflow
     xgboost

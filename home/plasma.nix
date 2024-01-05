@@ -21,22 +21,24 @@ in
       wallpaper = "${pkgs.libsForQt5.plasma-workspace-wallpapers}/share/wallpapers/Patak";
     };
     shortcuts = {
-      "kwin"."Switch to Desktop 1" = "Meta+1";
-      "kwin"."Switch to Desktop 2" = "Meta+2";
-      "kwin"."Switch to Desktop 3" = "Meta+3";
-      "kwin"."Switch to Desktop 4" = "Meta+4";
-      "kwin"."Switch to Desktop 5" = "Meta+5";
-      "kwin"."Switch to Desktop 6" = "Meta+6";
-      "kwin"."Switch to Desktop 7" = "Meta+7";
-      "kwin"."Switch to Desktop 8" = "Meta+8";
-      "kwin"."Window to Desktop 1" = "Meta+!";
-      "kwin"."Window to Desktop 2" = "Meta+\"";
-      "kwin"."Window to Desktop 3" = "Meta+#";
-      "kwin"."Window to Desktop 4" = "Meta+¤";
-      "kwin"."Window to Desktop 5" = "Meta+%";
-      "kwin"."Window to Desktop 6" = "Meta+&";
-      "kwin"."Window to Desktop 7" = "Meta+/";
-      "kwin"."Window to Desktop 8" = "Meta+(";
+      kwin = {
+        "Switch to Desktop 1" = "Meta+1";
+        "Switch to Desktop 2" = "Meta+2";
+        "Switch to Desktop 3" = "Meta+3";
+        "Switch to Desktop 4" = "Meta+4";
+        "Switch to Desktop 5" = "Meta+5";
+        "Switch to Desktop 6" = "Meta+6";
+        "Switch to Desktop 7" = "Meta+7";
+        "Switch to Desktop 8" = "Meta+8";
+        "Window to Desktop 1" = "Meta+!";
+        "Window to Desktop 2" = "Meta+\"";
+        "Window to Desktop 3" = "Meta+#";
+        "Window to Desktop 4" = "Meta+¤";
+        "Window to Desktop 5" = "Meta+%";
+        "Window to Desktop 6" = "Meta+&";
+        "Window to Desktop 7" = "Meta+/";
+        "Window to Desktop 8" = "Meta+(";
+      };
     };
     dataFile = {
       "konsole/Profile 1.profile" = {
@@ -51,7 +53,7 @@ in
       "krunnerrc"."General"."FreeFloating" = true;
       "kwinrc"."Desktops"."Number" = 8;
       "kwinrc"."Desktops"."Rows" = 2;
-      "kwinrc"."Tiling"."padding" = 6;
+      "kwinrc"."Tiling"."padding[$e]" = 8;
       "konsolerc"."Default"."MenuBar" = "Disabled";
       "konsolerc"."Desktop Entry"."DefaultProfile" = "Profile 1.profile";
       "konsolerc"."MainWindow"."State" = "AAAA/wAAAAD9AAAAAQAAAAAAAAAAAAAAAPwCAAAAAvsAAAAcAFMAUwBIAE0AYQBuAGEAZwBlAHIARABvAGMAawAAAAAA/////wAAARUBAAAD+wAAACIAUQB1AGkAYwBrAEMAbwBtAG0AYQBuAGQAcwBEAG8AYwBrAAAAAAD/////AAABfAEAAAMAAAVWAAACqAAAAAQAAAAEAAAACAAAAAj8AAAAAQAAAAIAAAACAAAAFgBtAGEAaQBuAFQAbwBvAGwAQgBhAHIAAAAAAP////8AAAAAAAAAAAAAABwAcwBlAHMAcwBpAG8AbgBUAG8AbwBsAGIAYQByAAAAAAD/////AAAAAAAAAAA=";

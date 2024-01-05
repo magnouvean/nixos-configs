@@ -12,6 +12,10 @@
   networking = {
     networkmanager.enable = true;
   };
+  services.openssh = {
+    enable = true;
+    passwordAuthentication = true;
+  };
 
   # Printer support
   services.printing.enable = true;
@@ -27,6 +31,7 @@
 
   # Games
   programs.steam.enable = true;
+  programs.gamemode.enable = true;
 
   # Time/Locale
   time.timeZone = "Europe/Oslo";
@@ -110,6 +115,7 @@
     xdg-utils
 
     # Games
+    mangohud
     osu-lazer-bin
   ];
 

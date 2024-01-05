@@ -53,6 +53,9 @@ in
   programs.kdeconnect.enable = true;
   programs.dconf.enable = true;
   environment.systemPackages = with pkgs; [
+    # Applications
+    k3b
+
     # Theme
     bibata-cursors
     catppuccin-gtk

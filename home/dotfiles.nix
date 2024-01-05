@@ -2,6 +2,7 @@
   imports = [ ./joplin.nix ];
   home.file = {
     ".config/autostart/ferdium.desktop".source = ../files/autostart/ferdium.desktop;
+    ".config/MangoHud/MangoHud.conf".source = ../files/mangohud/MangoHud.conf;
     ".config/godot/editor_settings-4.tres".source =
       ../files/godot/editor_settings-4.tres;
 
