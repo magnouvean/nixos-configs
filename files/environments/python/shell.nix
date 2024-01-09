@@ -27,6 +27,7 @@ pkgs.mkShell {
     jupyter
     keras
     matplotlib
+    nltk
     numpy
     pandas
     pip

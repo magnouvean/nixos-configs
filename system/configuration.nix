@@ -88,6 +88,7 @@
     ferdium
     godot_4
     joplin-desktop
+    kitty
     krita
     libreoffice-qt
 
