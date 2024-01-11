@@ -252,7 +252,10 @@ local function my_on_attach(bufnr)
 	vim.keymap.set('n', 'gd', api.tree.change_root_to_node, opts('CD'))
 	vim.keymap.set('n', 'gh', function() api.tree.change_root('~/') end,
 		opts('CD to ~/'))
-	vim.keymap.set('n', 'gu', function() api.tree.change_root('../') end,
+	vim.keymap.set('n', 'gu', function()
+			local parent_dir = vim.fn.fnamemodify(vim.fn.getcwd(), ":h")
+			api.tree.change_root(parent_dir)
+		end,
 		opts('CD to ../'))
 	vim.keymap.set('n', '<leader>e', api.tree.close, opts('Close'))
 end
