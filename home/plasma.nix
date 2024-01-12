@@ -65,7 +65,6 @@ in
       "krunnerrc"."General"."FreeFloating" = true;
       "kwinrc"."Desktops"."Number" = 8;
       "kwinrc"."Desktops"."Rows" = 2;
-      "kwinrc"."Tiling"."padding[$e]" = 8;
       "konsolerc"."Default"."MenuBar" = "Disabled";
       "konsolerc"."Desktop Entry"."DefaultProfile" = "Profile 1.profile";
       "konsolerc"."MainWindow"."State" = "AAAA/wAAAAD9AAAAAQAAAAAAAAAAAAAAAPwCAAAAAvsAAAAcAFMAUwBIAE0AYQBuAGEAZwBlAHIARABvAGMAawAAAAAA/////wAAARUBAAAD+wAAACIAUQB1AGkAYwBrAEMAbwBtAG0AYQBuAGQAcwBEAG8AYwBrAAAAAAD/////AAABfAEAAAMAAAVWAAACqAAAAAQAAAAEAAAACAAAAAj8AAAAAQAAAAIAAAACAAAAFgBtAGEAaQBuAFQAbwBvAGwAQgBhAHIAAAAAAP////8AAAAAAAAAAAAAABwAcwBlAHMAcwBpAG8AbgBUAG8AbwBsAGIAYQByAAAAAAD/////AAAAAAAAAAA=";
