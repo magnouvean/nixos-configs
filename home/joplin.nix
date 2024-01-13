@@ -41,12 +41,13 @@
       	"editor.spellcheckBeta": true,
       	"themeAutoDetect": true,
       	"editor.keyboardMode": "vim",
-      	"plugin-io.github.personalizedrefrigerator.js-draw.disable-editor-fills-window": false,
       	"plugin-io.github.personalizedrefrigerator.js-draw.autosave-interval-minutes": 0,
+      	"plugin-io.github.personalizedrefrigerator.js-draw.disable-editor-fills-window": false,
+      	"plugin-io.github.personalizedrefrigerator.js-draw.keyboard-shortcuts": {},
       	"plugin-io.github.personalizedrefrigerator.js-draw.keyboard-shortcuts": {},
       	"style.editor.fontFamily": "FiraCode Nerd Font",
       	"style.editor.monospaceFontFamily": "FiraCode Nerd Font Mono",
-      	"editor": "codium"
+      	"editor": "konsole -e nvim"
       }
     '';
   };

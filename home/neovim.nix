@@ -2,6 +2,7 @@
   programs.neovim = {
     enable = true;
     plugins = with pkgs.vimPlugins; [
+      ChatGPT-nvim
       bufferline-nvim
       catppuccin-nvim
       cmp-nvim-lsp
@@ -31,5 +32,8 @@
     ];
     extraLuaConfig = (builtins.readFile ../files/neovim/init.lua);
   };
-  home.packages = with pkgs; [ neovide ];
+  home.file.".config/nvim/get_openai.sh" = {
+    text = "cat ~/.config/shell_gpt/.sgptrc | rg OPENAI_API_KEY | cut -d = -f2";
+    executable = true;
+  };
 }

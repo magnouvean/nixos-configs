@@ -104,6 +104,7 @@
     networkmanagerapplet
     pass-wayland
     ripgrep
+    shell_gpt
     sshfs
     unzip
     vim
