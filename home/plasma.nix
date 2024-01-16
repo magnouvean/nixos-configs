@@ -22,6 +22,7 @@ in
     };
     panels = [
       {
+        height = 32;
         location = "bottom";
         widgets = [
           "org.kde.plasma.kickoff"
@@ -29,6 +30,11 @@ in
           "org.kde.plasma.marignsseperator"
           "org.kde.plasma.systemtray"
           "org.kde.plasma.digitalclock"
+        ];
+        iconTasksLaunchers = [
+          "org.kde.dolphin.desktop"
+          "org.wezfurlong.wezterm.desktop"
+          "brave-browser.desktop"
         ];
       }
     ];

@@ -14,6 +14,7 @@
   };
   services.openssh = {
     enable = true;
+    passwordAuthentication = false;
   };
 
   # Printer support
@@ -88,9 +89,9 @@
     ferdium
     godot_4
     joplin-desktop
-    kitty
     krita
     libreoffice-qt
+    wezterm
 
     # CLI tools
     android-tools

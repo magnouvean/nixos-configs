@@ -11,7 +11,6 @@
       comment-nvim
       diffview-nvim
       direnv-vim
-      iron-nvim
       lualine-nvim
       luasnip
       markdown-preview-nvim
@@ -25,8 +24,9 @@
       playground
       telescope-nvim
       telescope-project-nvim
-      toggleterm-nvim
+      tmux-nvim
       vim-fugitive
+      vim-slime
       vimtex
       which-key-nvim
     ];

@@ -4,7 +4,9 @@
     ./git.nix
     ./mimeapps.nix
     ./neovim.nix
+    ./tmux.nix
     ./plasma.nix
+    ./zsh.nix
   ];
 
   # Fonts
@@ -14,16 +16,6 @@
   programs.direnv = {
     enable = true;
     nix-direnv.enable = true;
-  };
-
-  # Shell
-  programs.zsh = {
-    enable = true;
-    syntaxHighlighting.enable = true;
-    enableAutosuggestions = true;
-    initExtra = ''
-      ${builtins.readFile ../files/zsh/zshrc}
-    '';
   };
 
   # Syncing
