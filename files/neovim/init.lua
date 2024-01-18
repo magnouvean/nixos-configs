@@ -44,6 +44,8 @@ require('tmux').setup {}
 
 -- Slime (REPL)
 vim.g.slime_target = "tmux"
+vim.keymap.set('n', '<C-c>l', '<CMD>SlimeSendCurrentLine<CR>')
+
 
 
 -- ChatGPT
@@ -103,13 +105,12 @@ require("catppuccin").setup({
 	color_overrides = {},
 	custom_highlights = {},
 	integrations = {
-		which_key = true,
 		cmp = true,
 		gitsigns = true,
+		markdown = true,
 		notify = false,
 		nvimtree = true,
-		treesitter = true,
-		markdown = true,
+		which_key = true,
 	},
 })
 vim.cmd.colorscheme "catppuccin"
