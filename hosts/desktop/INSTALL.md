@@ -4,8 +4,9 @@
 
 I recommend using `gdisk` for paritioning
 
-- 512M boot parition (`8300`) at /dev/sda1
-- Rest of the space (`8300`) at /dev/sda2
+- 1M BIOS boot parition (`ef02`) at /dev/sda1
+- 512M boot parition (`8300`) at /dev/sda2
+- Rest of the space (`8300`) at /dev/sda3
 
 ## Installation
 
@@ -13,8 +14,8 @@ I recommend using `gdisk` for paritioning
 
 After formatting as described above run the following commands (as root and with internet):
 ```{bash}
-sudo cryptsetup luksFormat /dev/sda2 --type luks1
-sudo cryptsetup luksOpen /dev/sda2 enc-pv
+sudo cryptsetup luksFormat /dev/sda3
+sudo cryptsetup luksOpen /dev/sda3 enc-pv
 ```
 
 ```{bash}
@@ -25,15 +26,15 @@ sudo lvcreate -l '100%FREE' -n root vg
 ```
 
 ```{bash}
-sudo mkfs.fat /dev/sda1 -i
-sudo mkfs.ext4 -L root /dev/vg/root -U
-sudo mkswap -L swap /dev/vg/swap -U
+sudo mkfs.ext2 /dev/sda2 -U 933c1d16-e734-4d7c-879a-834497581785
+sudo mkfs.ext4 -L root /dev/vg/root -U 009b54b4-d4a1-427f-8471-1ea2fcd52a1b
+sudo mkswap -L swap /dev/vg/swap -U 3adc58f0-5602-406d-82a1-7605c88e7ee4
 ```
 
 ```{bash}
 sudo mount /dev/vg/root /mnt
-sudo mkdir -p /mnt/boot/efi
-sudo mount /dev/sda1 /mnt/boot/efi
+sudo mkdir /mnt/boot
+sudo mount /dev/sda2 /mnt/boot
 sudo swapon /dev/vg/swap
 ```
 
@@ -48,7 +49,7 @@ git clone https://codeberg.org/magnouvean/nixos-configs
 Finally run:
 ```{bash}
 sudo nixos-install --flake ./nixos-configs#nixos-desktop
-sudo reboot
+sudo poweroff
 ```
 
 ## Sources
