@@ -1,7 +1,7 @@
 { config, ... }: {
   imports = [
     ../../system/configuration.nix
-    ../uefi_common
+    ../uefi_common.nix
     ./hardware-configuration.nix
   ];
 

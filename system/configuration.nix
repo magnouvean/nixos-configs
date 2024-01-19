@@ -86,7 +86,6 @@
   environment.systemPackages = with pkgs; [
     # GUI programs
     brave
-    ferdium
     godot_4
     joplin-desktop
     krita
