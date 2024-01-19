@@ -44,7 +44,6 @@ in
     };
     desktopManager.plasma5.enable = true;
     layout = "no";
-    videoDrivers = [ "displaylink" "modesetting" ];
   };
   security.pam.services.kwallet = {
     name = "kwallet";

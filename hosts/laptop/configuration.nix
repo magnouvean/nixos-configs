@@ -6,4 +6,7 @@
   ];
 
   networking.hostName = "nixos-laptop";
+
+  # Enable displaylink
+  services.xserver.videoDrivers = [ "displaylink" "modesetting" ];
 }
