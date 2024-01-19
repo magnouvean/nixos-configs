@@ -32,7 +32,7 @@ sudo mkswap -L swap /dev/vg/swap -U
 
 ```{bash}
 sudo mount /dev/vg/root /mnt
-sudo mkdir /mnt/boot/efi
+sudo mkdir -p /mnt/boot/efi
 sudo mount /dev/sda1 /mnt/boot/efi
 sudo swapon /dev/vg/swap
 ```
