@@ -13,7 +13,7 @@ I recommend using `gdisk` for paritioning
 
 After formatting as described above run the following commands (as root and with internet):
 ```{bash}
-sudo cryptsetup luksFormat /dev/sda2
+sudo cryptsetup luksFormat /dev/sda2 --type luks1
 sudo cryptsetup luksOpen /dev/sda2 enc-pv
 ```
 
@@ -32,8 +32,8 @@ sudo mkswap -L swap /dev/vg/swap -U
 
 ```{bash}
 sudo mount /dev/vg/root /mnt
-sudo mkdir /mnt/boot
-sudo mount /dev/sda1 /mnt/boot
+sudo mkdir /mnt/boot/efi
+sudo mount /dev/sda1 /mnt/boot/efi
 sudo swapon /dev/vg/swap
 ```
 
