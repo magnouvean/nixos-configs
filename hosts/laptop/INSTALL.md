@@ -53,8 +53,8 @@ This should be one line, and the whole line can be deleted.
 
 Finally run the following to make the installation:
 ```{bash}
-sudo nixos-install --flake ./nixos-configs#nixos-latop
-sudo reboot
+nix-shell -p git --run "sudo nixos-install --flake ./nixos-configs#nixos-latop"
+sudo poweroff
 ```
 
 ## After installation

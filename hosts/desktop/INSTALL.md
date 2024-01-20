@@ -43,7 +43,7 @@ sudo swapon /dev/vg/swap
 Run the following to make the installation:
 ```{bash}
 nix-shell -p git --run "git clone https://codeberg.org/magnouvean/nixos-configs"
-sudo nixos-install --flake ./nixos-configs#nixos-desktop
+nix-shell -p git --run "sudo nixos-install --flake ./nixos-configs#nixos-desktop"
 sudo poweroff
 ```
 
