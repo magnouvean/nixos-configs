@@ -28,6 +28,10 @@
       # No escape time
       set -s escape-time 0
 
+      # VIM keys in copy-mode
+      bind-key -T copy-mode-vi v send-keys -X begin-selection
+      bind-key -T copy-mode-vi y send-keys -X copy-selection-and-cancel
+
       # Fixes neovim theme issues
       set -ag terminal-overrides ",xterm-256color:RGB"
 
