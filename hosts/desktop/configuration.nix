@@ -7,13 +7,13 @@
   networking.hostName = "nixos-desktop";
 
   boot.loader.grub = {
-    device = "/dev/disk/by-id/wwn-0x50014ee20fa211a7";
+    device = "/dev/sda";
     efiSupport = false;
   };
   boot.initrd.luks.devices = {
     root = {
       name = "root";
-      device = "/dev/disk/by-id/wwn-0x50014ee20fa211a7-part3";
+      device = "/dev/sda3";
       preLVM = true;
       allowDiscards = true;
     };
