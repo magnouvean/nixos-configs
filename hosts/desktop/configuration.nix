@@ -13,7 +13,7 @@
   boot.initrd.luks.devices = {
     root = {
       name = "root";
-      device = "/dev/disk/by-id/wwn-0x50014ee20fa211a7";
+      device = "/dev/disk/by-id/wwn-0x50014ee20fa211a7-part3";
       preLVM = true;
       allowDiscards = true;
     };
