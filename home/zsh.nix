@@ -24,6 +24,7 @@
       grm = "git rm";
       gst = "git status";
       ls = "exa -a";
+      sgpt = "sgpt --model gpt-3.5-turbo";
       t = "tmux";
     };
     initExtra = ''

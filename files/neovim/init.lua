@@ -160,14 +160,24 @@ vim.api.nvim_create_autocmd('LspAttach', {
 	end,
 })
 
+-- Setup languageservers without any configuration
 local servers = {
-	'gdscript', 'rust_analyzer', 'pylsp', 'rnix', 'texlab', 'r_language_server', 'lua_ls'
+	'gdscript', 'rust_analyzer', 'pylsp', 'texlab', 'julials', 'r_language_server', 'lua_ls'
 }
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 capabilities.textDocument.completion.completionItem.snipperSupport = true
 for _, lsp in ipairs(servers) do
 	lspconfig[lsp].setup { capabilities = capabilities }
 end
+-- For nil_ls we set the formatter
+lspconfig.nil_ls.setup {
+	capabilities = capabilities,
+	settings = {
+		['nil'] = {
+			formatting = { command = { "nixpkgs-fmt" } }
+		},
+	},
+}
 
 vim.cmd [[autocmd BufWritePre * lua vim.lsp.buf.format()]]
 
