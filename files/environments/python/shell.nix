@@ -48,6 +48,7 @@ pkgs.mkShell {
     spacy_models.en_core_web_sm
     sympy
     tensorflow
+    torchvision
     xgboost
   ]);
 }

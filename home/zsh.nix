@@ -13,7 +13,7 @@
     };
     sessionVariables = {
       "BAT_THEME" = "ansi";
-      "EDITOR" = "nvim";
+      "EDITOR" = "vim";
     };
     shellGlobalAliases = {
       cat = "bat";
@@ -48,9 +48,6 @@
       bindkey -M menuselect 'k' vi-up-line-or-history
       bindkey -M menuselect 'l' vi-forward-char
       bindkey -M menuselect 'j' vi-down-line-or-history
-
-      # Start tmux
-      [ -z "$TMUX"  ] && exec tmux new-session
     '';
   };
 }

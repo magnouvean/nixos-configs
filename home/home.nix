@@ -3,9 +3,8 @@
     ./dotfiles.nix
     ./git.nix
     ./mimeapps.nix
-    ./neovim.nix
-    ./tmux.nix
     ./plasma.nix
+    ./vscodium.nix
     ./zsh.nix
   ];
 

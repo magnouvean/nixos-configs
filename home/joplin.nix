@@ -46,8 +46,7 @@
       	"plugin-io.github.personalizedrefrigerator.js-draw.keyboard-shortcuts": {},
       	"plugin-io.github.personalizedrefrigerator.js-draw.keyboard-shortcuts": {},
       	"style.editor.fontFamily": "FiraCode Nerd Font",
-      	"style.editor.monospaceFontFamily": "FiraCode Nerd Font Mono",
-      	"editor": "konsole -e nvim"
+      	"style.editor.monospaceFontFamily": "FiraCode Nerd Font Mono"
       }
     '';
   };

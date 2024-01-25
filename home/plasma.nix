@@ -36,10 +36,10 @@ in
                 "applications:org.kde.dolphin.desktop"
                 "applications:org.wezfurlong.wezterm.desktop"
                 "applications:brave-browser.desktop"
+                "applications:codium.desktop"
               ];
             };
           }
-          { name = "org.kde.plasma.marignsseperator"; }
           "org.kde.plasma.marignsseperator"
           "org.kde.plasma.systemtray"
           "org.kde.plasma.digitalclock"
