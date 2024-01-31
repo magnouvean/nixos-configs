@@ -51,6 +51,8 @@ in
       "terminal.integrated.commandsToSkipShell" = [
         "language-julia.interrupt"
       ];
+      "julia.symbolCacheDownload" = true;
+      "notebook.formatOnSave.enabled" = true;
     };
   };
 
