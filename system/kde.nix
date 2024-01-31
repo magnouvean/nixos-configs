@@ -9,7 +9,7 @@ let
       owner = "catppuccin";
       repo = "sddm";
       rev = "main";
-      sha256 = "sha256-Jf4xfgJEzLM7WiVsERVkj5k80Fhh1edUl6zsSBbQi6Y=";
+      sha256 = "sha256-Jmc/prRATAbtWvvbNmgl4fPdHNkI7q942+Nf6m2fauk=";
     };
     propagatedBuildInputs = with pkgs.libsForQt5.qt5; [
       qtgraphicaleffects

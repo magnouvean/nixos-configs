@@ -37,6 +37,7 @@ in
                 "applications:org.wezfurlong.wezterm.desktop"
                 "applications:brave-browser.desktop"
                 "applications:codium.desktop"
+                "applications:@joplinapp-desktop.desktop"
               ];
             };
           }

@@ -90,6 +90,7 @@
     joplin-desktop
     krita
     libreoffice-qt
+    vscodium
     wezterm
 
     # CLI tools
