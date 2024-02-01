@@ -29,8 +29,6 @@ in
   imports = [ ./joplin.nix ];
   home.file = lib.mkMerge [{
     ".config/MangoHud/MangoHud.conf".source = ../files/mangohud/MangoHud.conf;
-    ".config/wezterm/wezterm.lua".source = ../files/wezterm/wezterm.lua;
-    ".config/godot/editor_settings-4.tres".source = ../files/godot/editor_settings-4.tres;
   }
     stignoreAttrs
     languageAttrs];

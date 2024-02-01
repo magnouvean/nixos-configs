@@ -25,10 +25,6 @@
     openFirewall = true;
   };
 
-  # Virt-manager
-  virtualisation.libvirtd.enable = true;
-  programs.virt-manager.enable = true;
-
   # Games
   programs.steam.enable = true;
   programs.gamemode.enable = true;
@@ -91,7 +87,6 @@
     krita
     libreoffice-qt
     vscodium
-    wezterm
 
     # CLI tools
     android-tools

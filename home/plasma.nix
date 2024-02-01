@@ -1,13 +1,4 @@
 { pkgs, ... }:
-let
-  konsole-themes = pkgs.fetchFromGitHub
-    {
-      owner = "catppuccin";
-      repo = "konsole";
-      rev = "master";
-      sha256 = "sha256-EwSJMTxnaj2UlNJm1t6znnatfzgm1awIQQUF3VPfCTM=";
-    };
-in
 {
   programs.plasma = {
     enable = true;
@@ -15,14 +6,11 @@ in
     workspace = {
       clickItemTo = "select";
       lookAndFeel = "org.kde.breezedark.desktop";
-      colorScheme = "CatppuccinFrappeBlue";
-      cursorTheme = "Bibata-Modern-Ice";
-      iconTheme = "Papirus-Dark";
       wallpaper = "${pkgs.libsForQt5.plasma-workspace-wallpapers}/share/wallpapers/Patak";
     };
     panels = [
       {
-        height = 32;
+        height = 34;
         location = "bottom";
         widgets = [
           {
@@ -34,7 +22,7 @@ in
             config = {
               General.launchers = [
                 "applications:org.kde.dolphin.desktop"
-                "applications:org.wezfurlong.wezterm.desktop"
+                "applications:org.kde.konsole.desktop"
                 "applications:brave-browser.desktop"
                 "applications:codium.desktop"
                 "applications:@joplinapp-desktop.desktop"
@@ -69,7 +57,7 @@ in
     };
     dataFile = {
       "konsole/Profile 1.profile" = {
-        "Appearance"."ColorScheme" = "Catppuccin-Frappe";
+        "Appearance"."ColorScheme" = "Breeze";
         "Appearance"."Font" = "FiraCode Nerd Font,11,-1,5,50,0,0,0,0,0";
         "General"."Name" = "Profile 1";
         "General"."Parent" = "FALLBACK/";
@@ -83,13 +71,8 @@ in
       "konsolerc"."Default"."MenuBar" = "Disabled";
       "konsolerc"."Desktop Entry"."DefaultProfile" = "Profile 1.profile";
       "konsolerc"."MainWindow"."State" = "AAAA/wAAAAD9AAAAAQAAAAAAAAAAAAAAAPwCAAAAAvsAAAAcAFMAUwBIAE0AYQBuAGEAZwBlAHIARABvAGMAawAAAAAA/////wAAARUBAAAD+wAAACIAUQB1AGkAYwBrAEMAbwBtAG0AYQBuAGQAcwBEAG8AYwBrAAAAAAD/////AAABfAEAAAMAAAVWAAACqAAAAAQAAAAEAAAACAAAAAj8AAAAAQAAAAIAAAACAAAAFgBtAGEAaQBuAFQAbwBvAGwAQgBhAHIAAAAAAP////8AAAAAAAAAAAAAABwAcwBlAHMAcwBpAG8AbgBUAG8AbwBsAGIAYQByAAAAAAD/////AAAAAAAAAAA=";
-      "gtk-3.0/settings.ini"."Settings"."gtk-theme-name" = "Catppuccin-Frappe-Standard-Blue-Dark";
-      "gtk-4.0/settings.ini"."Settings"."gtk-theme-name" = "Catppuccin-Frappe-Standard-Blue-Dark";
+      "gtk-3.0/settings.ini"."Settings"."gtk-theme-name" = "Breeze";
+      "gtk-4.0/settings.ini"."Settings"."gtk-theme-name" = "Breeze";
     };
-  };
-
-  home.file = {
-    ".local/share/konsole/Catppuccin-Latte.colorscheme".source = "${konsole-themes}/Catppuccin-Latte.colorscheme";
-    ".local/share/konsole/Catppuccin-Frappe.colorscheme".source = "${konsole-themes}/Catppuccin-Frappe.colorscheme";
   };
 }

@@ -1,7 +1,6 @@
 { pkgs, lib, ... }:
 let
   vscodeExtensions = [
-    "Catppuccin.catppuccin-vsc"
     "Continue.continue"
     "James-Yu.latex-workshop"
     "REditorSupport.r"
@@ -33,7 +32,7 @@ in
       };
       "editor.formatOnSave" = true;
       "vim.useSystemClipboard" = true;
-      "workbench.colorTheme" = "Catppuccin Frappé";
+      "workbench.colorTheme" = "Dark+";
       "workbench.startupEditor" = "none";
       "editor.fontFamily" = "'FiraCode Nerd Font', 'Droid Sans Mono', 'monospace', monospace";
       "editor.fontLigatures" = true;
