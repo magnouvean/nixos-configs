@@ -9,9 +9,6 @@
         General = {
           InputMethod = "";
         };
-        Theme = {
-          CursorTheme = "Bibata-Modern-Ice";
-        };
       };
       enable = true;
     };
@@ -27,9 +24,6 @@
   environment.systemPackages = with pkgs; [
     # Applications
     k3b
-
-    # Theme
-    bibata-cursors
 
     # Other
     plasma-pass

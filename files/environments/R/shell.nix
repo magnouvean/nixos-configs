@@ -17,7 +17,9 @@ pkgs.mkShell {
     IRkernel
     MASS
     VGAM
+    bnlearn
     gRain
+    igraph
     languageserver
     lme4
     nlme
