@@ -24,6 +24,7 @@ pkgs.mkShell {
     lme4
     nlme
     nnet
+    pcalg
     styler
     testthat
     tidyverse

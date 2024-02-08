@@ -52,6 +52,13 @@ in
       ];
       "julia.symbolCacheDownload" = true;
       "notebook.formatOnSave.enabled" = true;
+      "nix.serverSettings" = {
+        "nil" = {
+          "formatting" = {
+            "command" = [ "nixpkgs-fmt" ];
+          };
+        };
+      };
     };
   };
 
