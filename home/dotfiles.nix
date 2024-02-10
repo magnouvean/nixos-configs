@@ -29,6 +29,8 @@ in
   imports = [ ./joplin.nix ];
   home.file = lib.mkMerge [{
     ".config/MangoHud/MangoHud.conf".source = ../files/mangohud/MangoHud.conf;
+    "Code/elisp/tmp/README.md".source = ../files/environments/README.md;
+    "Code/misc/tmp/README.md".source = ../files/environments/README.md;
   }
     stignoreAttrs
     languageAttrs];

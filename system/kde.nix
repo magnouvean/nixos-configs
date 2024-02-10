@@ -13,7 +13,7 @@
       enable = true;
     };
     desktopManager.plasma5.enable = true;
-    layout = "no";
+    xkb.layout = "no";
   };
   security.pam.services.kwallet = {
     name = "kwallet";
@@ -22,9 +22,6 @@
   programs.kdeconnect.enable = true;
   programs.dconf.enable = true;
   environment.systemPackages = with pkgs; [
-    # Applications
-    k3b
-
     # Other
     plasma-pass
   ];

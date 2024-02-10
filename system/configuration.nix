@@ -93,11 +93,10 @@
     bat
     curl
     eza
-    gh
     htop
     lm_sensors
     neofetch
-    networkmanagerapplet
+    ollama
     pass-wayland
     ripgrep
     sshfs
