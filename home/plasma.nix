@@ -25,6 +25,7 @@
                 "applications:org.kde.dolphin.desktop"
                 "applications:org.kde.konsole.desktop"
                 "applications:brave-browser.desktop"
+                "applications:neovide.desktop"
                 "applications:codium.desktop"
                 "applications:@joplinapp-desktop.desktop"
               ];

@@ -86,6 +86,7 @@
     joplin-desktop
     krita
     libreoffice-qt
+    neovide
     vscodium
 
     # CLI tools
@@ -96,6 +97,7 @@
     htop
     lm_sensors
     neofetch
+    neovim
     ollama
     pass-wayland
     ripgrep
