@@ -5,11 +5,7 @@ pkgs.mkShell {
     black
     isort
     mypy
-    pyright
     python3
-
-    # Jupyter
-    python3Packages.jupyter
 
     # Latex
     pandoc
@@ -22,6 +18,7 @@ pkgs.mkShell {
     # Python libraries
     debugpy
     graphviz
+    imageio
     ipython
     jax
     jaxlib
