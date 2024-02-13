@@ -87,7 +87,6 @@
     krita
     libreoffice-qt
     neovide
-    vscodium
 
     # CLI tools
     android-tools
