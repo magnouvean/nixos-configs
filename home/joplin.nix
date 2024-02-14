@@ -35,7 +35,8 @@
       		"visible": true
       	},
       	"editor.codeView": true,
-      	"theme": 1,
+      	"theme": 5,
+      	"preferredDarkTheme": 5,
       	"sync.target": 2,
       	"sync.2.path": "${config.home.homeDirectory}/Joplin",
       	"editor.spellcheckBeta": true,
