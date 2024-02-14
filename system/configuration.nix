@@ -86,7 +86,7 @@
     joplin-desktop
     krita
     libreoffice-qt
-    neovide
+    vscodium
 
     # CLI tools
     android-tools
@@ -109,6 +109,11 @@
     # Other
     xdg-user-dirs
     xdg-utils
+
+    # Themes
+    bibata-cursors
+    candy-icons
+    dracula-theme
 
     # Games
     mangohud
