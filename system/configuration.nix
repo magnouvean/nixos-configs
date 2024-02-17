@@ -86,7 +86,6 @@
     joplin-desktop
     krita
     libreoffice-qt
-    vscodium
 
     # CLI tools
     android-tools
