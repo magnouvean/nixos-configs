@@ -34,6 +34,7 @@
   i18n = {
     defaultLocale = "en_US.UTF-8";
     extraLocaleSettings = {
+      # 24 hour time
       LC_TIME = "nb_NO.UTF-8";
     };
   };
@@ -86,6 +87,7 @@
     joplin-desktop
     krita
     libreoffice-qt
+    vscodium
 
     # CLI tools
     android-tools

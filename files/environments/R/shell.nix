@@ -3,6 +3,7 @@ pkgs.mkShell {
   nativeBuildInputs = (with pkgs; [
     # R
     R
+    python3Packages.radian
 
     # Jupyter
     python3Packages.jupyter

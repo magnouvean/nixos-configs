@@ -3,7 +3,8 @@ let
   mimeDefaults = {
     "x-scheme-handler/http" = [ "brave-desktop.desktop" ];
     "x-scheme-handler/https" = [ "brave-desktop.desktop" ];
-    "text/markdown" = [ "nvim.desktop" ];
+    "application/x-ipynb+json" = [ "codium.desktop" ];
+    "text/markdown" = [ "codium.desktop" ];
   };
 in
 {

@@ -35,8 +35,6 @@ pkgs.mkShell {
     pyflakes
     pyqt6
     pytest
-    python-lsp-black
-    python-lsp-server
     pytorch
     ray
     scikit-learn
