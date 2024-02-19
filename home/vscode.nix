@@ -11,6 +11,7 @@
         "source.organizeImports" = "explicit";
       };
       "editor.formatOnSave" = true;
+      "editor.lineNumbers" = "relative";
       "vim.useSystemClipboard" = true;
       "workbench.colorTheme" = "Dracula";
       "workbench.startupEditor" = "none";
@@ -32,6 +33,7 @@
       ];
       "julia.symbolCacheDownload" = true;
       "notebook.formatOnSave.enabled" = true;
+      "vim.highlightedyank.enable" = true;
       "nix.serverSettings" = {
         "nil" = {
           "formatting" = {
