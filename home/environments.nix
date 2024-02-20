@@ -67,7 +67,6 @@ let
           spacy_models.en_core_web_sm
           sympy
           tensorflow
-          torchWithRocm
           torchvision
           xgboost
         ]) ++ (pkgs.lib.optional (builtins.pathExists localPath) (import localPath { }));
