@@ -7,7 +7,7 @@ let
   stignoreAttrs = lib.mkMerge (map stignoreToAttrs stignoreFolders);
 in
 {
-  imports = [ ./joplin.nix ./environments.nix ];
+  imports = [ ./joplin.nix ./environments/environments.nix ];
   home.file = lib.mkMerge [{
     ".config/MangoHud/MangoHud.conf".source = ../files/mangohud/MangoHud.conf;
   }
