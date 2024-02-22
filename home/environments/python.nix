@@ -19,6 +19,7 @@ in
       kaggle
     ]) ++ (with pkgs.python3Packages; [
       # Python libraries
+      ${if rocmSupport then "torchWithRocm" else "torch"}
       debugpy
       graphviz
       imageio
@@ -32,6 +33,7 @@ in
       numpy
       pandas
       pip
+      plotly
       pyarrow
       pycodestyle
       pydocstyle
@@ -46,7 +48,6 @@ in
       spacy_models.en_core_web_sm
       sympy
       tensorflow
-      ${if rocmSupport then "torchWithRocm" else "torch"}
       torchvision
       xgboost
     ]);

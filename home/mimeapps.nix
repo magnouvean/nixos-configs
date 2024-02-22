@@ -5,6 +5,8 @@ let
     "x-scheme-handler/https" = [ "brave-desktop.desktop" ];
     "application/x-ipynb+json" = [ "codium.desktop" ];
     "text/markdown" = [ "codium.desktop" ];
+    "text/plain" = [ "codium.desktop" ];
+
   };
 in
 {

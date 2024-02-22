@@ -34,11 +34,6 @@
       "julia.symbolCacheDownload" = true;
       "notebook.formatOnSave.enabled" = true;
       "vim.highlightedyank.enable" = true;
-      "r.bracketedPaste" = true;
-      "r.rterm.linux" = "/bin/sh";
-      "r.rterm.option" = [
-        "radian"
-      ];
       "python.terminal.launchArgs" = [
         "-m"
         "IPython"

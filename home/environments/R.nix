@@ -30,6 +30,7 @@ in
       nlme
       nnet
       pcalg
+      plotly
       styler
       testthat
       tidyverse
