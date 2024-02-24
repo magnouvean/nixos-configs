@@ -4,7 +4,6 @@
     ./git.nix
     ./mimeapps.nix
     ./plasma.nix
-    ./vscode.nix
     ./zsh.nix
   ];
 

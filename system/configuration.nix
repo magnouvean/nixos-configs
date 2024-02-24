@@ -12,18 +12,6 @@
   networking = {
     networkmanager.enable = true;
   };
-  services.openssh = {
-    enable = true;
-    settings.PasswordAuthentication = false;
-  };
-
-  # Printer support
-  services.printing.enable = true;
-  services.avahi = {
-    enable = true;
-    nssmdns4 = true;
-    openFirewall = true;
-  };
 
   # Games
   programs.steam.enable = true;
@@ -52,7 +40,7 @@
   hardware.opentabletdriver.enable = true;
 
   # Users
-  users.users.magnus = {
+  users.users.user1 = {
     isNormalUser = true;
     extraGroups = [ "wheel" "storage" "networkmanager" ];
     shell = pkgs.zsh;
@@ -83,11 +71,8 @@
   environment.systemPackages = with pkgs; [
     # GUI programs
     brave
-    godot_4
     joplin-desktop
     krita
-    libreoffice-qt
-    vscodium
 
     # CLI tools
     android-tools
