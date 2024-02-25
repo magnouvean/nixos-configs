@@ -16,12 +16,11 @@ pkgs.mkShell {
     kaggle
   ]) ++ (with pkgs.python3Packages; [
     # Python libraries
-    debugpy
-    graphviz
     imageio
     ipython
     jax
     jaxlib
+    jupytext
     keras
     matplotlib
     nltk
@@ -34,6 +33,8 @@ pkgs.mkShell {
     pyflakes
     pyqt6
     pytest
+    python-lsp-black
+    python-lsp-server
     ray
     scikit-learn
     scipy

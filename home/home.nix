@@ -3,6 +3,7 @@
     ./dotfiles.nix
     ./git.nix
     ./mimeapps.nix
+    ./neovim.nix
     ./plasma.nix
     ./zsh.nix
   ];

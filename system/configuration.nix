@@ -64,15 +64,12 @@
   # Polkit
   security.polkit = { enable = true; };
 
-  # SSH
-  programs.ssh.askPassword = "";
-
   # Packages
   environment.systemPackages = with pkgs; [
     # GUI programs
     brave
-    joplin-desktop
     krita
+    rnote
 
     # CLI tools
     android-tools

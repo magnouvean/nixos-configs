@@ -21,7 +21,19 @@ in
     };
     panels = [
       {
-        height = 34;
+        height = 28;
+        location = "top";
+        widgets = [
+          "org.kde.plasma.panelspacer"
+          "org.kde.plasma.digitalclock"
+          "org.kde.plasma.panelspacer"
+          "org.kde.plasma.systemtray"
+        ];
+      }
+      {
+        height = 40;
+        maxLength = 1000;
+        hiding = "autohide";
         location = "bottom";
         widgets = [
           {
@@ -31,14 +43,10 @@ in
                 "applications:org.kde.dolphin.desktop"
                 "applications:org.kde.konsole.desktop"
                 "applications:brave-browser.desktop"
-                "applications:codium.desktop"
-                "applications:@joplinapp-desktop.desktop"
+                "applications:nvim.desktop"
               ];
             };
           }
-          "org.kde.plasma.marignsseperator"
-          "org.kde.plasma.systemtray"
-          "org.kde.plasma.digitalclock"
         ];
       }
     ];
