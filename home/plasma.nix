@@ -43,7 +43,7 @@ in
                 "applications:org.kde.dolphin.desktop"
                 "applications:org.kde.konsole.desktop"
                 "applications:brave-browser.desktop"
-                "applications:nvim.desktop"
+                "applications:codium.desktop"
               ];
             };
           }

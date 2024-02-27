@@ -79,7 +79,6 @@
     htop
     lm_sensors
     neofetch
-    neovim
     ollama
     pass-wayland
     ripgrep
