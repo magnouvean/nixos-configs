@@ -2,7 +2,6 @@
 {
   services.xserver = {
     enable = true;
-    displayManager.defaultSession = "plasmawayland";
     displayManager.sddm = {
       theme = "Dracula";
       settings = {
@@ -12,7 +11,7 @@
       };
       enable = true;
     };
-    desktopManager.plasma5.enable = true;
+    desktopManager.plasma6.enable = true;
     xkb.layout = "no";
   };
   security.pam.services.kwallet = {

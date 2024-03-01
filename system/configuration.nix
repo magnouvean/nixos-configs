@@ -6,7 +6,7 @@
   boot.loader.grub = { enable = true; };
 
   # Kernel
-  boot.kernelPackages = pkgs.linuxPackages_6_5;
+  boot.kernelPackages = pkgs.linuxPackages_6_6;
 
   # Neworking
   networking = {
