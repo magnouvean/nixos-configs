@@ -1,6 +1,7 @@
 { pkgs, ... }:
 let
   my-vscode-extensions = (with pkgs.vscode-extensions; [
+    continue.continue
     dracula-theme.theme-dracula
     james-yu.latex-workshop
     jnoortheen.nix-ide

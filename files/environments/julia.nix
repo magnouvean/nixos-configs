@@ -1,8 +1,11 @@
 { pkgs ? import <nixpkgs> { } }:
+let
+  juliaPackages = [ "Plots" ];
+in
 pkgs.mkShell {
   nativeBuildInputs = with pkgs; [
     # Julia
-    julia-bin
+    (julia.withPackages juliaPackages)
 
     # Latex
     pandoc
