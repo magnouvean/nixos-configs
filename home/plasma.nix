@@ -16,8 +16,6 @@ in
       colorScheme = "Dracula";
       cursorTheme = "Bibata-Modern-Classic";
       iconTheme = "candy-icons";
-      lookAndFeel = "Dracula";
-      wallpaper = "${pkgs.libsForQt5.plasma-workspace-wallpapers}/share/wallpapers/Patak";
     };
     panels = [
       {
