@@ -21,6 +21,7 @@ in
       {
         height = 28;
         location = "top";
+        floating = true;
         widgets = [
           "org.kde.plasma.panelspacer"
           "org.kde.plasma.digitalclock"
@@ -33,6 +34,7 @@ in
         maxLength = 1000;
         hiding = "autohide";
         location = "bottom";
+        floating = true;
         widgets = [
           {
             name = "org.kde.plasma.icontasks";
