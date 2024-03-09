@@ -14,7 +14,6 @@ in
     workspace = {
       clickItemTo = "select";
       colorScheme = "Dracula";
-      cursorTheme = "Bibata-Modern-Classic";
       iconTheme = "candy-icons";
     };
     panels = [
@@ -31,8 +30,7 @@ in
       }
       {
         height = 40;
-        maxLength = 1000;
-        hiding = "autohide";
+        hiding = "dodgewindows";
         location = "bottom";
         floating = true;
         widgets = [
@@ -83,6 +81,7 @@ in
       "krunnerrc"."General"."FreeFloating" = true;
       "kwinrc"."Desktops"."Number" = 8;
       "kwinrc"."Desktops"."Rows" = 2;
+      "kwinrc"."Plugins"."shakecursorEnabled" = true;
       "konsolerc"."Default"."MenuBar" = "Disabled";
       "konsolerc"."Desktop Entry"."DefaultProfile" = "Profile 1.profile";
       "konsolerc"."MainWindow"."State" = "AAAA/wAAAAD9AAAAAQAAAAAAAAAAAAAAAPwCAAAAAvsAAAAcAFMAUwBIAE0AYQBuAGEAZwBlAHIARABvAGMAawAAAAAA/////wAAARUBAAAD+wAAACIAUQB1AGkAYwBrAEMAbwBtAG0AYQBuAGQAcwBEAG8AYwBrAAAAAAD/////AAABfAEAAAMAAAVWAAACqAAAAAQAAAAEAAAACAAAAAj8AAAAAQAAAAIAAAACAAAAFgBtAGEAaQBuAFQAbwBvAGwAQgBhAHIAAAAAAP////8AAAAAAAAAAAAAABwAcwBlAHMAcwBpAG8AbgBUAG8AbwBsAGIAYQByAAAAAAD/////AAAAAAAAAAA=";

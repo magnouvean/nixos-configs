@@ -7,6 +7,7 @@ let
     jnoortheen.nix-ide
     mkhl.direnv
     ms-pyright.pyright
+    ms-python.black-formatter
     ms-python.isort
     ms-python.python
     ms-toolsai.jupyter
