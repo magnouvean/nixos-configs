@@ -41,7 +41,7 @@ sudo swapon /dev/vg/swap
 
 Clone this repo:
 ```{bash}
-nix-shell -p git --run "git clone https://codeberg.org/magnouvean/nixos-configs"
+nix-shell -p git --run "git clone https://github.com/magnouvean/nixos-configs"
 ```
 
 Remove the displaylink configuration located in `configuration.nix`, for
@@ -53,7 +53,7 @@ This should be one line, and the whole line can be deleted.
 
 Finally run the following to make the installation:
 ```{bash}
-nix-shell -p git --run "sudo nixos-install --flake ./nixos-configs#nixos-latop"
+nix-shell -p git --run "sudo nixos-install --flake ./nixos-configs#nixos-laptop"
 sudo poweroff
 ```
 

@@ -21,16 +21,12 @@
     enable = true;
     overrideConfig = true;
     workspace = {
-      lookAndFeel = "org.kde.breezedark.desktop";
+      lookAndFeel = "Catppuccin-Mocha-Blue";
+      cursor.theme = "Bibata-Modern-Amber";
       wallpaperPictureOfTheDay.provider = "bing";
     };
     kwin = {
-      effects = {
-        shakeCursor.enable = true;
-        wobblyWindows.enable = true;
-        windowOpenClose.animation = "fade";
-        translucency.enable = true;
-      };
+      effects.shakeCursor.enable = true;
       virtualDesktops = {
         rows = 2;
         number = 8;
@@ -40,7 +36,7 @@
       {
         height = 28;
         location = "top";
-        floating = false;
+        floating = true;
         widgets = [
           {
             name = "org.kde.plasma.kickerdash";
@@ -73,9 +69,8 @@
       {
         height = 50;
         hiding = "dodgewindows";
-        location = "left";
+        location = "bottom";
         floating = true;
-        lengthMode = "fit";
         widgets = [
           {
             name = "org.kde.plasma.icontasks";

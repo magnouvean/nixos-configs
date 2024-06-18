@@ -1,17 +1,12 @@
 { pkgs, ... }:
-let
-  sddm-wallpaper = "${import ./wallpapers.nix {inherit pkgs;}}/wallpapers/img_1.jpeg";
-in
 {
   imports = [ ./kde.nix ];
 
   # Bootloader
-  boot.loader.grub = { enable = true; };
+  boot.loader.grub.enable = true;
 
   # Neworking
-  networking = {
-    networkmanager.enable = true;
-  };
+  networking.networkmanager.enable = true;
 
   # Games
   programs.steam.enable = true;
@@ -61,15 +56,16 @@ in
   };
 
   # Fonts
-  fonts = {
-    packages = with pkgs; [ jetbrains-mono ];
-  };
+  fonts.packages = with pkgs; [ jetbrains-mono ];
 
   # GPG
-  programs.gnupg.agent = { enable = true; };
+  programs.gnupg.agent.enable = true;
 
   # Polkit
-  security.polkit = { enable = true; };
+  security.polkit.enable = true;
+
+  # Git
+  programs.git.enable = true;
 
   # Packages
   environment.systemPackages = with pkgs; [
@@ -99,6 +95,10 @@ in
     xdg-user-dirs
     xdg-utils
 
+    # Theme
+    (catppuccin-kde.override { flavour = [ "mocha" ]; })
+    bibata-cursors
+
     # Nix tools
     nil
     nixpkgs-fmt
@@ -112,4 +112,3 @@ in
   nixpkgs.config.allowUnfree = true;
   system.stateVersion = "24.05";
 }
-

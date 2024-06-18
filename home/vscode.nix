@@ -1,8 +1,8 @@
 { pkgs, ... }:
 let
   my-vscode-extensions = (with pkgs.vscode-extensions; [
+    catppuccin.catppuccin-vsc
     continue.continue
-    github.github-vscode-theme
     jnoortheen.nix-ide
     ms-azuretools.vscode-docker
     ms-vscode-remote.remote-containers
@@ -24,7 +24,7 @@ in
       "editor.lineNumbers" = "relative";
       "vim.useSystemClipboard" = true;
       "workbench.startupEditor" = "none";
-      "workbench.colorTheme" = "GitHub Dark";
+      "workbench.colorTheme" = "Catppuccin Mocha";
       "editor.fontFamily" = "'JetBrains Mono', 'Droid Sans Mono', 'monospace', monospace";
       "editor.fontLigatures" = true;
       "nix.enableLanguageServer" = true;
