@@ -20,9 +20,6 @@
     };
   };
 
-  # Power saving
-  services.auto-cpufreq.enable = true;
-
   # Enable displaylink
   services.xserver.videoDrivers = [ "displaylink" "modesetting" ];
 }
