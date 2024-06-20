@@ -1,4 +1,7 @@
-{ ... }:
+{ pkgs, ... }:
+let
+  wallpapers = (import ./wallpapers.nix { inherit pkgs; });
+in
 {
   programs.konsole = {
     enable = true;
@@ -21,9 +24,17 @@
     enable = true;
     overrideConfig = true;
     workspace = {
-      lookAndFeel = "Catppuccin-Mocha-Blue";
+      colorScheme = "CatppuccinMochaBlue";
       cursor.theme = "Bibata-Modern-Amber";
-      wallpaperPictureOfTheDay.provider = "bing";
+      wallpaperSlideShow = {
+        path = "${wallpapers}/share/wallpapers/";
+        interval = 3600;
+      };
+      splashScreen.theme = "Catppuccin-Mocha-Blue";
+    };
+    kscreenlocker.wallpaperSlideShow = {
+      path = "${wallpapers}/share/wallpapers/";
+      interval = 3600;
     };
     kwin = {
       effects.shakeCursor.enable = true;
@@ -110,10 +121,6 @@
     configFile = {
       kcminputrc."Libinput/2/14/ETPS\\/2 Elantech Touchpad".NaturalScroll = true;
       krunnerrc.General.FreeFloating = true;
-      kscreenlockerrc = {
-        Greeter.WallpaperPlugin = "org.kde.potd";
-        "Greeter/Wallpaper/org.kde.potd/General".Provider = "bing";
-      };
       kwinrc."Effect-overview".BorderActivate = 9;
     };
   };

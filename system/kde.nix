@@ -11,7 +11,7 @@ let
     };
     installPhase = ''
       mkdir -p $out/share/sddm/themes/
-      cp -aR ${pkgs.kdePackages.plasma-workspace}/share/sddm/themes/breeze $out/share/sddm/themes/breeze-custom
+      cp -aR ${pkgs.kdePackages.plasma-desktop}/share/sddm/themes/breeze $out/share/sddm/themes/breeze-custom
       chmod +w $out/share/sddm/themes/breeze-custom $out/share/sddm/themes/breeze-custom/theme.conf
       cp -aR $src $out/share/sddm/themes/breeze-custom/background.jpeg
       sed -i 's/background=.*/background=background.jpeg/g' $out/share/sddm/themes/breeze-custom/theme.conf
