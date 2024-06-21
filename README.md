@@ -2,9 +2,11 @@
 
 My nixos configuration files (system and home-manager)
 
+![screenshot of kde plasma](./screenshots/Screenshot_20240621_155255.png)
+
 ## Usage
 
 To deploy for a host after initial installation simply run the `deploy.sh`
-script in the folder for host you want to deploy for (in the *hosts/*
-directory). For initial installation (with encryption) see the `INSTALL.md`
-file in the same folder.
+script in the folder for host you want to deploy for (in the [hosts](./hosts)
+directory). For initial installation (with encryption) see the `INSTALL.md` file
+in the same folder.

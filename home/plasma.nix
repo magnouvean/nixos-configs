@@ -1,25 +1,63 @@
 { pkgs, ... }:
 let
   wallpapers = (import ./wallpapers.nix { inherit pkgs; });
+  createTopPanel = screen: {
+    height = 28;
+    inherit screen;
+    location = "top";
+    floating = true;
+    widgets = [
+      {
+        name = "org.kde.plasma.kickerdash";
+        config.General.icon = "nix-snowflake-white";
+      }
+      "org.kde.plasma.panelspacer"
+      {
+        digitalClock = {
+          date.position = "besideTime";
+          calendar.showWeekNumbers = true;
+        };
+      }
+      "org.kde.plasma.panelspacer"
+      {
+        systemTray = {
+          items = {
+            shown = [
+              "org.kde.plasma.battery"
+              "org.kde.plasma.bluetooth"
+              "org.kde.plasma.clipboard"
+              "org.kde.plasma.networkmanagement"
+              "org.kde.plasma.volume"
+            ];
+            configs.battery.showPercentage = true;
+          };
+        };
+      }
+    ];
+  };
+  createBottomPanel = screen: {
+    height = 50;
+    inherit screen;
+    hiding = "dodgewindows";
+    location = "bottom";
+    floating = true;
+    widgets = [
+      {
+        name = "org.kde.plasma.icontasks";
+        config = {
+          General.launchers = [
+            "applications:brave-browser.desktop"
+            "applications:org.kde.konsole.desktop"
+            "applications:org.kde.dolphin.desktop"
+            "applications:code.desktop"
+            "applications:bitwarden.desktop"
+          ];
+        };
+      }
+    ];
+  };
 in
 {
-  programs.konsole = {
-    enable = true;
-    defaultProfile = "Profile 1";
-    profiles = {
-      "Profile 1" = {
-        font = {
-          name = "JetBrains Mono";
-          size = 11;
-        };
-      };
-    };
-    extraConfig = {
-      Default.MenuBar = "Disabled";
-      MainWindow.State = "AAAA/wAAAAD9AAAAAQAAAAAAAAAAAAAAAPwCAAAAAvsAAAAcAFMAUwBIAE0AYQBuAGEAZwBlAHIARABvAGMAawAAAAAA/////wAAARUBAAAD+wAAACIAUQB1AGkAYwBrAEMAbwBtAG0AYQBuAGQAcwBEAG8AYwBrAAAAAAD/////AAABfAEAAAMAAAVWAAACqAAAAAQAAAAEAAAACAAAAAj8AAAAAQAAAAIAAAACAAAAFgBtAGEAaQBuAFQAbwBvAGwAQgBhAHIAAAAAAP////8AAAAAAAAAAAAAABwAcwBlAHMAcwBpAG8AbgBUAG8AbwBsAGIAYQByAAAAAAD/////AAAAAAAAAAA=";
-    };
-  };
-
   programs.plasma = {
     enable = true;
     overrideConfig = true;
@@ -44,59 +82,12 @@ in
       };
     };
     panels = [
-      {
-        height = 28;
-        location = "top";
-        floating = true;
-        widgets = [
-          {
-            name = "org.kde.plasma.kickerdash";
-            config.General.icon = "nix-snowflake-white";
-          }
-          "org.kde.plasma.panelspacer"
-          {
-            digitalClock = {
-              date.position = "besideTime";
-              calendar.showWeekNumbers = true;
-            };
-          }
-          "org.kde.plasma.panelspacer"
-          {
-            systemTray = {
-              items = {
-                shown = [
-                  "org.kde.plasma.battery"
-                  "org.kde.plasma.bluetooth"
-                  "org.kde.plasma.clipboard"
-                  "org.kde.plasma.networkmanagement"
-                  "org.kde.plasma.volume"
-                ];
-                configs.battery.showPercentage = true;
-              };
-            };
-          }
-        ];
-      }
-      {
-        height = 50;
-        hiding = "dodgewindows";
-        location = "bottom";
-        floating = true;
-        widgets = [
-          {
-            name = "org.kde.plasma.icontasks";
-            config = {
-              General.launchers = [
-                "applications:brave-browser.desktop"
-                "applications:org.kde.konsole.desktop"
-                "applications:org.kde.dolphin.desktop"
-                "applications:code.desktop"
-                "applications:bitwarden.desktop"
-              ];
-            };
-          }
-        ];
-      }
+      (createTopPanel 0)
+      (createBottomPanel 0)
+      (createTopPanel 1)
+      (createBottomPanel 1)
+      (createTopPanel 2)
+      (createBottomPanel 2)
     ];
     shortcuts = {
       kwin = {

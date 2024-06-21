@@ -81,9 +81,9 @@
     curl
     distrobox
     eza
+    fastfetch
     htop
     lm_sensors
-    neofetch
     neovim
     ripgrep
     unzip

@@ -2,6 +2,7 @@
 {
   imports = [
     ./dotfiles.nix
+    ./konsole.nix
     ./mimeapps.nix
     ./plasma.nix
     ./vscode.nix
