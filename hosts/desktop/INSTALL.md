@@ -16,6 +16,7 @@ After formatting as described above run the following commands (as root and with
 ```{bash}
 sudo cryptsetup luksFormat /dev/sda3
 sudo cryptsetup luksOpen /dev/sda3 enc-pv
+sudo cryptsetup luksUUID /dev/sda3 --uuid "b17f7d5a-6e7d-4357-8f30-4d5a98a39d62"
 ```
 
 ```{bash}

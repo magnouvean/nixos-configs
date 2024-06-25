@@ -25,7 +25,7 @@ in
       "vim.useSystemClipboard" = true;
       "workbench.startupEditor" = "none";
       "workbench.colorTheme" = "Catppuccin Mocha";
-      "editor.fontFamily" = "'JetBrains Mono', 'Droid Sans Mono', 'monospace', monospace";
+      "editor.fontFamily" = "'JetBrainsMono Nerd Font', 'Droid Sans Mono', 'monospace', monospace";
       "editor.fontLigatures" = true;
       "nix.enableLanguageServer" = true;
       "nix.serverPath" = "nil";

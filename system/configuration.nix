@@ -56,7 +56,7 @@
   };
 
   # Fonts
-  fonts.packages = with pkgs; [ jetbrains-mono ];
+  fonts.packages = with pkgs; [ (nerdfonts.override { fonts = [ "JetBrainsMono" ]; }) ];
 
   # GPG
   programs.gnupg.agent.enable = true;
@@ -84,9 +84,9 @@
     fastfetch
     htop
     lm_sensors
-    neovim
     ripgrep
     unzip
+    vim
     wget
     wl-clipboard
     yt-dlp
@@ -98,6 +98,7 @@
     # Theme
     (catppuccin-kde.override { flavour = [ "mocha" ]; })
     bibata-cursors
+    (catppuccin-gtk.override { variant = "mocha"; })
 
     # Nix tools
     nil

@@ -16,7 +16,7 @@ in
       "Profile 1" = {
         colorScheme = "Catppuccin-Mocha";
         font = {
-          name = "JetBrains Mono";
+          name = "JetBrainsMono Nerd Font";
           size = 11;
         };
       };

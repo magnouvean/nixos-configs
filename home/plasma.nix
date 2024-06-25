@@ -35,27 +35,6 @@ let
       }
     ];
   };
-  createBottomPanel = screen: {
-    height = 50;
-    inherit screen;
-    hiding = "dodgewindows";
-    location = "bottom";
-    floating = true;
-    widgets = [
-      {
-        name = "org.kde.plasma.icontasks";
-        config = {
-          General.launchers = [
-            "applications:brave-browser.desktop"
-            "applications:org.kde.konsole.desktop"
-            "applications:org.kde.dolphin.desktop"
-            "applications:code.desktop"
-            "applications:bitwarden.desktop"
-          ];
-        };
-      }
-    ];
-  };
 in
 {
   programs.plasma = {
@@ -83,11 +62,8 @@ in
     };
     panels = [
       (createTopPanel 0)
-      (createBottomPanel 0)
       (createTopPanel 1)
-      (createBottomPanel 1)
       (createTopPanel 2)
-      (createBottomPanel 2)
     ];
     shortcuts = {
       kwin = {
@@ -113,6 +89,15 @@ in
       kcminputrc."Libinput/2/14/ETPS\\/2 Elantech Touchpad".NaturalScroll = true;
       krunnerrc.General.FreeFloating = true;
       kwinrc."Effect-overview".BorderActivate = 9;
+      "gtk-3.0/settings.ini".Settings.gtk-theme-name = "catppuccin-mocha-blue-standard+default";
+      "gtk-4.0/settings.ini".Settings.gtk-theme-name = "catppuccin-mocha-blue-standard+default";
+    };
+  };
+
+  dconf = {
+    enable = true;
+    settings = {
+      "org/gnome/desktop/interface".gtk-theme = "catppuccin-mocha-blue-standard+default";
     };
   };
 }

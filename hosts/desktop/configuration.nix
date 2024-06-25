@@ -1,4 +1,4 @@
-{ config, ... }: {
+{ ... }: {
   imports = [
     ../../system/configuration.nix
     ./hardware-configuration.nix
@@ -13,7 +13,7 @@
   boot.initrd.luks.devices = {
     root = {
       name = "root";
-      device = "/dev/sda3";
+      device = "/dev/disk/by-uuid/b17f7d5a-6e7d-4357-8f30-4d5a98a39d62";
       preLVM = true;
       allowDiscards = true;
     };
