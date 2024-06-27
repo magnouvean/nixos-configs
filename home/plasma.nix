@@ -41,18 +41,10 @@ in
     enable = true;
     overrideConfig = true;
     workspace = {
-      colorScheme = "CatppuccinMochaBlue";
-      cursor.theme = "Bibata-Modern-Amber";
-      wallpaperSlideShow = {
-        path = "${wallpapers}/share/wallpapers/";
-        interval = 3600;
-      };
-      splashScreen.theme = "Catppuccin-Mocha-Blue";
+      colorScheme = "org.kde.breezedark.desktop";
+      wallpaperPictureOfTheDay = "bing";
     };
-    kscreenlocker.wallpaperSlideShow = {
-      path = "${wallpapers}/share/wallpapers/";
-      interval = 3600;
-    };
+    kscreenlocker.wallpaperPictureOfTheDay = "bing";
     kwin = {
       effects.shakeCursor.enable = true;
       virtualDesktops = {
@@ -89,15 +81,6 @@ in
       kcminputrc."Libinput/2/14/ETPS\\/2 Elantech Touchpad".NaturalScroll = true;
       krunnerrc.General.FreeFloating = true;
       kwinrc."Effect-overview".BorderActivate = 9;
-      "gtk-3.0/settings.ini".Settings.gtk-theme-name = "catppuccin-mocha-blue-standard+default";
-      "gtk-4.0/settings.ini".Settings.gtk-theme-name = "catppuccin-mocha-blue-standard+default";
-    };
-  };
-
-  dconf = {
-    enable = true;
-    settings = {
-      "org/gnome/desktop/interface".gtk-theme = "catppuccin-mocha-blue-standard+default";
     };
   };
 }

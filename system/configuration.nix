@@ -10,7 +10,6 @@
 
   # Games
   programs.steam.enable = true;
-  programs.gamemode.enable = true;
 
   # AI
   services.ollama.enable = true;
@@ -73,6 +72,7 @@
     bitwarden-desktop
     brave
     haruna
+    rnote
     vscode
 
     # CLI tools
@@ -95,17 +95,9 @@
     xdg-user-dirs
     xdg-utils
 
-    # Theme
-    (catppuccin-kde.override { flavour = [ "mocha" ]; })
-    bibata-cursors
-    (catppuccin-gtk.override { variant = "mocha"; })
-
     # Nix tools
     nil
     nixpkgs-fmt
-
-    # Games
-    mangohud
   ];
 
   # Misc
