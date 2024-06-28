@@ -2,7 +2,7 @@
 
 My nixos configuration files (system and home-manager)
 
-![screenshot of kde plasma](./screenshots/Screenshot_20240621_155255.png)
+![screenshot of kde plasma](./screenshots/screenshot.png)
 
 ## Usage
 

@@ -41,10 +41,10 @@ in
     enable = true;
     overrideConfig = true;
     workspace = {
-      colorScheme = "org.kde.breezedark.desktop";
-      wallpaperPictureOfTheDay = "bing";
+      lookAndFeel = "org.kde.breezedark.desktop";
+      wallpaperPictureOfTheDay.provider = "bing";
     };
-    kscreenlocker.wallpaperPictureOfTheDay = "bing";
+    kscreenlocker.wallpaperPictureOfTheDay.provider = "bing";
     kwin = {
       effects.shakeCursor.enable = true;
       virtualDesktops = {

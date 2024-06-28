@@ -5,16 +5,12 @@ let
     version = "1.0.0";
     dontBuild = true;
     dontUnpack = true;
-    src = pkgs.fetchurl {
-      url = "https://images.pexels.com/photos/2860804/pexels-photo-2860804.jpeg";
-      sha256 = "sha256-XPNlKvuZceluh2qp+oDcTDIhj7QyU1mHqg4Nnctbn8s=";
-    };
     installPhase = ''
       mkdir -p $out/share/sddm/themes/
       cp -aR ${pkgs.kdePackages.plasma-desktop}/share/sddm/themes/breeze $out/share/sddm/themes/breeze-custom
       chmod +w $out/share/sddm/themes/breeze-custom $out/share/sddm/themes/breeze-custom/theme.conf
-      cp -aR $src $out/share/sddm/themes/breeze-custom/background.jpeg
-      sed -i 's/background=.*/background=background.jpeg/g' $out/share/sddm/themes/breeze-custom/theme.conf
+      cp -aR ${pkgs.plasma-workspace-wallpapers}/share/wallpapers/Honeywave/contents/images/5120x2880.jpg $out/share/sddm/themes/breeze-custom/background.jpg
+      sed -i 's/background=.*/background=background.jpg/g' $out/share/sddm/themes/breeze-custom/theme.conf
     '';
   };
 in
