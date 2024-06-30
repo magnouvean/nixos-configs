@@ -1,6 +1,5 @@
-{ pkgs, ... }:
+{ ... }:
 let
-  wallpapers = (import ./wallpapers.nix { inherit pkgs; });
   createTopPanel = screen: {
     height = 28;
     inherit screen;
