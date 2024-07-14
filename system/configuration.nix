@@ -72,8 +72,8 @@
     bitwarden-desktop
     brave
     haruna
+    neovide
     rnote
-    vscode
 
     # CLI tools
     android-tools
@@ -84,9 +84,9 @@
     fastfetch
     htop
     lm_sensors
+    neovim
     ripgrep
     unzip
-    vim
     wget
     wl-clipboard
     yt-dlp
@@ -94,10 +94,6 @@
     # Other
     xdg-user-dirs
     xdg-utils
-
-    # Nix tools
-    nil
-    nixpkgs-fmt
   ];
 
   # Misc

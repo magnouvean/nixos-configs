@@ -1,8 +1,8 @@
 { ... }:
 let
-  createTopPanel = screen: {
+  topPanel = {
     height = 28;
-    inherit screen;
+    screen = "all";
     location = "top";
     floating = true;
     widgets = [
@@ -19,6 +19,16 @@ let
       }
       "org.kde.plasma.panelspacer"
       {
+        plasmusicToolbar = {
+          preferredSource = "any";
+          panelIcon.albumCover = {
+            useAsIcon = true;
+            radius = 2;
+          };
+          showPlaybackControls = false;
+        };
+      }
+      {
         systemTray = {
           items = {
             shown = [
@@ -28,6 +38,7 @@ let
               "org.kde.plasma.networkmanagement"
               "org.kde.plasma.volume"
             ];
+            hidden = [ "org.kde.plasma.mediacontroller" ];
             configs.battery.showPercentage = true;
           };
         };
@@ -52,9 +63,7 @@ in
       };
     };
     panels = [
-      (createTopPanel 0)
-      (createTopPanel 1)
-      (createTopPanel 2)
+      topPanel
     ];
     shortcuts = {
       kwin = {
@@ -77,7 +86,13 @@ in
       };
     };
     configFile = {
-      kcminputrc."Libinput/2/14/ETPS\\/2 Elantech Touchpad".NaturalScroll = true;
+      kcminputrc = {
+        "Libinput/2/14/ETPS\\/2 Elantech Touchpad".NaturalScroll = true;
+        Keyboard = {
+          RepeatDelay = 400;
+          RepeatRate = 30;
+        };
+      };
       krunnerrc.General.FreeFloating = true;
       kwinrc."Effect-overview".BorderActivate = 9;
     };
