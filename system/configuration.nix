@@ -11,9 +11,6 @@
   # Games
   programs.steam.enable = true;
 
-  # AI
-  services.ollama.enable = true;
-
   # Time/Locale
   time.timeZone = "Europe/Oslo";
   i18n = {
@@ -66,8 +63,9 @@
     bitwarden-desktop
     brave
     haruna
-    neovide
+    neovim-qt-unwrapped
     rnote
+    vscodium
 
     # CLI tools
     android-tools
