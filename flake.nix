@@ -32,7 +32,10 @@
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.sharedModules = [ plasma-manager.homeManagerModules.plasma-manager nixvim.homeManagerModules.nixvim ];
+            home-manager.sharedModules = [
+              nixvim.homeManagerModules.nixvim
+              plasma-manager.homeManagerModules.plasma-manager
+            ];
             home-manager.users.user1 = import ./home/home.nix;
           }
         ];
@@ -45,7 +48,10 @@
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.sharedModules = [ plasma-manager.homeManagerModules.plasma-manager nixvim.homeManagerModules.nixvim ];
+            home-manager.sharedModules = [
+              nixvim.homeManagerModules.nixvim
+              plasma-manager.homeManagerModules.plasma-manager
+            ];
             home-manager.users.user1 = import ./home/home.nix;
           }
         ];

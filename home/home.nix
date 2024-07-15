@@ -4,6 +4,7 @@
     ./konsole.nix
     ./mimeapps.nix
     ./neovim.nix
+    ./vscodium.nix
     ./plasma.nix
     ./zsh.nix
   ];
@@ -12,7 +13,10 @@
   fonts.fontconfig.enable = true;
 
   # Direnv
-  programs.direnv.enable = true;
+  programs.direnv = {
+    enable = true;
+    nix-direnv.enable = true;
+  };
 
   # Syncing
   services.syncthing.enable = true;

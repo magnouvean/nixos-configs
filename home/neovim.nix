@@ -9,7 +9,10 @@
       # Editor stuff
       nix.enable = true;
       nvim-autopairs.enable = true;
-      treesitter = { enable = true; settings.indent.enable = true; };
+      treesitter = {
+        enable = true;
+        settings.indent.enable = true;
+      };
       comment.enable = true;
       todo-comments.enable = true;
 
@@ -18,11 +21,11 @@
         enable = true;
         sources = {
           formatting = {
-            shfmt.enable = true;
-            prettier.enable = true;
             black.enable = true;
             nixpkgs_fmt.enable = true;
-            csharpier.enable = true;
+            prettier.enable = true;
+            shfmt.enable = true;
+            uncrustify.enable = true;
           };
         };
       };
@@ -45,7 +48,7 @@
               action = "references";
               desc = "Goto References";
             };
-            K = {
+            gh = {
               action = "hover";
               desc = "Hover";
             };
@@ -101,7 +104,7 @@
       toggleterm = {
         enable = true;
         settings = {
-          open_mapping = "[[<C-t>]]";
+          open_mapping = "[[<f12>]]";
           direction = "float";
         };
       };
@@ -118,8 +121,10 @@
       };
     };
     opts = {
+      number = true;
       relativenumber = true;
       foldenable = false;
+      guifont = "JetBrainsMono Nerd Font:h11";
     };
 
     # Yank highlighting

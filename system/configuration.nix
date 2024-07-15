@@ -14,12 +14,6 @@
   # AI
   services.ollama.enable = true;
 
-  # Podman
-  virtualisation.podman = {
-    enable = true;
-    dockerCompat = true;
-  };
-
   # Time/Locale
   time.timeZone = "Europe/Oslo";
   i18n = {
@@ -79,7 +73,7 @@
     android-tools
     bat
     curl
-    distrobox
+    exercism
     eza
     fastfetch
     htop
