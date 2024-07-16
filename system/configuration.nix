@@ -63,7 +63,6 @@
     bitwarden-desktop
     brave
     haruna
-    neovim-qt-unwrapped
     rnote
     vscodium
 
@@ -76,9 +75,9 @@
     fastfetch
     htop
     lm_sensors
-    neovim
     ripgrep
     unzip
+    vim
     wget
     wl-clipboard
     yt-dlp

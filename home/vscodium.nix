@@ -58,10 +58,7 @@ in
       "cSpell.enableFiletypes" = [
         "nix"
       ];
-      "continue.enableTabAutocomplete" = false;
-      "[csharp]" = {
-        "editor.defaultFormatter" = "csharpier.csharpier-vscode";
-      };
+      "github.gitAuthentication" = false;
     };
   };
 }

@@ -3,7 +3,6 @@
   imports = [
     ./konsole.nix
     ./mimeapps.nix
-    ./neovim.nix
     ./plasma.nix
     ./vscodium.nix
     ./zsh.nix
@@ -11,6 +10,8 @@
 
   # Fonts
   fonts.fontconfig.enable = true;
+
+  xdg.configFile."autostart/caffeine.desktop".source = ../files/autostart/caffeine;
 
   # Direnv
   programs.direnv = {

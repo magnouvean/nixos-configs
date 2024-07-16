@@ -15,14 +15,9 @@
         home-manager.follows = "home-manager";
       };
     };
-
-    nixvim = {
-      url = "github:nix-community/nixvim";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
-  outputs = inputs@ { nixpkgs, home-manager, plasma-manager, nixvim, ... }: {
+  outputs = inputs@ { nixpkgs, home-manager, plasma-manager, ... }: {
     nixosConfigurations = {
       nixos-desktop = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
@@ -33,7 +28,6 @@
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.sharedModules = [
-              nixvim.homeManagerModules.nixvim
               plasma-manager.homeManagerModules.plasma-manager
             ];
             home-manager.users.user1 = import ./home/home.nix;
@@ -49,7 +43,6 @@
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.sharedModules = [
-              nixvim.homeManagerModules.nixvim
               plasma-manager.homeManagerModules.plasma-manager
             ];
             home-manager.users.user1 = import ./home/home.nix;
