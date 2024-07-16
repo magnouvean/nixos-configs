@@ -17,6 +17,12 @@ let
       version = "2.0.9";
       hash = "sha256-hbg6HQWkmEa7F5Wk2JKXpLVXHrnGKfu02uRjwjhJ50k=";
     }
+    {
+      name = "csharpier-vscode";
+      publisher = "csharpier";
+      version = "1.7.3";
+      hash = "sha256-/ZLjnlLl6xmgEazdCbnuE6UuuV1tDwAjpxz+vmBuYHE=";
+    }
   ]
   );
 in
@@ -25,6 +31,8 @@ in
     enable = true;
     package = pkgs.vscodium;
     extensions = my-vscode-extensions;
+    enableUpdateCheck = false;
+    enableExtensionUpdateCheck = false;
     userSettings = {
       "window.titleBarStyle" = "custom";
       "editor.codeActionsOnSave" = {
@@ -51,6 +59,9 @@ in
         "nix"
       ];
       "continue.enableTabAutocomplete" = false;
+      "[csharp]" = {
+        "editor.defaultFormatter" = "csharpier.csharpier-vscode";
+      };
     };
   };
 }

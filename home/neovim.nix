@@ -21,6 +21,7 @@
           formatting = {
             black.enable = true;
             csharpier.enable = true;
+            isort.enable = true;
             nixpkgs_fmt.enable = true;
             shfmt.enable = true;
           };
@@ -30,8 +31,15 @@
       # LSP
       lsp = {
         enable = true;
+        inlayHints = true;
         servers = {
-          pyright.enable = true;
+          pylsp = {
+            enable = true;
+            settings = {
+              black.enabled = true;
+              isort.enabled = true;
+            };
+          };
           nil-ls.enable = true;
           csharp-ls.enable = true;
           bashls.enable = true;
@@ -131,6 +139,7 @@
       foldenable = false;
       guifont = "JetBrainsMono Nerd Font:h11";
     };
+    clipboard.register = "unnamedplus";
 
     # Keymaps
     keymaps = [
