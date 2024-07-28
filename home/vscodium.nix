@@ -1,30 +1,16 @@
 { pkgs, ... }:
 let
-  my-vscode-extensions = (with pkgs.vscode-extensions; [
+  my-vscode-extensions = with pkgs.vscode-extensions; [
+    continue.continue
     github.github-vscode-theme
     jnoortheen.nix-ide
     mkhl.direnv
-    ms-dotnettools.csharp
     ms-pyright.pyright
     ms-python.black-formatter
     ms-python.isort
     streetsidesoftware.code-spell-checker
     vscodevim.vim
-  ]) ++ (pkgs.vscode-utils.extensionsFromVscodeMarketplace [
-    {
-      name = "vscode-dotnet-runtime";
-      publisher = "ms-dotnettools";
-      version = "2.0.9";
-      hash = "sha256-hbg6HQWkmEa7F5Wk2JKXpLVXHrnGKfu02uRjwjhJ50k=";
-    }
-    {
-      name = "csharpier-vscode";
-      publisher = "csharpier";
-      version = "1.7.3";
-      hash = "sha256-/ZLjnlLl6xmgEazdCbnuE6UuuV1tDwAjpxz+vmBuYHE=";
-    }
-  ]
-  );
+  ];
 in
 {
   programs.vscode = {
@@ -59,6 +45,7 @@ in
         "nix"
       ];
       "github.gitAuthentication" = false;
+      "continue.enableTabAutocomplete" = false;
     };
   };
 }

@@ -55,13 +55,30 @@ in
       wallpaperPictureOfTheDay.provider = "bing";
     };
     kscreenlocker.wallpaperPictureOfTheDay.provider = "bing";
+    input = {
+      touchpads = [
+        {
+          enable = true;
+          name = "ETPS/2 Elantech Touchpad";
+          vendorId = "0002";
+          productId = "000e";
+        }
+      ];
+      keyboard = {
+        repeatRate = 30.0;
+        repeatDelay = 200;
+      };
+    };
     kwin = {
       effects.shakeCursor.enable = true;
       virtualDesktops = {
         rows = 2;
         number = 8;
       };
+      cornerBarrier = false;
+      edgeBarrier = 0;
     };
+    powerdevil.powerButtonAction = "sleep";
     panels = [
       topPanel
     ];
@@ -86,13 +103,6 @@ in
       };
     };
     configFile = {
-      kcminputrc = {
-        "Libinput/2/14/ETPS\\/2 Elantech Touchpad".NaturalScroll = true;
-        Keyboard = {
-          RepeatDelay = 400;
-          RepeatRate = 30;
-        };
-      };
       krunnerrc.General.FreeFloating = true;
       kwinrc."Effect-overview".BorderActivate = 9;
     };

@@ -22,6 +22,9 @@
   };
   console = { keyMap = "no"; };
 
+  # AI
+  services.ollama.enable = true;
+
   # Sound
   services.pipewire = {
     enable = true;
@@ -62,6 +65,7 @@
     # GUI programs
     bitwarden-desktop
     brave
+    foliate
     haruna
     rnote
     vscodium

@@ -1,6 +1,7 @@
 { ... }:
 {
   imports = [
+    ./kate.nix
     ./konsole.nix
     ./mimeapps.nix
     ./plasma.nix
