@@ -40,6 +40,10 @@ in
     sddm-breeze-custom
   ];
 
+  environment.plasma6.excludePackages = with pkgs; [
+    kdePackages.kate
+  ];
+
   system.activationScripts.sddmSetBreezeDark.text = ''
     mkdir -p /var/lib/sddm/.config
     cp ${../files/sddm/sddm-kdeglobals} /var/lib/sddm/.config/kdeglobals

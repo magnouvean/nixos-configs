@@ -1,9 +1,9 @@
 { ... }:
 {
   imports = [
-    ./kate.nix
     ./konsole.nix
     ./mimeapps.nix
+    ./neovim.nix
     ./plasma.nix
     ./vscodium.nix
     ./zsh.nix
