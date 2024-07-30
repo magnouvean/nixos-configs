@@ -105,6 +105,7 @@ in
     configFile = {
       krunnerrc.General.FreeFloating = true;
       kwinrc."Effect-overview".BorderActivate = 9;
+      "onlyoffice/DesktopEditors.conf".General.UITheme = "theme-dark";
     };
   };
 }

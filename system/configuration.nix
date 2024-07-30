@@ -67,6 +67,7 @@
     brave
     foliate
     haruna
+    onlyoffice-bin
     rnote
     vscodium
 
@@ -89,6 +90,10 @@
     # Other
     xdg-user-dirs
     xdg-utils
+
+    # Theme
+    candy-icons
+    dracula-theme
   ];
 
   # Misc
