@@ -22,8 +22,11 @@
   };
   console = { keyMap = "no"; };
 
-  # AI
-  services.ollama.enable = true;
+  # Podman
+  virtualisation.podman = {
+    enable = true;
+    dockerCompat = true;
+  };
 
   # Sound
   services.pipewire = {
@@ -69,12 +72,13 @@
     haruna
     onlyoffice-bin
     rnote
-    vscodium
+    vscode
 
     # CLI tools
     android-tools
     bat
     curl
+    distrobox
     exercism
     eza
     fastfetch
@@ -92,8 +96,10 @@
     xdg-utils
 
     # Theme
-    candy-icons
-    dracula-theme
+    (catppuccin-kde.override { flavour = [ "mocha" ]; })
+    (catppuccin-papirus-folders.override { flavor = "mocha"; })
+    (magnetic-catppuccin-gtk.override { tweaks = [ "black" ]; })
+    bibata-cursors
   ];
 
   # Misc

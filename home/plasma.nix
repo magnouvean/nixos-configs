@@ -25,7 +25,7 @@ let
             useAsIcon = true;
             radius = 2;
           };
-          showPlaybackControls = false;
+          musicControls.showPlaybackControls = false;
         };
       }
       {
@@ -45,16 +45,28 @@ let
       }
     ];
   };
+  gtkIniContents = {
+    Settings = {
+      gtk-icon-theme-name = "Papirus-Dark";
+      gtk-theme-name = "Catppuccin-GTK-Dark";
+    };
+  };
 in
 {
   programs.plasma = {
     enable = true;
     overrideConfig = true;
     workspace = {
-      lookAndFeel = "org.kde.breezedark.desktop";
+      lookAndFeel = "Catppuccin-Mocha-Blue";
+      iconTheme = "Papirus-Dark";
+      cursor.theme = "Bibata-Modern-Ice";
       wallpaperPictureOfTheDay.provider = "bing";
     };
-    kscreenlocker.wallpaperPictureOfTheDay.provider = "bing";
+    kscreenlocker.appearance = {
+      alwaysShowClock = false;
+      showMediaControls = false;
+      wallpaperPictureOfTheDay.provider = "bing";
+    };
     input = {
       touchpads = [
         {
@@ -78,7 +90,14 @@ in
       cornerBarrier = false;
       edgeBarrier = 0;
     };
-    powerdevil.powerButtonAction = "sleep";
+    powerdevil = {
+      AC = {
+        powerButtonAction = "sleep";
+      };
+      battery = {
+        powerButtonAction = "sleep";
+      };
+    };
     panels = [
       topPanel
     ];
@@ -106,6 +125,9 @@ in
       krunnerrc.General.FreeFloating = true;
       kwinrc."Effect-overview".BorderActivate = 9;
       "onlyoffice/DesktopEditors.conf".General.UITheme = "theme-dark";
+      "gtk-3.0/settings.ini" = gtkIniContents;
+      "gtk-4.0/settings.ini" = gtkIniContents;
+      auroraerc.CatppuccinMocha-Modern.ButtonSize = 0;
     };
   };
 }

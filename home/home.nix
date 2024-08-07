@@ -3,9 +3,8 @@
   imports = [
     ./konsole.nix
     ./mimeapps.nix
-    ./neovim.nix
     ./plasma.nix
-    ./vscodium.nix
+    ./vscode.nix
     ./zsh.nix
   ];
 

@@ -45,7 +45,9 @@ in
   ];
 
   system.activationScripts.sddmSetBreezeDark.text = ''
+    if [ -d /var/lib/sddm/.config ]; then rm -rf /var/lib/sddm/.config; fi
     mkdir -p /var/lib/sddm/.config
     cp ${../files/sddm/sddm-kdeglobals} /var/lib/sddm/.config/kdeglobals
+    cp ${../files/sddm/sddm-kcminputrc} /var/lib/sddm/.config/kcminputrc
   '';
 }
