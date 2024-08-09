@@ -15,7 +15,7 @@ After formatting as described above run the following commands (as root and with
 ```{bash}
 sudo cryptsetup luksFormat /dev/sda2
 sudo cryptsetup luksOpen /dev/sda2 enc-pv
-sudo cryptsetup luksUUID /dev/sda3 --uuid "1d1131ba-3652-4322-9d82-7e4c29693a62"
+sudo cryptsetup luksUUID /dev/sda2 --uuid "1d1131ba-3652-4322-9d82-7e4c29693a62"
 ```
 
 ```{bash}
@@ -63,5 +63,5 @@ After installation it should be enough to run `./deploy.sh` (in this
 directory). You will however have had to run (at least once) the following
 command:
 ```{bash}
-sudo nix-prefetch-url --name displaylink-580.zip https://www.synaptics.com/sites/default/files/exe_files/2023-08/DisplayLink%20USB%20Graphics%20Software%20for%20Ubuntu5.8-EXE.zip
+sudo nix-prefetch-url --name displaylink-600.zip https://www.synaptics.com/sites/default/files/exe_files/2024-05/DisplayLink%20USB%20Graphics%20Software%20for%20Ubuntu6.0-EXE.zip
 ```

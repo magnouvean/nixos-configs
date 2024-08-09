@@ -74,6 +74,7 @@ in
           name = "ETPS/2 Elantech Touchpad";
           vendorId = "0002";
           productId = "000e";
+          naturalScroll = true;
         }
       ];
       keyboard = {
