@@ -1,4 +1,5 @@
-{ ... }: {
+{ ... }:
+{
   imports = [
     ../../system/configuration.nix
     ./hardware-configuration.nix
@@ -21,5 +22,8 @@
   };
 
   # Enable displaylink
-  services.xserver.videoDrivers = [ "displaylink" "modesetting" ];
+  services.xserver.videoDrivers = [
+    "displaylink"
+    "modesetting"
+  ];
 }

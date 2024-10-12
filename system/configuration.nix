@@ -11,6 +11,15 @@
   # Games
   programs.steam.enable = true;
 
+  # AI
+  services.ollama.enable = true;
+
+  # Tablet support
+  hardware.opentabletdriver = {
+    enable = true;
+    daemon.enable = false;
+  };
+
   # Time/Locale
   time.timeZone = "Europe/Oslo";
   i18n = {
@@ -20,7 +29,9 @@
       LC_TIME = "nb_NO.UTF-8";
     };
   };
-  console = { keyMap = "no"; };
+  console = {
+    keyMap = "no";
+  };
 
   # Podman
   virtualisation.podman = {
@@ -38,7 +49,11 @@
   # Users
   users.users.user1 = {
     isNormalUser = true;
-    extraGroups = [ "wheel" "storage" "networkmanager" ];
+    extraGroups = [
+      "wheel"
+      "storage"
+      "networkmanager"
+    ];
     shell = pkgs.zsh;
   };
 
@@ -68,11 +83,10 @@
     # GUI programs
     bitwarden-desktop
     brave
-    foliate
     haruna
     onlyoffice-bin
     rnote
-    vscode
+    vscodium
 
     # CLI tools
     android-tools
@@ -95,15 +109,15 @@
     xdg-user-dirs
     xdg-utils
 
-    # Theme
-    (catppuccin-kde.override { flavour = [ "mocha" ]; })
-    (catppuccin-papirus-folders.override { flavor = "mocha"; })
-    (magnetic-catppuccin-gtk.override { tweaks = [ "black" ]; })
-    bibata-cursors
+    # Games
+    osu-lazer
   ];
 
   # Misc
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
   nixpkgs.config.allowUnfree = true;
   system.stateVersion = "24.05";
 }

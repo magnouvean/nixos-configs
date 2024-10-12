@@ -45,21 +45,13 @@ let
       }
     ];
   };
-  gtkIniContents = {
-    Settings = {
-      gtk-icon-theme-name = "Papirus-Dark";
-      gtk-theme-name = "Catppuccin-GTK-Dark";
-    };
-  };
 in
 {
   programs.plasma = {
     enable = true;
     overrideConfig = true;
     workspace = {
-      lookAndFeel = "Catppuccin-Mocha-Blue";
-      iconTheme = "Papirus-Dark";
-      cursor.theme = "Bibata-Modern-Ice";
+      lookAndFeel = "org.kde.breezedark.desktop";
       wallpaperPictureOfTheDay.provider = "bing";
     };
     kscreenlocker.appearance = {
@@ -126,9 +118,6 @@ in
       krunnerrc.General.FreeFloating = true;
       kwinrc."Effect-overview".BorderActivate = 9;
       "onlyoffice/DesktopEditors.conf".General.UITheme = "theme-dark";
-      "gtk-3.0/settings.ini" = gtkIniContents;
-      "gtk-4.0/settings.ini" = gtkIniContents;
-      auroraerc.CatppuccinMocha-Modern.ButtonSize = 0;
     };
   };
 }
