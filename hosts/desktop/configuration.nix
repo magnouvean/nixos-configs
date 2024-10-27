@@ -5,8 +5,25 @@
     ./hardware-configuration.nix
   ];
 
-  networking.hostName = "nixos-desktop";
+  # Nvidia
+  hardware.graphics.enable = true;
+  services.xserver.videoDrivers = [ "nvidia" ];
+  hardware.nvidia = {
+    modesetting.enable = true;
+    open = true;
+    nvidiaSettings = true;
+  };
+  nixpkgs.config.cudaSupport = true;
 
+  # Filesystems/disks
+  fileSystems."/" = {
+    device = "/dev/disk/by-uuid/009b54b4-d4a1-427f-8471-1ea2fcd52a1b";
+    fsType = "ext4";
+  };
+  fileSystems."/boot" = {
+    device = "/dev/disk/by-uuid/933c1d16-e734-4d7c-879a-834497581785";
+    fsType = "ext2";
+  };
   boot.loader.grub = {
     device = "/dev/sda";
     efiSupport = false;
@@ -19,4 +36,7 @@
       allowDiscards = true;
     };
   };
+
+  # Misc
+  networking.hostName = "nixos-desktop";
 }

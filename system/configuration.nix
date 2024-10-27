@@ -10,9 +10,12 @@
 
   # Games
   programs.steam.enable = true;
+  programs.gamemode.enable = true;
 
   # AI
-  services.ollama.enable = true;
+  services.ollama = {
+    enable = true;
+  };
 
   # Tablet support
   hardware.opentabletdriver = {
@@ -108,8 +111,10 @@
     # Other
     xdg-user-dirs
     xdg-utils
+    openvpn
 
     # Games
+    mangohud
     osu-lazer
   ];
 
