@@ -20,7 +20,6 @@ let
       "org.kde.plasma.panelspacer"
       {
         plasmusicToolbar = {
-          preferredSource = "any";
           panelIcon.albumCover = {
             useAsIcon = true;
             radius = 2;
