@@ -14,6 +14,7 @@
     nvidiaSettings = true;
   };
   nixpkgs.config.cudaSupport = true;
+  hardware.nvidia-container-toolkit.enable = true;
 
   # Filesystems/disks
   fileSystems."/" = {

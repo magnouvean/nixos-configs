@@ -5,11 +5,8 @@ let
     github.github-vscode-theme
     jnoortheen.nix-ide
     mkhl.direnv
-    ms-dotnettools.csdevkit
-    ms-dotnettools.csharp
-    ms-dotnettools.vscode-dotnet-runtime
-    ms-dotnettools.vscodeintellicode-csharp
-    ms-pyright.pyright
+    ms-vscode-remote.remote-containers
+    ms-vscode-remote.remote-ssh
     streetsidesoftware.code-spell-checker
     vscodevim.vim
   ];
@@ -17,7 +14,7 @@ in
 {
   programs.vscode = {
     enable = true;
-    package = pkgs.vscodium;
+    package = pkgs.vscode;
     extensions = my-vscode-extensions;
     enableUpdateCheck = false;
     enableExtensionUpdateCheck = false;
@@ -41,7 +38,12 @@ in
         "nix"
       ];
       "github.gitAuthentication" = false;
-      "continue.enableTabAutocomplete" = false;
+      "vim.normalModeKeyBindingsNonRecursive" = [
+        {
+          "before" = [ "<C-p>" ];
+          "commands" = [ "workbench.action.quickOpen" ];
+        }
+      ];
     };
   };
 }

@@ -89,7 +89,7 @@
     haruna
     onlyoffice-bin
     rnote
-    vscodium
+    vscode
 
     # CLI tools
     android-tools
