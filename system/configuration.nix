@@ -1,6 +1,8 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 {
-  imports = [ ./kde.nix ];
+  imports = [
+    ./gnome.nix
+  ];
 
   # Bootloader
   boot.loader.grub.enable = true;
@@ -86,7 +88,7 @@
     # GUI programs
     bitwarden-desktop
     brave
-    haruna
+    gapless
     onlyoffice-bin
     rnote
     vscode
@@ -117,6 +119,12 @@
     mangohud
     osu-lazer
   ];
+
+  # XServer
+  services.xserver = {
+    enable = true;
+    xkb.layout = "no";
+  };
 
   # Misc
   nix.settings.experimental-features = [

@@ -1,17 +1,14 @@
 { ... }:
 {
   imports = [
-    ./konsole.nix
+    ./gnome.nix
     ./mimeapps.nix
-    ./plasma.nix
     ./vscode.nix
     ./zsh.nix
   ];
 
   # Fonts
   fonts.fontconfig.enable = true;
-
-  xdg.configFile."autostart/caffeine.desktop".source = ../files/autostart/caffeine;
 
   # Direnv
   programs.direnv = {

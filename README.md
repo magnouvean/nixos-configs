@@ -2,8 +2,6 @@
 
 My nixos configuration files (system and home-manager)
 
-![screenshot of kde plasma](./screenshots/screenshot.png)
-
 ## Usage
 
 To deploy for a host after initial installation simply run the `deploy.sh`
