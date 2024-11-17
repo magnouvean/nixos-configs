@@ -1,6 +1,7 @@
 { ... }:
 {
   imports = [
+    ./firefox.nix
     ./gnome.nix
     ./mimeapps.nix
     ./vscode.nix

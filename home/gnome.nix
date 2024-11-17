@@ -30,6 +30,10 @@
         switch-to-workspace-7 = [ "<Super>7" ];
         switch-to-workspace-8 = [ "<Super>8" ];
       };
+      "org/gnome/desktop/wm/preferences" = {
+        button-layout = ":minimize,maximize,close";
+      };
+
       "org/gnome/shell/keybindings" = {
         switch-to-application-1 = [ ];
         switch-to-application-2 = [ ];
@@ -43,6 +47,7 @@
       "org/gnome/shell" = {
         favorite-apps = [
           "brave-browser.desktop"
+          "firefox.desktop"
           "org.gnome.Console.desktop"
           "code.desktop"
           "com.github.neithern.g4music.desktop"

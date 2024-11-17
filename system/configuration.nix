@@ -7,6 +7,9 @@
   # Bootloader
   boot.loader.grub.enable = true;
 
+  # Kernel
+  boot.kernelPackages = pkgs.linuxPackages_latest;
+
   # Neworking
   networking.networkmanager.enable = true;
 
@@ -88,6 +91,7 @@
     # GUI programs
     bitwarden-desktop
     brave
+    firefox
     gapless
     onlyoffice-bin
     rnote
