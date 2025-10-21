@@ -1,43 +1,38 @@
 { ... }:
 {
   imports = [
-    ../../system/configuration.nix
+    ../../configuration.nix
     ./hardware-configuration.nix
   ];
 
-  # Nvidia
-  hardware.graphics.enable = true;
-  services.xserver.videoDrivers = [ "nvidia" ];
   hardware.nvidia = {
+    open = false;
     modesetting.enable = true;
-    open = true;
-    nvidiaSettings = true;
   };
-  nixpkgs.config.cudaSupport = true;
-  hardware.nvidia-container-toolkit.enable = true;
 
-  # Filesystems/disks
+  service.xserver = {
+    videoDrivers = [ "nvidia" ];
+  };
+
   fileSystems."/" = {
-    device = "/dev/disk/by-uuid/009b54b4-d4a1-427f-8471-1ea2fcd52a1b";
+    device = "/dev/disk/by-uuid/40a4c612-7b66-4abf-b23d-6eea5ff4d85d";
     fsType = "ext4";
   };
   fileSystems."/boot" = {
-    device = "/dev/disk/by-uuid/933c1d16-e734-4d7c-879a-834497581785";
-    fsType = "ext2";
+    device = "/dev/disk/by-uuid/AEB1-E5FE";
+    fsType = "vfat";
   };
   boot.loader.grub = {
-    device = "/dev/sda";
-    efiSupport = false;
+    device = "nodev";
+    efiSupport = true;
   };
+  boot.loader.efi.canTouchEfiVariables = true;
   boot.initrd.luks.devices = {
     root = {
       name = "root";
-      device = "/dev/disk/by-uuid/b17f7d5a-6e7d-4357-8f30-4d5a98a39d62";
+      device = "/dev/disk/by-uuid/1d1131ba-3652-4322-9d82-7e4c29693a62";
       preLVM = true;
       allowDiscards = true;
     };
   };
-
-  # Misc
-  networking.hostName = "nixos-desktop";
 }
