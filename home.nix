@@ -51,19 +51,21 @@
 
   home.file = {
     ".config/hypr" = {
-        source = ./files/hypr;
-        recursive = true;
+      source = ./files/hypr;
+      recursive = true;
     };
 
     ".config/waybar" = {
-        source = ./files/waybar;
-        recursive = true;
+      source = ./files/waybar;
+      recursive = true;
     };
 
     ".config/wofi" = {
-        source = ./files/wofi;
-        recursive = true;
+      source = ./files/wofi;
+      recursive = true;
     };
+
+    ".zshrc".source = ./files/zsh/zshrc;
   };
 
   home.stateVersion = "25.05";

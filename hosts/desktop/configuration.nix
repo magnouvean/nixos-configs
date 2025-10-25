@@ -52,6 +52,11 @@
     fsType = "vfat";
   };
 
+  fileSystems."/mnt/games" = {
+    device = "/dev/disk/by-uuid/a6f74323-d256-47c1-92aa-5659c85866aa";
+    fsType = "ext4";
+  };
+
   swapDevices = [ ];
 
   networking.useDHCP = lib.mkDefault true;

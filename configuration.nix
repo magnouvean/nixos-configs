@@ -119,6 +119,7 @@
   ];
 
   environment.systemPackages = with pkgs; [
+    g4music
     bat
     bitwarden-desktop
     brave
@@ -146,6 +147,13 @@
     wofi
     zed-editor
   ];
+
+  services.logind = {
+    extraConfig = ''
+      IdleAction=suspend
+      IdleActionSec=15min
+    '';
+  };
 
   programs.gnupg.agent = {
     enable = true;
