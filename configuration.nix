@@ -65,6 +65,8 @@
   services.blueman.enable = true;
   programs.nm-applet.enable = true;
 
+  programs.steam.enable = true;
+
   programs.direnv = {
     enable = true;
     nix-direnv.enable = true;
@@ -117,15 +119,18 @@
   ];
 
   environment.systemPackages = with pkgs; [
-    jq
     bat
+    bitwarden-desktop
     brave
+    dracula-theme
     eza
     godot
     htop
     hyprlock
     hyprpaper
     hyprshot
+    hyprpolkitagent
+    jq
     kitty
     llama-cpp
     lm_sensors

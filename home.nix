@@ -8,7 +8,7 @@
       "org/gnome/desktop/interface" = {
         color-scheme = "prefer-dark";
         icon-theme = "Papirus-Dark";
-        gtk-theme = "Adwaita";
+        gtk-theme = "Dracula";
       };
     };
   };
@@ -49,14 +49,21 @@
     };
   };
 
-  home.file.".config/hypr" = {
-    source = ./files/hypr;
-    recursive = true;
-  };
+  home.file = {
+    ".config/hypr" = {
+        source = ./files/hypr;
+        recursive = true;
+    };
 
-  home.file.".config/waybar" = {
-    source = ./files/waybar;
-    recursive = true;
+    ".config/waybar" = {
+        source = ./files/waybar;
+        recursive = true;
+    };
+
+    ".config/wofi" = {
+        source = ./files/wofi;
+        recursive = true;
+    };
   };
 
   home.stateVersion = "25.05";

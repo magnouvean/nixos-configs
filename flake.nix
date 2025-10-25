@@ -20,13 +20,13 @@
       nixosConfigurations = {
         nixos-desktop = nixpkgs.lib.nixosSystem {
           modules = [
-            ./configuration.nix
+            ./hosts/desktop/configuration.nix
             home-manager.nixosModules.home-manager
             {
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
 
-              home-manager.users.magnus = import ./home.nix;
+              home-manager.users.magnus = import ./hosts/desktop/home.nix;
             }
           ];
         };
