@@ -1,5 +1,23 @@
 { pkgs, ... }:
-
+let
+  sddm-breeze-custom = pkgs.stdenv.mkDerivation {
+    pname = "sddm-breeze-custom";
+    version = "1.0.0";
+    dontBuild = true;
+    dontUnpack = true;
+    src = pkgs.fetchurl {
+      url = "https://images.pexels.com/photos/163848/road-mountains-sunset-path-163848.jpeg";
+      hash = "sha256-1pLDjQfimAhA/mKE2yldDXRpFP7kEJE3A6lP1S3JKuU=";
+    };
+    installPhase = ''
+      mkdir -p $out/share/sddm/themes/
+      cp -aR ${pkgs.kdePackages.plasma-desktop}/share/sddm/themes/breeze $out/share/sddm/themes/breeze-custom
+      chmod +w $out/share/sddm/themes/breeze-custom $out/share/sddm/themes/breeze-custom/theme.conf
+      cp -aR $src $out/share/sddm/themes/breeze-custom/background.jpg
+      sed -i 's/background=.*/background=background.jpg/g' $out/share/sddm/themes/breeze-custom/theme.conf
+    '';
+  };
+in
 {
   nixpkgs.config.allowUnfree = true;
   nix.settings.experimental-features = [
@@ -62,9 +80,6 @@
     shell = pkgs.zsh;
   };
 
-  services.blueman.enable = true;
-  programs.nm-applet.enable = true;
-
   programs.steam.enable = true;
 
   programs.direnv = {
@@ -82,26 +97,27 @@
 
   programs.git.enable = true;
 
-  services.greetd = {
+  services.desktopManager.plasma6.enable = true;
+  services.displayManager.sddm = {
     enable = true;
-    settings = rec {
-      initial_session = {
-        command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --cmd hyprland";
-        user = "greeter";
-      };
-      default_session = initial_session;
-    };
+    wayland.enable = true;
+    theme = "breeze-custom";
+  };
+  security.pam.services.kwallet = {
+    name = "kwallet";
+    enableKwallet = true;
   };
 
-  xdg.portal = {
-    enable = true;
-    extraPortals = with pkgs; [
-      xdg-desktop-portal-hyprland
-    ];
-  };
+  environment.plasma6.excludePackages = with pkgs; [
+    kdePackages.kate
+  ];
 
-  programs.hyprland.enable = true;
-  programs.waybar.enable = true;
+  system.activationScripts.sddmSetBreezeDark.text = ''
+    if [ -d /var/lib/sddm/.config ]; then rm -rf /var/lib/sddm/.config; fi
+    mkdir -p /var/lib/sddm/.config
+    cp ${./files/sddm/sddm-kdeglobals} /var/lib/sddm/.config/kdeglobals
+    cp ${./files/sddm/sddm-kcminputrc} /var/lib/sddm/.config/kcminputrc
+  '';
 
   fonts.packages = with pkgs; [
     jetbrains-mono
@@ -119,7 +135,6 @@
   ];
 
   environment.systemPackages = with pkgs; [
-    g4music
     bat
     bitwarden-desktop
     brave
@@ -127,33 +142,19 @@
     eza
     godot
     htop
-    hyprlock
-    hyprpaper
-    hyprshot
-    hyprpolkitagent
     jq
+    kdePackages.sddm-kcm
     kitty
     llama-cpp
     lm_sensors
-    lxqt.lxqt-policykit
     networkmanagerapplet
+    onlyoffice-desktopeditors
     osu-lazer-bin
-    papirus-icon-theme
-    pcmanfm
-    swayidle
+    sddm-breeze-custom
     syncthing
     vim
-    wlr-randr
-    wofi
     zed-editor
   ];
-
-  services.logind = {
-    extraConfig = ''
-      IdleAction=suspend
-      IdleActionSec=15min
-    '';
-  };
 
   programs.gnupg.agent = {
     enable = true;

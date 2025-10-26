@@ -1,0 +1,7 @@
+[Keyboard]
+RepeatDelay=200
+RepeatRate=30.0
+
+[Libinput][2][14][ETPS/2 Elantech Touchpad]
+Enabled=true
+NaturalScroll=true

@@ -1,17 +1,7 @@
 { ... }:
 {
+  imports = [ ./plasma.nix ];
   services.syncthing.enable = true;
-
-  dconf = {
-    enable = true;
-    settings = {
-      "org/gnome/desktop/interface" = {
-        color-scheme = "prefer-dark";
-        icon-theme = "Papirus-Dark";
-        gtk-theme = "Dracula";
-      };
-    };
-  };
 
   programs.zed-editor = {
     enable = true;
@@ -19,17 +9,17 @@
       "nix"
       "toml"
       "rust"
-      "dracula"
       "clojure"
       "csharp"
       "direnv"
       "vim"
+      "github-dark-default"
     ];
     userSettings = {
       theme = {
         mode = "system";
-        light = "Dracula Solid";
-        dark = "Dracula Solid";
+        light = "GitHub Dark Default";
+        dark = "GitHub Dark Default";
       };
       "vim_mode" = true;
       "ui_font_family" = "JetBrains Mono";
@@ -50,22 +40,12 @@
   };
 
   home.file = {
-    ".config/hypr" = {
-      source = ./files/hypr;
-      recursive = true;
-    };
-
-    ".config/waybar" = {
-      source = ./files/waybar;
-      recursive = true;
-    };
-
-    ".config/wofi" = {
-      source = ./files/wofi;
-      recursive = true;
-    };
-
     ".zshrc".source = ./files/zsh/zshrc;
+
+    ".config/kitty" = {
+      source = ./files/kitty;
+      recursive = true;
+    };
   };
 
   home.stateVersion = "25.05";
