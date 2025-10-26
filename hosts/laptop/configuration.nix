@@ -10,13 +10,6 @@
     (modulesPath + "/installer/scan/not-detected.nix")
   ];
 
-  hardware.nvidia = {
-    open = false;
-    modesetting.enable = true;
-  };
-
-  services.xserver.videoDrivers = [ "nvidia" ];
-
   boot.loader.grub = {
     device = "nodev";
     efiSupport = true;
@@ -34,12 +27,10 @@
   boot.initrd.availableKernelModules = [
     "xhci_pci"
     "ahci"
-    "usb_storage"
-    "usbhid"
     "sd_mod"
   ];
-  boot.initrd.kernelModules = [ ];
-  boot.kernelModules = [ "kvm-amd" ];
+  boot.initrd.kernelModules = [ "dm-snapshot" ];
+  boot.kernelModules = [ "kvm-intel" ];
   boot.extraModulePackages = [ ];
 
   fileSystems."/" = {
@@ -61,6 +52,8 @@
     { device = "/dev/disk/by-uuid/fd9a1b38-9b0f-4eeb-a880-5b5980f8d1ed"; }
   ];
 
+  networking.useDHCP = lib.mkDefault true;
+
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
-  hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
+  hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 }

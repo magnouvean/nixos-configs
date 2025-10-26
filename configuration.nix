@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 let
   sddm-breeze-custom = pkgs.stdenv.mkDerivation {
     pname = "sddm-breeze-custom";
@@ -160,6 +160,8 @@ in
     enable = true;
     enableSSHSupport = true;
   };
+
+  networking.useDHCP = lib.mkDefault true;
 
   system.stateVersion = "25.05"; # Did you read the comment?
 }
