@@ -138,13 +138,11 @@ in
     bat
     bitwarden-desktop
     brave
-    dracula-theme
     eza
     godot
     htop
     jq
     kdePackages.sddm-kcm
-    kitty
     llama-cpp
     lm_sensors
     networkmanagerapplet
