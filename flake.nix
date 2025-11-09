@@ -25,9 +25,9 @@
     }:
     {
       nixosConfigurations = {
-        nixos-desktop = nixpkgs.lib.nixosSystem {
+        nixos-desktop1 = nixpkgs.lib.nixosSystem {
           modules = [
-            ./hosts/desktop/configuration.nix
+            ./hosts/desktop1/configuration.nix
             home-manager.nixosModules.home-manager
             {
               home-manager.useGlobalPkgs = true;

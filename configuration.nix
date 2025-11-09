@@ -47,7 +47,6 @@ in
     };
   };
 
-  networking.hostName = "nixos-desktop"; # Define your hostname.
   time.timeZone = "Europe/Oslo";
 
   networking.networkmanager = {

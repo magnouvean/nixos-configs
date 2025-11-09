@@ -50,6 +50,6 @@ nix-shell -p git --run "git clone https://github.com/magnouvean/nixos-configs"
 Finally run the following to make the installation:
 
 ```{bash}
-nix-shell -p git --run "sudo nixos-install --flake ./nixos-configs#nixos-desktop"
+nix-shell -p git --run "sudo nixos-install --flake ./nixos-configs#nixos-desktop1"
 sudo poweroff
 ```

@@ -10,7 +10,14 @@
     (modulesPath + "/installer/scan/not-detected.nix")
   ];
 
-  networking.hostName = "nixos-laptop";
+  hardware.nvidia = {
+    open = false;
+    modesetting.enable = true;
+  };
+
+  services.xserver.videoDrivers = [ "nvidia" ];
+
+  networking.hostName = "nixos-desktop1";
 
   boot.loader.grub = {
     device = "nodev";
@@ -29,10 +36,12 @@
   boot.initrd.availableKernelModules = [
     "xhci_pci"
     "ahci"
+    "usb_storage"
+    "usbhid"
     "sd_mod"
   ];
-  boot.initrd.kernelModules = [ "dm-snapshot" ];
-  boot.kernelModules = [ "kvm-intel" ];
+  boot.initrd.kernelModules = [ ];
+  boot.kernelModules = [ "kvm-amd" ];
   boot.extraModulePackages = [ ];
 
   fileSystems."/" = {
@@ -45,7 +54,7 @@
     fsType = "vfat";
   };
 
-  fileSystems."/mnt/games" = {
+  fileSystems."/home/magnus/.games" = {
     device = "/dev/disk/by-uuid/a6f74323-d256-47c1-92aa-5659c85866aa";
     fsType = "ext4";
   };
@@ -54,8 +63,6 @@
     { device = "/dev/disk/by-uuid/fd9a1b38-9b0f-4eeb-a880-5b5980f8d1ed"; }
   ];
 
-  networking.useDHCP = lib.mkDefault true;
-
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
-  hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
+  hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 }
