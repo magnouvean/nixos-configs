@@ -16,7 +16,6 @@
     device = "/dev/sda";
     efiSupport = false;
   };
-  boot.loader.efi.canTouchEfiVariables = true;
   boot.initrd.luks.devices = {
     root = {
       name = "root";

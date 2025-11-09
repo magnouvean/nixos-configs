@@ -23,6 +23,7 @@
     device = "nodev";
     efiSupport = true;
   };
+  boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
   boot.initrd.luks.devices = {
     root = {

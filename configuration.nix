@@ -25,9 +25,6 @@ in
     "flakes"
   ];
 
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
-
   hardware.opentabletdriver = {
     enable = true;
     daemon.enable = true;
