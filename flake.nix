@@ -36,7 +36,23 @@
                 plasma-manager.homeModules.plasma-manager
               ];
 
-              home-manager.users.magnus = import ./hosts/desktop/home.nix;
+              home-manager.users.magnus = import ./hosts/desktop1/home.nix;
+            }
+          ];
+        };
+
+        nixos-desktop2 = nixpkgs.lib.nixosSystem {
+          modules = [
+            ./hosts/desktop2/configuration.nix
+            home-manager.nixosModules.home-manager
+            {
+              home-manager.useGlobalPkgs = true;
+              home-manager.useUserPackages = true;
+              home-manager.sharedModules = [
+                plasma-manager.homeModules.plasma-manager
+              ];
+
+              home-manager.users.magnus = import ./hosts/desktop2/home.nix;
             }
           ];
         };
