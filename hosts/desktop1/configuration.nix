@@ -1,4 +1,5 @@
 {
+  pkgs,
   config,
   lib,
   modulesPath,
@@ -44,6 +45,12 @@
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ "kvm-amd" ];
   boot.extraModulePackages = [ ];
+
+  environment.systemPackages = [
+    (pkgs.llama-cpp.override {
+      cudaSupport = true;
+    })
+  ];
 
   fileSystems."/" = {
     device = "/dev/disk/by-uuid/40a4c612-7b66-4abf-b23d-6eea5ff4d85d";

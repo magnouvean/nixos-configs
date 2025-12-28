@@ -1,6 +1,5 @@
 { ... }:
 {
-  imports = [ ./plasma.nix ];
   services.syncthing.enable = true;
 
   programs.zed-editor = {
@@ -27,6 +26,14 @@
       "buffer_font_family" = "JetBrains Mono";
       "buffer_font_size" = 16;
       "format_on_save" = "on";
+      languages = {
+        cs = {
+          language_servers = [ "omnisharp" ];
+        };
+        python = {
+          language_servers = [ "basedpyright" ];
+        };
+      };
       lsp = {
         nil = {
           "initialization_options" = {
@@ -35,17 +42,33 @@
             };
           };
         };
+        omnisharp = {
+          command = "OmniSharp";
+          args = [ ];
+          env = {
+            PATH = "$PATH";
+          };
+          language_ids = [ "cs" ];
+        };
+        basedpyright = {
+          command = "basedpyright-langserver";
+          args = [ "--stdio" ];
+          env = {
+            PATH = "$PATH";
+          };
+          language_ids = [ "python" ];
+        };
       };
     };
   };
 
   home.file = {
     ".zshrc".source = ./files/zsh/zshrc;
-
-    ".config/kitty" = {
-      source = ./files/kitty;
+    ".config/cosmic" = {
+      source = ./files/cosmic;
       recursive = true;
     };
+    ".config/cosmic-initial-setup-done".text = "";
   };
 
   home.stateVersion = "25.05";
